@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9363CA491FEC164300C12FF8 /* GfycatApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA3C1FEC164200C12FF8 /* GfycatApiController.swift */; };
+		9363CA4B1FEC164300C12FF8 /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA3E1FEC164200C12FF8 /* GifCollectionViewCell.swift */; };
+		9363CA4D1FEC164300C12FF8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA401FEC164300C12FF8 /* DataController.swift */; };
+		9363CA4E1FEC164300C12FF8 /* GifPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA411FEC164300C12FF8 /* GifPlayer.swift */; };
+		9363CA511FEC164300C12FF8 /* MyGifsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA441FEC164300C12FF8 /* MyGifsCollectionVC.swift */; };
+		9363CA521FEC164300C12FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */; };
+		9363CA531FEC164300C12FF8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA461FEC164300C12FF8 /* PlayerView.swift */; };
+		9363CA541FEC164300C12FF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363CA471FEC164300C12FF8 /* Main.storyboard */; };
+		9363CA591FEC21A000C12FF8 /* GfyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA581FEC21A000C12FF8 /* GfyModel.swift */; };
+		9363CAA71FEDB25D00C12FF8 /* CacheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CAA61FEDB25D00C12FF8 /* CacheController.swift */; };
+		9363CAA91FEE9F7600C12FF8 /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CAA81FEE9F7500C12FF8 /* DataControllerTests.swift */; };
+		9363CAAD1FEEE54B00C12FF8 /* GfycatRawData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */; };
+		93E234931FEC0B9F00EF2538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234921FEC0B9F00EF2538 /* AppDelegate.swift */; };
+		93E2349A1FEC0B9F00EF2538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E234991FEC0B9F00EF2538 /* Assets.xcassets */; };
+		93E234A81FEC0B9F00EF2538 /* CacheControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234A71FEC0B9F00EF2538 /* CacheControllerTests.swift */; };
+		93E234B31FEC0B9F00EF2538 /* MyGifsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234B21FEC0B9F00EF2538 /* MyGifsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93E234A41FEC0B9F00EF2538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93E234871FEC0B9F00EF2538 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93E2348E1FEC0B9F00EF2538;
+			remoteInfo = MyGifs;
+		};
+		93E234AF1FEC0B9F00EF2538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93E234871FEC0B9F00EF2538 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93E2348E1FEC0B9F00EF2538;
+			remoteInfo = MyGifs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9363CA3C1FEC164200C12FF8 /* GfycatApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfycatApiController.swift; sourceTree = "<group>"; };
+		9363CA3E1FEC164200C12FF8 /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		9363CA401FEC164300C12FF8 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		9363CA411FEC164300C12FF8 /* GifPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPlayer.swift; sourceTree = "<group>"; };
+		9363CA441FEC164300C12FF8 /* MyGifsCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGifsCollectionVC.swift; sourceTree = "<group>"; };
+		9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9363CA461FEC164300C12FF8 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		9363CA471FEC164300C12FF8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9363CA581FEC21A000C12FF8 /* GfyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfyModel.swift; sourceTree = "<group>"; };
+		9363CAA61FEDB25D00C12FF8 /* CacheController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheController.swift; sourceTree = "<group>"; };
+		9363CAA81FEE9F7500C12FF8 /* DataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerTests.swift; sourceTree = "<group>"; };
+		9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GfycatRawData.json; sourceTree = "<group>"; };
+		93E2348F1FEC0B9F00EF2538 /* MyGifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E234921FEC0B9F00EF2538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93E234991FEC0B9F00EF2538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93E2349E1FEC0B9F00EF2538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E234A31FEC0B9F00EF2538 /* MyGifsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGifsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E234A71FEC0B9F00EF2538 /* CacheControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheControllerTests.swift; sourceTree = "<group>"; };
+		93E234A91FEC0B9F00EF2538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E234AE1FEC0B9F00EF2538 /* MyGifsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGifsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E234B21FEC0B9F00EF2538 /* MyGifsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGifsUITests.swift; sourceTree = "<group>"; };
+		93E234B41FEC0B9F00EF2538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93E2348C1FEC0B9F00EF2538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E234A01FEC0B9F00EF2538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E234AB1FEC0B9F00EF2538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9363CA551FEC165000C12FF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */,
+				9363CA471FEC164300C12FF8 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9363CA561FEC165F00C12FF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9363CAA61FEDB25D00C12FF8 /* CacheController.swift */,
+				9363CA401FEC164300C12FF8 /* DataController.swift */,
+				9363CA3C1FEC164200C12FF8 /* GfycatApiController.swift */,
+				9363CA441FEC164300C12FF8 /* MyGifsCollectionVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9363CA571FEC166D00C12FF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9363CA3E1FEC164200C12FF8 /* GifCollectionViewCell.swift */,
+				9363CA461FEC164300C12FF8 /* PlayerView.swift */,
+				9363CA411FEC164300C12FF8 /* GifPlayer.swift */,
+				9363CA581FEC21A000C12FF8 /* GfyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93E234861FEC0B9F00EF2538 = {
+			isa = PBXGroup;
+			children = (
+				93E234911FEC0B9F00EF2538 /* MyGifs */,
+				93E234A61FEC0B9F00EF2538 /* MyGifsTests */,
+				93E234B11FEC0B9F00EF2538 /* MyGifsUITests */,
+				93E234901FEC0B9F00EF2538 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93E234901FEC0B9F00EF2538 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93E2348F1FEC0B9F00EF2538 /* MyGifs.app */,
+				93E234A31FEC0B9F00EF2538 /* MyGifsTests.xctest */,
+				93E234AE1FEC0B9F00EF2538 /* MyGifsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93E234911FEC0B9F00EF2538 /* MyGifs */ = {
+			isa = PBXGroup;
+			children = (
+				9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */,
+				93E2349E1FEC0B9F00EF2538 /* Info.plist */,
+				93E234991FEC0B9F00EF2538 /* Assets.xcassets */,
+				93E234921FEC0B9F00EF2538 /* AppDelegate.swift */,
+				9363CA571FEC166D00C12FF8 /* Models */,
+				9363CA551FEC165000C12FF8 /* Views */,
+				9363CA561FEC165F00C12FF8 /* Controllers */,
+			);
+			path = MyGifs;
+			sourceTree = "<group>";
+		};
+		93E234A61FEC0B9F00EF2538 /* MyGifsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9363CAA81FEE9F7500C12FF8 /* DataControllerTests.swift */,
+				93E234A71FEC0B9F00EF2538 /* CacheControllerTests.swift */,
+				93E234A91FEC0B9F00EF2538 /* Info.plist */,
+			);
+			path = MyGifsTests;
+			sourceTree = "<group>";
+		};
+		93E234B11FEC0B9F00EF2538 /* MyGifsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93E234B21FEC0B9F00EF2538 /* MyGifsUITests.swift */,
+				93E234B41FEC0B9F00EF2538 /* Info.plist */,
+			);
+			path = MyGifsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93E2348E1FEC0B9F00EF2538 /* MyGifs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E234B71FEC0B9F00EF2538 /* Build configuration list for PBXNativeTarget "MyGifs" */;
+			buildPhases = (
+				93E2348B1FEC0B9F00EF2538 /* Sources */,
+				93E2348C1FEC0B9F00EF2538 /* Frameworks */,
+				93E2348D1FEC0B9F00EF2538 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyGifs;
+			productName = MyGifs;
+			productReference = 93E2348F1FEC0B9F00EF2538 /* MyGifs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93E234A21FEC0B9F00EF2538 /* MyGifsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E234BA1FEC0B9F00EF2538 /* Build configuration list for PBXNativeTarget "MyGifsTests" */;
+			buildPhases = (
+				93E2349F1FEC0B9F00EF2538 /* Sources */,
+				93E234A01FEC0B9F00EF2538 /* Frameworks */,
+				93E234A11FEC0B9F00EF2538 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E234A51FEC0B9F00EF2538 /* PBXTargetDependency */,
+			);
+			name = MyGifsTests;
+			productName = MyGifsTests;
+			productReference = 93E234A31FEC0B9F00EF2538 /* MyGifsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93E234AD1FEC0B9F00EF2538 /* MyGifsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E234BD1FEC0B9F00EF2538 /* Build configuration list for PBXNativeTarget "MyGifsUITests" */;
+			buildPhases = (
+				93E234AA1FEC0B9F00EF2538 /* Sources */,
+				93E234AB1FEC0B9F00EF2538 /* Frameworks */,
+				93E234AC1FEC0B9F00EF2538 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E234B01FEC0B9F00EF2538 /* PBXTargetDependency */,
+			);
+			name = MyGifsUITests;
+			productName = MyGifsUITests;
+			productReference = 93E234AE1FEC0B9F00EF2538 /* MyGifsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93E234871FEC0B9F00EF2538 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Aaron Rosenberger";
+				TargetAttributes = {
+					93E2348E1FEC0B9F00EF2538 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					93E234A21FEC0B9F00EF2538 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 93E2348E1FEC0B9F00EF2538;
+					};
+					93E234AD1FEC0B9F00EF2538 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 93E2348E1FEC0B9F00EF2538;
+					};
+				};
+			};
+			buildConfigurationList = 93E2348A1FEC0B9F00EF2538 /* Build configuration list for PBXProject "MyGifs" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93E234861FEC0B9F00EF2538;
+			productRefGroup = 93E234901FEC0B9F00EF2538 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93E2348E1FEC0B9F00EF2538 /* MyGifs */,
+				93E234A21FEC0B9F00EF2538 /* MyGifsTests */,
+				93E234AD1FEC0B9F00EF2538 /* MyGifsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93E2348D1FEC0B9F00EF2538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9363CAAD1FEEE54B00C12FF8 /* GfycatRawData.json in Resources */,
+				9363CA541FEC164300C12FF8 /* Main.storyboard in Resources */,
+				93E2349A1FEC0B9F00EF2538 /* Assets.xcassets in Resources */,
+				9363CA521FEC164300C12FF8 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E234A11FEC0B9F00EF2538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E234AC1FEC0B9F00EF2538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93E2348B1FEC0B9F00EF2538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9363CA591FEC21A000C12FF8 /* GfyModel.swift in Sources */,
+				9363CA4D1FEC164300C12FF8 /* DataController.swift in Sources */,
+				9363CA531FEC164300C12FF8 /* PlayerView.swift in Sources */,
+				9363CA511FEC164300C12FF8 /* MyGifsCollectionVC.swift in Sources */,
+				9363CA4B1FEC164300C12FF8 /* GifCollectionViewCell.swift in Sources */,
+				9363CA4E1FEC164300C12FF8 /* GifPlayer.swift in Sources */,
+				93E234931FEC0B9F00EF2538 /* AppDelegate.swift in Sources */,
+				9363CA491FEC164300C12FF8 /* GfycatApiController.swift in Sources */,
+				9363CAA71FEDB25D00C12FF8 /* CacheController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E2349F1FEC0B9F00EF2538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E234A81FEC0B9F00EF2538 /* CacheControllerTests.swift in Sources */,
+				9363CAA91FEE9F7600C12FF8 /* DataControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E234AA1FEC0B9F00EF2538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E234B31FEC0B9F00EF2538 /* MyGifsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93E234A51FEC0B9F00EF2538 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93E2348E1FEC0B9F00EF2538 /* MyGifs */;
+			targetProxy = 93E234A41FEC0B9F00EF2538 /* PBXContainerItemProxy */;
+		};
+		93E234B01FEC0B9F00EF2538 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93E2348E1FEC0B9F00EF2538 /* MyGifs */;
+			targetProxy = 93E234AF1FEC0B9F00EF2538 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		93E234B51FEC0B9F00EF2538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93E234B61FEC0B9F00EF2538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93E234B81FEC0B9F00EF2538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93E234B91FEC0B9F00EF2538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93E234BB1FEC0B9F00EF2538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGifs.app/MyGifs";
+			};
+			name = Debug;
+		};
+		93E234BC1FEC0B9F00EF2538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGifs.app/MyGifs";
+			};
+			name = Release;
+		};
+		93E234BE1FEC0B9F00EF2538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyGifs;
+			};
+			name = Debug;
+		};
+		93E234BF1FEC0B9F00EF2538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyGifs;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93E2348A1FEC0B9F00EF2538 /* Build configuration list for PBXProject "MyGifs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E234B51FEC0B9F00EF2538 /* Debug */,
+				93E234B61FEC0B9F00EF2538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E234B71FEC0B9F00EF2538 /* Build configuration list for PBXNativeTarget "MyGifs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E234B81FEC0B9F00EF2538 /* Debug */,
+				93E234B91FEC0B9F00EF2538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E234BA1FEC0B9F00EF2538 /* Build configuration list for PBXNativeTarget "MyGifsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E234BB1FEC0B9F00EF2538 /* Debug */,
+				93E234BC1FEC0B9F00EF2538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E234BD1FEC0B9F00EF2538 /* Build configuration list for PBXNativeTarget "MyGifsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E234BE1FEC0B9F00EF2538 /* Debug */,
+				93E234BF1FEC0B9F00EF2538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93E234871FEC0B9F00EF2538 /* Project object */;
+}
