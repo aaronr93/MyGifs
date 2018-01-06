@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // ASDK Home Feed viewController & navController
+        let GfyNavController = UINavigationController(rootViewController: GfyCollectionNodeController())
+        GfyNavController.tabBarItem.title = "Gfycats"
+        
+        // UIWindow
+        window = UIWindow()
+        window?.backgroundColor = .white
+        window?.rootViewController = GfyNavController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

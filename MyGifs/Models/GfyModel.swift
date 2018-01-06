@@ -7,27 +7,43 @@
 //
 
 import Foundation
+import AsyncDisplayKit
 
-struct Gfy: Decodable {
+struct Gfy: Gif {
+    var thumbnailAsset: AVAsset
+    var thumbnailUrl: URL
+    var imageUrl: URL
+    var originalUrl: URL
     var title: String?
-    var miniUrl: URL?
-    var mobileUrl: URL?
-    var thumb360Url: URL?
-    var mp4Url: URL?
-    var width: Int?
-    var height: Int?
-    var tags: [String]?
+    var width: Int
+    var height: Int
+    
+    init(model: GfyModel) {
+        if let miniUrl = model.miniUrl {
+            self.thumbnailUrl = miniUrl
+        } else if let mobileUrl = model.mobileUrl {
+            self.thumbnailUrl = mobileUrl
+        } else {
+            self.thumbnailUrl = model.mp4Url
+        }
+        self.imageUrl = model.miniPosterUrl
+        self.originalUrl = model.mp4Url
+        self.title = model.title
+        self.width = model.width
+        self.height = model.height
+        self.thumbnailAsset = AVAsset(url: thumbnailUrl)
+    }
+    
+    func size() -> CGSize {
+        return CGSize(width: width, height: height)
+    }
 }
 extension Gfy: Hashable {
     var hashValue: Int {
-        if let mp4Url = mp4Url {
-            return mp4Url.hashValue
-        } else {
-            return 0
-        }
+        return originalUrl.hashValue
     }
     static func ==(lhs: Gfy, rhs: Gfy) -> Bool {
-        if (lhs.mp4Url == rhs.mp4Url) {
+        if (lhs.originalUrl == rhs.originalUrl) {
             return true
         } else {
             return false
@@ -35,14 +51,15 @@ extension Gfy: Hashable {
     }
 }
 
-struct Tag: Decodable {
-    var tag: String?
-    var gfycats: [Gfy]?
-}
-
-struct UserFeed: Decodable {
-    var gfycats: [Gfy]?
-    var cursor: String?
+struct GfyModel: Decodable {
+    var title: String?
+    var miniUrl: URL?
+    var mobileUrl: URL?
+    var mp4Url: URL
+    var miniPosterUrl: URL
+    var width: Int
+    var height: Int
+    var tags: [String]?
 }
 
 /*
