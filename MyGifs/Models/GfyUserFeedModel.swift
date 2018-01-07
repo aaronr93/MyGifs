@@ -52,13 +52,18 @@ final class GfyUserFeed: GfyFeed {
     }
     
     private func fetchNextPage(replaceData: Bool, numberOfAdditionsCompletion: @escaping (Int, NetworkingErrors?) -> ()) {
-        if totalPagesSoFar > 0, cursor == nil {
+        if totalPagesSoFar > 0, cursor == "" {
             DispatchQueue.main.async {
                 return numberOfAdditionsCompletion(0, .customError("No pages left to parse"))
             }
         }
         
-        WebService().load(resource: parseGfyUserFeed(withURL: url)) { [unowned self] result in
+        var urlWithCursor = self.url
+        if let cursorValue = self.cursor {
+            urlWithCursor = self.url.addQueryParams([URLQueryItem.init(name: Const.Gfy.cursorKey, value: cursorValue)])
+        }
+        
+        WebService().load(resource: parseGfyUserFeed(withURL: urlWithCursor)) { [unowned self] result in
             DispatchQueue.global().async {
                 switch result {
                 case .success(let userFeed):

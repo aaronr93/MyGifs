@@ -15,4 +15,25 @@ extension URL {
         return URL(string: urlString)!
     }
     
+    func addQueryParams(_ params: Dictionary<String, String>) -> URL {
+        guard !params.isEmpty else { return self }
+        let queryItems: [URLQueryItem] = params.map { return URLQueryItem(name: $0.key, value: $0.value) }
+        return self.addQueryParams(queryItems)
+    }
+    
+    func addQueryParams(_ params: [URLQueryItem]) -> URL {
+        guard !params.isEmpty else { return self }
+        let urlComponents = NSURLComponents.init(url: self, resolvingAgainstBaseURL: false)
+        guard urlComponents != nil else { return self }
+        if urlComponents?.queryItems == nil {
+            urlComponents?.queryItems = [];
+        }
+        urlComponents?.queryItems?.append(contentsOf: params)
+        if let newUrl = urlComponents?.url {
+            return newUrl
+        } else {
+            return self
+        }
+    }
+    
 }

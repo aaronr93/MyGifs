@@ -17,9 +17,8 @@ fileprivate let sectionInsets = UIEdgeInsets(top: 30.0, left: 10.0, bottom: 30.0
 
 class GfyCollectionNodeController: ASViewController<ASCollectionNode>, MosaicCollectionViewLayoutDelegate {
     
-    //let dataController = DataController()
     var i = 0
-    let layout = UICollectionViewFlowLayout() //MosaicCollectionViewLayout()
+    let layout = UICollectionViewFlowLayout() // MosaicCollectionViewLayout()
     let collectionNode: ASCollectionNode
     var gfyFeed: GfyFeed
     var feedModelType: FeedModelType = .feedModelTypeGfyUser
@@ -90,13 +89,6 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode>, MosaicCol
                 break
             }
         }
-    }
-    
-    func finishedFetchingNewBatch(additions: Int) {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-        }
-        self.addRowsIntoTableNode(newGfyCount: additions)
     }
     
     func addRowsIntoTableNode(newGfyCount newGfys: Int) {

@@ -15,7 +15,7 @@ struct Const {
     struct Gfy {
         static private let apiVersion = "/v1"
         static private let testApiVersion = "/v1test"
-        static private let cursorKey = "cursor"
+        static let cursorKey = "cursor"
         static let baseURLString = "https://api.gfycat.com" +
             (Const.debugMode ? Const.Gfy.testApiVersion : Const.Gfy.apiVersion)
         static let userFeed = "/users"
