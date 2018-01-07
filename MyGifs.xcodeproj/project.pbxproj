@@ -19,13 +19,12 @@
 		9363CA511FEC164300C12FF8 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA441FEC164300C12FF8 /* GfyCollectionNodeController.swift */; };
 		9363CA521FEC164300C12FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */; };
 		9363CA591FEC21A000C12FF8 /* GfyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA581FEC21A000C12FF8 /* GfyModel.swift */; };
-		9363CAA91FEE9F7600C12FF8 /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CAA81FEE9F7500C12FF8 /* DataControllerTests.swift */; };
 		9363CAAD1FEEE54B00C12FF8 /* GfycatRawData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */; };
 		93E234931FEC0B9F00EF2538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234921FEC0B9F00EF2538 /* AppDelegate.swift */; };
 		93E2349A1FEC0B9F00EF2538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E234991FEC0B9F00EF2538 /* Assets.xcassets */; };
-		93E234A81FEC0B9F00EF2538 /* CacheControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234A71FEC0B9F00EF2538 /* CacheControllerTests.swift */; };
 		93E234B31FEC0B9F00EF2538 /* MyGifsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234B21FEC0B9F00EF2538 /* MyGifsUITests.swift */; };
 		93F712971FFA801400151902 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F712961FFA801400151902 /* WebService.swift */; };
+		93F712C92002578900151902 /* MyGifsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F712C82002578900151902 /* MyGifsUnitTests.swift */; };
 		E4D2DA4F3C2ABD09271EB857 /* Pods_MyGifsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923AC60B73B903CD5B4356A6 /* Pods_MyGifsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,19 +62,18 @@
 		9363CA441FEC164300C12FF8 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
 		9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9363CA581FEC21A000C12FF8 /* GfyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfyModel.swift; sourceTree = "<group>"; };
-		9363CAA81FEE9F7500C12FF8 /* DataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerTests.swift; sourceTree = "<group>"; };
 		9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GfycatRawData.json; sourceTree = "<group>"; };
 		93E2348F1FEC0B9F00EF2538 /* MyGifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E234921FEC0B9F00EF2538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E234991FEC0B9F00EF2538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93E2349E1FEC0B9F00EF2538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93E234A31FEC0B9F00EF2538 /* MyGifsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGifsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93E234A71FEC0B9F00EF2538 /* CacheControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheControllerTests.swift; sourceTree = "<group>"; };
 		93E234A91FEC0B9F00EF2538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93E234AE1FEC0B9F00EF2538 /* MyGifsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGifsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E234B21FEC0B9F00EF2538 /* MyGifsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGifsUITests.swift; sourceTree = "<group>"; };
 		93E234B41FEC0B9F00EF2538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93F712961FFA801400151902 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		93F712C82002578900151902 /* MyGifsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGifsUnitTests.swift; sourceTree = "<group>"; };
 		952DC6E54D5CFAD4D7A66247 /* Pods-MyGifsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGifsTests/Pods-MyGifsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9845AB25A86B63529035E106 /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
 		EA5F73C54E62B4D036BC7ABE /* Pods-MyGifsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGifsTests/Pods-MyGifsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,8 +209,7 @@
 		93E234A61FEC0B9F00EF2538 /* MyGifsTests */ = {
 			isa = PBXGroup;
 			children = (
-				9363CAA81FEE9F7500C12FF8 /* DataControllerTests.swift */,
-				93E234A71FEC0B9F00EF2538 /* CacheControllerTests.swift */,
+				93F712C82002578900151902 /* MyGifsUnitTests.swift */,
 				93E234A91FEC0B9F00EF2538 /* Info.plist */,
 			);
 			path = MyGifsTests;
@@ -308,6 +305,7 @@
 					};
 					93E234A21FEC0B9F00EF2538 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 93E2348E1FEC0B9F00EF2538;
 					};
@@ -544,8 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93E234A81FEC0B9F00EF2538 /* CacheControllerTests.swift in Sources */,
-				9363CAA91FEE9F7600C12FF8 /* DataControllerTests.swift in Sources */,
+				93F712C92002578900151902 /* MyGifsUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,12 +718,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WBGRJV88Z;
 				INFOPLIST_FILE = MyGifsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGifs.app/MyGifs";
@@ -739,6 +738,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WBGRJV88Z;
 				INFOPLIST_FILE = MyGifsTests/Info.plist;
