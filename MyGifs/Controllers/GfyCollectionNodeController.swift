@@ -8,25 +8,16 @@
 
 import AsyncDisplayKit
 
-fileprivate let gfyReuseIdentifier = "gfy"
-fileprivate let loopSafety = 100
-fileprivate let kMaxGifs = 20
-
-fileprivate let itemsPerRow: CGFloat = 2.0
-fileprivate let sectionInsets = UIEdgeInsets(top: 30.0, left: 10.0, bottom: 30.0, right: 10.0)
-
-class GfyCollectionNodeController: ASViewController<ASCollectionNode>, MosaicCollectionViewLayoutDelegate {
+class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     
-    var i = 0
-    let layout = UICollectionViewFlowLayout() // MosaicCollectionViewLayout()
+    let layout: UICollectionViewLayout
+    var activityIndicator: UIActivityIndicatorView!
     let collectionNode: ASCollectionNode
     var gfyFeed: GfyFeed
     var feedModelType: FeedModelType = .feedModelTypeGfyUser
-    var activityIndicator: UIActivityIndicatorView!
     
     init() {
-//        layout.minimumInteritemSpacing = 1
-//        layout.minimumLineSpacing = 1
+        layout = UICollectionViewFlowLayout()
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
         switch feedModelType {
         case .feedModelTypeGfyUser:
@@ -37,7 +28,6 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode>, MosaicCol
             break
         }
         super.init(node: collectionNode)
-//        layout.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,7 +44,6 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode>, MosaicCol
         navigationController?.hidesBarsOnSwipe = true
     }
     
-    // MARK: Helper functions
     func setupActivityIndicator() {
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         self.activityIndicator = activityIndicator
@@ -64,46 +53,10 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode>, MosaicCol
         activityIndicator.frame = refreshRect
         self.node.view.addSubview(activityIndicator)
     }
-    
-    var screenSizeForWidth: CGSize = {
-        let screenRect = UIScreen.main.bounds
-        let screenScale = UIScreen.main.scale
-        return CGSize(width: screenRect.size.width * screenScale, height: screenRect.size.width * screenScale)
-    }()
-    
-    func fetchNewBatchWithContext(_ context: ASBatchContext?) {
-        DispatchQueue.main.async {
-            self.activityIndicator.startAnimating()
-        }
-        gfyFeed.updateNewBatch { additions, connectionStatus in
-            switch connectionStatus {
-            case .connected:
-                self.activityIndicator.stopAnimating()
-                self.addRowsIntoTableNode(newGfyCount: additions)
-                context?.completeBatchFetching(true)
-            case .noConnection:
-                self.activityIndicator.stopAnimating()
-                if context != nil {
-                    context!.completeBatchFetching(true)
-                }
-                break
-            }
-        }
-    }
-    
-    func addRowsIntoTableNode(newGfyCount newGfys: Int) {
-        let indexRange = (gfyFeed.numberOfItemsInFeed - newGfys..<gfyFeed.numberOfItemsInFeed)
-        let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
-        node.insertItems(at: indexPaths)
-    }
-    
-    internal func collectionView(_ collectionView: UICollectionView, layout: MosaicCollectionViewLayout, originalItemSizeAtIndexPath: IndexPath) -> CGSize {
-        return gfyFeed.gfys[originalItemSizeAtIndexPath.item].size()
-    }
 }
 
 extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDelegate {
-    // MARK: ASCollectionDataSource
+    // MARK: ASCollectionDataSource, ASCollectionDelegate
     
     func shouldBatchFetchForCollectionNode(collectionNode: ASCollectionNode) -> Bool { return true }
     func numberOfSections(in collectionNode: ASCollectionNode) -> Int { return 1 }
@@ -121,5 +74,27 @@ extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDeleg
     
     func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
         fetchNewBatchWithContext(context)
+    }
+    
+    func fetchNewBatchWithContext(_ context: ASBatchContext?) {
+        DispatchQueue.main.async { self.activityIndicator.startAnimating() }
+        gfyFeed.updateNewBatch { additions, connectionStatus in
+            switch connectionStatus {
+            case .connected:
+                self.activityIndicator.stopAnimating()
+                self.addRowsIntoTableNode(newGfyCount: additions)
+                context?.completeBatchFetching(true)
+            case .noConnection:
+                self.activityIndicator.stopAnimating()
+                context?.completeBatchFetching(true)
+                break
+            }
+        }
+    }
+    
+    func addRowsIntoTableNode(newGfyCount newGfys: Int) {
+        let indexRange = (gfyFeed.numberOfItemsInFeed - newGfys..<gfyFeed.numberOfItemsInFeed)
+        let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
+        node.insertItems(at: indexPaths)
     }
 }

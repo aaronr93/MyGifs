@@ -2,6 +2,7 @@
 //  WebService.swift
 //  MyGifs
 //
+//  Modified by Aaron Rosenberger (https://github.com/aaronr93)
 //  Created by Calum Harris on 06/01/2017.
 //
 //  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.

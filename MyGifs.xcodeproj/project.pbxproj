@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2F089DEE4C0217110518F8E0 /* Pods_MyGifsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CD444D37284E33D1AFC79A /* Pods_MyGifsTests.framework */; };
 		633FF70FE6F9F748F1BDA4A3 /* Pods_MyGifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0443C427B67FBC29006EB44E /* Pods_MyGifs.framework */; };
-		93262AA71FF3E4E10055C2A8 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93262AA61FF3E4E10055C2A8 /* MosaicCollectionViewLayout.swift */; };
 		93262AA91FF7D9980055C2A8 /* GfyUserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93262AA81FF7D9980055C2A8 /* GfyUserFeedModel.swift */; };
 		93262AAB1FF7D9C30055C2A8 /* GfyTagFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93262AAA1FF7D9C30055C2A8 /* GfyTagFeedModel.swift */; };
 		93262AAF1FF931B70055C2A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93262AAE1FF931B70055C2A8 /* Constants.swift */; };
@@ -19,7 +18,6 @@
 		9363CA511FEC164300C12FF8 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA441FEC164300C12FF8 /* GfyCollectionNodeController.swift */; };
 		9363CA521FEC164300C12FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */; };
 		9363CA591FEC21A000C12FF8 /* GfyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363CA581FEC21A000C12FF8 /* GfyModel.swift */; };
-		9363CAAD1FEEE54B00C12FF8 /* GfycatRawData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */; };
 		93E234931FEC0B9F00EF2538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234921FEC0B9F00EF2538 /* AppDelegate.swift */; };
 		93E2349A1FEC0B9F00EF2538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E234991FEC0B9F00EF2538 /* Assets.xcassets */; };
 		93E234B31FEC0B9F00EF2538 /* MyGifsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E234B21FEC0B9F00EF2538 /* MyGifsUITests.swift */; };
@@ -52,7 +50,6 @@
 		374478EF13EE6384E66B46F5 /* Pods-MyGifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.debug.xcconfig"; sourceTree = "<group>"; };
 		58CD444D37284E33D1AFC79A /* Pods_MyGifsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		923AC60B73B903CD5B4356A6 /* Pods_MyGifsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93262AA61FF3E4E10055C2A8 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
 		93262AA81FF7D9980055C2A8 /* GfyUserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfyUserFeedModel.swift; sourceTree = "<group>"; };
 		93262AAA1FF7D9C30055C2A8 /* GfyTagFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfyTagFeedModel.swift; sourceTree = "<group>"; };
 		93262AAE1FF931B70055C2A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -62,7 +59,6 @@
 		9363CA441FEC164300C12FF8 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
 		9363CA451FEC164300C12FF8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9363CA581FEC21A000C12FF8 /* GfyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfyModel.swift; sourceTree = "<group>"; };
-		9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GfycatRawData.json; sourceTree = "<group>"; };
 		93E2348F1FEC0B9F00EF2538 /* MyGifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E234921FEC0B9F00EF2538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E234991FEC0B9F00EF2538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				9363CA441FEC164300C12FF8 /* GfyCollectionNodeController.swift */,
-				93262AA61FF3E4E10055C2A8 /* MosaicCollectionViewLayout.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,7 +187,6 @@
 		93E234911FEC0B9F00EF2538 /* MyGifs */ = {
 			isa = PBXGroup;
 			children = (
-				9363CAAC1FEEE54B00C12FF8 /* GfycatRawData.json */,
 				93E2349E1FEC0B9F00EF2538 /* Info.plist */,
 				93E234991FEC0B9F00EF2538 /* Assets.xcassets */,
 				93E234921FEC0B9F00EF2538 /* AppDelegate.swift */,
@@ -341,7 +335,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9363CAAD1FEEE54B00C12FF8 /* GfycatRawData.json in Resources */,
 				93E2349A1FEC0B9F00EF2538 /* Assets.xcassets in Resources */,
 				9363CA521FEC164300C12FF8 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -526,7 +519,6 @@
 			files = (
 				93F712971FFA801400151902 /* WebService.swift in Sources */,
 				9363CA591FEC21A000C12FF8 /* GfyModel.swift in Sources */,
-				93262AA71FF3E4E10055C2A8 /* MosaicCollectionViewLayout.swift in Sources */,
 				93262AB51FF935A20055C2A8 /* URL.swift in Sources */,
 				9363CA511FEC164300C12FF8 /* GfyCollectionNodeController.swift in Sources */,
 				9363CA4B1FEC164300C12FF8 /* GifCollectionNode.swift in Sources */,

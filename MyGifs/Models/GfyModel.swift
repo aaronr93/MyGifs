@@ -95,7 +95,6 @@ struct GfyModel: Decodable {
  var views: Int = 0
  var userName: String = ""
  var gfyName: String = ""
- var title: String = ""
  var subreddit: String = ""
  var redditId: String = ""
  var redditIdText: String = ""
