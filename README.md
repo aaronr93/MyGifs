@@ -10,4 +10,4 @@ iOS application for curating your own gif sources.
 1. Tap a gif to copy its URL to they clipboard
 2. Send gifs via iMessage with iMessages App and iMessages Extension (requires restructuring the existing logic into a Framework)
 3. View a user's public albums of gifs on Imgur
-
+4. View gifs from specified Tags in Gfycat
