@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		930DD6A2200AF542000BE025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD6A1200AF542000BE025 /* AppDelegate.swift */; };
+		930DD6A9200AF542000BE025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930DD6A8200AF542000BE025 /* Assets.xcassets */; };
+		930DD6AC200AF542000BE025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930DD6AA200AF542000BE025 /* LaunchScreen.storyboard */; };
+		930DD711200AF616000BE025 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD70F200AF616000BE025 /* GfyCollectionNodeController.swift */; };
+		930DD712200AF616000BE025 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD710200AF616000BE025 /* GifCollectionNode.swift */; };
+		930DD71A200AF831000BE025 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930DD713200AF7A6000BE025 /* MyGifsKit.framework */; };
+		930DD71B200AF831000BE025 /* MyGifsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 930DD713200AF7A6000BE025 /* MyGifsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E05D2B389B712544BD92B404 /* Pods_MyGifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A64D176F4D99D5CA3E84BAB /* Pods_MyGifs.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		930DD71C200AF831000BE025 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				930DD71B200AF831000BE025 /* MyGifsKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A64D176F4D99D5CA3E84BAB /* Pods_MyGifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65185F55276C3387B768DD94 /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
+		6909FA91FD0AB5D05098EF6C /* Pods-MyGifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.debug.xcconfig"; sourceTree = "<group>"; };
+		930DD69E200AF542000BE025 /* MyGifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		930DD6A1200AF542000BE025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		930DD6A8200AF542000BE025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		930DD6AB200AF542000BE025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		930DD6AD200AF542000BE025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		930DD70F200AF616000BE025 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
+		930DD710200AF616000BE025 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
+		930DD713200AF7A6000BE025 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		930DD69B200AF542000BE025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930DD71A200AF831000BE025 /* MyGifsKit.framework in Frameworks */,
+				E05D2B389B712544BD92B404 /* Pods_MyGifs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		358B3A185D6C8A11C627E606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A64D176F4D99D5CA3E84BAB /* Pods_MyGifs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8507D490FA37B1278F27527E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6909FA91FD0AB5D05098EF6C /* Pods-MyGifs.debug.xcconfig */,
+				65185F55276C3387B768DD94 /* Pods-MyGifs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		930DD695200AF542000BE025 = {
+			isa = PBXGroup;
+			children = (
+				930DD713200AF7A6000BE025 /* MyGifsKit.framework */,
+				930DD6A0200AF542000BE025 /* MyGifs */,
+				930DD69F200AF542000BE025 /* Products */,
+				8507D490FA37B1278F27527E /* Pods */,
+				358B3A185D6C8A11C627E606 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		930DD69F200AF542000BE025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				930DD69E200AF542000BE025 /* MyGifs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		930DD6A0200AF542000BE025 /* MyGifs */ = {
+			isa = PBXGroup;
+			children = (
+				930DD70F200AF616000BE025 /* GfyCollectionNodeController.swift */,
+				930DD710200AF616000BE025 /* GifCollectionNode.swift */,
+				930DD6A1200AF542000BE025 /* AppDelegate.swift */,
+				930DD6A8200AF542000BE025 /* Assets.xcassets */,
+				930DD6AA200AF542000BE025 /* LaunchScreen.storyboard */,
+				930DD6AD200AF542000BE025 /* Info.plist */,
+			);
+			path = MyGifs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		930DD69D200AF542000BE025 /* MyGifs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930DD6B0200AF542000BE025 /* Build configuration list for PBXNativeTarget "MyGifs" */;
+			buildPhases = (
+				4F8E100752441B4D2571315D /* [CP] Check Pods Manifest.lock */,
+				930DD69A200AF542000BE025 /* Sources */,
+				930DD69B200AF542000BE025 /* Frameworks */,
+				930DD69C200AF542000BE025 /* Resources */,
+				3EAE806529A6CB9FB713AB6A /* [CP] Embed Pods Frameworks */,
+				A6AE3360F50096C5209E3AB8 /* [CP] Copy Pods Resources */,
+				930DD71C200AF831000BE025 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyGifs;
+			productName = MyGifs;
+			productReference = 930DD69E200AF542000BE025 /* MyGifs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		930DD696200AF542000BE025 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Aaron Rosenberger";
+				TargetAttributes = {
+					930DD69D200AF542000BE025 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 930DD699200AF542000BE025 /* Build configuration list for PBXProject "MyGifs" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 930DD695200AF542000BE025;
+			productRefGroup = 930DD69F200AF542000BE025 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				930DD69D200AF542000BE025 /* MyGifs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		930DD69C200AF542000BE025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930DD6AC200AF542000BE025 /* LaunchScreen.storyboard in Resources */,
+				930DD6A9200AF542000BE025 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EAE806529A6CB9FB713AB6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F8E100752441B4D2571315D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyGifs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6AE3360F50096C5209E3AB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		930DD69A200AF542000BE025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930DD711200AF616000BE025 /* GfyCollectionNodeController.swift in Sources */,
+				930DD712200AF616000BE025 /* GifCollectionNode.swift in Sources */,
+				930DD6A2200AF542000BE025 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		930DD6AA200AF542000BE025 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				930DD6AB200AF542000BE025 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		930DD6AE200AF542000BE025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		930DD6AF200AF542000BE025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		930DD6B1200AF542000BE025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6909FA91FD0AB5D05098EF6C /* Pods-MyGifs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		930DD6B2200AF542000BE025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65185F55276C3387B768DD94 /* Pods-MyGifs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WBGRJV88Z;
+				INFOPLIST_FILE = MyGifs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		930DD699200AF542000BE025 /* Build configuration list for PBXProject "MyGifs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930DD6AE200AF542000BE025 /* Debug */,
+				930DD6AF200AF542000BE025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		930DD6B0200AF542000BE025 /* Build configuration list for PBXNativeTarget "MyGifs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930DD6B1200AF542000BE025 /* Debug */,
+				930DD6B2200AF542000BE025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 930DD696200AF542000BE025 /* Project object */;
+}

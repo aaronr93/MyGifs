@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MyGifs.xcodeproj">
+      location = "group:MyGifs-iMessage/MyGifs-iMessage.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:MyGifsKit/MyGifsKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyGifs/MyGifs.xcodeproj">
    </FileRef>
 </Workspace>
