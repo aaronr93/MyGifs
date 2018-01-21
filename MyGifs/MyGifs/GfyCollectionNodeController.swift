@@ -11,14 +11,15 @@ import MyGifsKit
 
 class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     
-    let username = "aaronr93"
-    let numberOfColumns = 3
-    let layout: MosaicCollectionViewLayout
-    let layoutInspector: MosaicCollectionViewLayoutInspector
-    var activityIndicator: UIActivityIndicatorView!
-    let collectionNode: ASCollectionNode
-    var gfyFeed: GfyFeed
+    var username = "aaronr93"
+    var numberOfColumns = 2
     var feedModelType: FeedModelType = .feedModelTypeGfyUser
+    private var gfyFeed: GfyFeed
+    
+    private let layout: MosaicCollectionViewLayout
+    private let layoutInspector: MosaicCollectionViewLayoutInspector
+    private var activityIndicator: UIActivityIndicatorView!
+    private let collectionNode: ASCollectionNode
     
     init() {
         layout = MosaicCollectionViewLayout()

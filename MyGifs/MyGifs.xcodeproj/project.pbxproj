@@ -100,12 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				930DD70F200AF616000BE025 /* GfyCollectionNodeController.swift */,
+				930DD734200D5AAD000BE025 /* MosaicCollectionViewLayout.swift */,
 				930DD710200AF616000BE025 /* GifCollectionNode.swift */,
 				930DD6A1200AF542000BE025 /* AppDelegate.swift */,
 				930DD6A8200AF542000BE025 /* Assets.xcassets */,
 				930DD6AA200AF542000BE025 /* LaunchScreen.storyboard */,
 				930DD6AD200AF542000BE025 /* Info.plist */,
-				930DD734200D5AAD000BE025 /* MosaicCollectionViewLayout.swift */,
 			);
 			path = MyGifs;
 			sourceTree = "<group>";

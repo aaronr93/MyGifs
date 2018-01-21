@@ -13,6 +13,9 @@
 		930DD6F1200AF587000BE025 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD6F0200AF587000BE025 /* MessagesViewController.swift */; };
 		930DD6F4200AF587000BE025 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930DD6F2200AF587000BE025 /* MainInterface.storyboard */; };
 		930DD6F6200AF587000BE025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930DD6F5200AF587000BE025 /* Assets.xcassets */; };
+		9326FC4A201526C600A87134 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FC47201526C600A87134 /* GfyCollectionNodeController.swift */; };
+		9326FC4B201526C600A87134 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FC48201526C600A87134 /* GifCollectionNode.swift */; };
+		9326FC4C201526C600A87134 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FC49201526C600A87134 /* MosaicCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		930DD6F3200AF587000BE025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		930DD6F5200AF587000BE025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930DD6F7200AF587000BE025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9326FC47201526C600A87134 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
+		9326FC48201526C600A87134 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
+		9326FC49201526C600A87134 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 		930DD6EF200AF587000BE025 /* MyGifs-iMessage MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				9326FC47201526C600A87134 /* GfyCollectionNodeController.swift */,
+				9326FC49201526C600A87134 /* MosaicCollectionViewLayout.swift */,
+				9326FC48201526C600A87134 /* GifCollectionNode.swift */,
 				930DD6F0200AF587000BE025 /* MessagesViewController.swift */,
 				930DD6F2200AF587000BE025 /* MainInterface.storyboard */,
 				930DD6F5200AF587000BE025 /* Assets.xcassets */,
@@ -211,6 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9326FC4C201526C600A87134 /* MosaicCollectionViewLayout.swift in Sources */,
+				9326FC4B201526C600A87134 /* GifCollectionNode.swift in Sources */,
+				9326FC4A201526C600A87134 /* GfyCollectionNodeController.swift in Sources */,
 				930DD6F1200AF587000BE025 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

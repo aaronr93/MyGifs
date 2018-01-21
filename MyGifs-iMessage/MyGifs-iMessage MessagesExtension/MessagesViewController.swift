@@ -35,25 +35,10 @@ class MessagesViewController: MSMessagesAppViewController {
         // Remove any child view controllers that have been presented.
         removeAllChildViewControllers()
         
-        // Determine the controller to present.
-        let controller: UIViewController
+        // Determine the controller settings.
+        let controller = instantiateGfyCollectionNodeController()
         if presentationStyle == .compact {
-            // Show a list of previously created ice creams.
-            controller = instantiateIceCreamsController()
-        }
-        else {
-            /*
-             Parse an `IceCream` from the conversation's `selectedMessage` or
-             create a new `IceCream` if there isn't one associated with the message.
-             */
-            let iceCream = IceCream(message: conversation.selectedMessage) ?? IceCream()
-            
-            if iceCream.isComplete {
-                controller = instantiateCompletedIceCreamController(with: iceCream)
-            }
-            else {
-                controller = instantiateBuildIceCreamController(with: iceCream)
-            }
+            controller.numberOfColumns = 1
         }
         
         // Embed the new controller.
@@ -68,14 +53,13 @@ class MessagesViewController: MSMessagesAppViewController {
             controller.view.rightAnchor.constraint(equalTo: view.rightAnchor),
             controller.view.topAnchor.constraint(equalTo: view.topAnchor),
             controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            ])
+        ])
         
         controller.didMove(toParentViewController: self)
     }
     
-    private func instantiateIceCreamsController() -> UIViewController {
-        // Instantiate a `IceCreamsViewController`.
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: IceCreamsViewController.storyboardIdentifier) as? IceCreamsViewController else { fatalError("Unable to instantiate an IceCreamsViewController from the storyboard") }
+    private func instantiateGfyCollectionNodeController() -> UIViewController {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: GfyCollectionNodeController.storyboardIdentifier) as? GfyCollectionNodeController else { fatalError("Unable to instantiate an GfyCollectionNodeController from the storyboard") }
         
         controller.delegate = self
         
