@@ -11,26 +11,35 @@ import MyGifsKit
 
 class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     
-    let layout: UICollectionViewLayout
+    let username = "aaronr93"
+    let numberOfColumns = 3
+    let layout: MosaicCollectionViewLayout
+    let layoutInspector: MosaicCollectionViewLayoutInspector
     var activityIndicator: UIActivityIndicatorView!
     let collectionNode: ASCollectionNode
     var gfyFeed: GfyFeed
     var feedModelType: FeedModelType = .feedModelTypeGfyUser
     
     init() {
-        layout = UICollectionViewFlowLayout()
+        layout = MosaicCollectionViewLayout()
+        layoutInspector = MosaicCollectionViewLayoutInspector()
+        layout.numberOfColumns = numberOfColumns
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
         switch feedModelType {
         case .feedModelTypeGfyUser:
-            gfyFeed = GfyUserFeed(username: "aaronr93")
+            gfyFeed = GfyUserFeed(username: username)
             break
         default:
-            gfyFeed = GfyUserFeed(username: "aaronr93")
+            gfyFeed = GfyUserFeed(username: username)
             break
         }
         super.init(node: collectionNode)
+        layout.delegate = self
+        node.layoutInspector = layoutInspector
+        node.allowsSelection = false
+        node.dataSource = self
+        node.delegate = self
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -38,9 +47,6 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActivityIndicator()
-        node.allowsSelection = false
-        node.dataSource = self
-        node.delegate = self
         node.leadingScreensForBatching = 2.5
         navigationController?.hidesBarsOnSwipe = true
     }
@@ -97,5 +103,11 @@ extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDeleg
         let indexRange = (gfyFeed.numberOfItemsInFeed - newGfys..<gfyFeed.numberOfItemsInFeed)
         let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
         node.insertItems(at: indexPaths)
+    }
+}
+
+extension GfyCollectionNodeController: MosaicCollectionViewLayoutDelegate {
+    internal func collectionView(_ collectionView: UICollectionView, layout: MosaicCollectionViewLayout, originalItemSizeAt indexPath: IndexPath) -> CGSize {
+        return gfyFeed.gfys[indexPath.row].size()
     }
 }

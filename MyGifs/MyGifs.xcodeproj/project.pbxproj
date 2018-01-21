@@ -12,19 +12,20 @@
 		930DD6AC200AF542000BE025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930DD6AA200AF542000BE025 /* LaunchScreen.storyboard */; };
 		930DD711200AF616000BE025 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD70F200AF616000BE025 /* GfyCollectionNodeController.swift */; };
 		930DD712200AF616000BE025 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD710200AF616000BE025 /* GifCollectionNode.swift */; };
-		930DD71A200AF831000BE025 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930DD713200AF7A6000BE025 /* MyGifsKit.framework */; };
-		930DD71B200AF831000BE025 /* MyGifsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 930DD713200AF7A6000BE025 /* MyGifsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		930DD735200D5AAD000BE025 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DD734200D5AAD000BE025 /* MosaicCollectionViewLayout.swift */; };
+		9326FC442015208600A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FC432015208600A87134 /* MyGifsKit.framework */; };
+		9326FC452015208600A87134 /* MyGifsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FC432015208600A87134 /* MyGifsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E05D2B389B712544BD92B404 /* Pods_MyGifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A64D176F4D99D5CA3E84BAB /* Pods_MyGifs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		930DD71C200AF831000BE025 /* Embed Frameworks */ = {
+		9326FC462015208700A87134 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				930DD71B200AF831000BE025 /* MyGifsKit.framework in Embed Frameworks */,
+				9326FC452015208600A87134 /* MyGifsKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +43,8 @@
 		930DD6AD200AF542000BE025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930DD70F200AF616000BE025 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
 		930DD710200AF616000BE025 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
-		930DD713200AF7A6000BE025 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930DD734200D5AAD000BE025 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
+		9326FC432015208600A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930DD71A200AF831000BE025 /* MyGifsKit.framework in Frameworks */,
+				9326FC442015208600A87134 /* MyGifsKit.framework in Frameworks */,
 				E05D2B389B712544BD92B404 /* Pods_MyGifs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +80,7 @@
 		930DD695200AF542000BE025 = {
 			isa = PBXGroup;
 			children = (
-				930DD713200AF7A6000BE025 /* MyGifsKit.framework */,
+				9326FC432015208600A87134 /* MyGifsKit.framework */,
 				930DD6A0200AF542000BE025 /* MyGifs */,
 				930DD69F200AF542000BE025 /* Products */,
 				8507D490FA37B1278F27527E /* Pods */,
@@ -103,6 +105,7 @@
 				930DD6A8200AF542000BE025 /* Assets.xcassets */,
 				930DD6AA200AF542000BE025 /* LaunchScreen.storyboard */,
 				930DD6AD200AF542000BE025 /* Info.plist */,
+				930DD734200D5AAD000BE025 /* MosaicCollectionViewLayout.swift */,
 			);
 			path = MyGifs;
 			sourceTree = "<group>";
@@ -120,7 +123,7 @@
 				930DD69C200AF542000BE025 /* Resources */,
 				3EAE806529A6CB9FB713AB6A /* [CP] Embed Pods Frameworks */,
 				A6AE3360F50096C5209E3AB8 /* [CP] Copy Pods Resources */,
-				930DD71C200AF831000BE025 /* Embed Frameworks */,
+				9326FC462015208700A87134 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930DD735200D5AAD000BE025 /* MosaicCollectionViewLayout.swift in Sources */,
 				930DD711200AF616000BE025 /* GfyCollectionNodeController.swift in Sources */,
 				930DD712200AF616000BE025 /* GifCollectionNode.swift in Sources */,
 				930DD6A2200AF542000BE025 /* AppDelegate.swift in Sources */,

@@ -28,6 +28,66 @@ class MessagesViewController: MSMessagesAppViewController {
         // This will happen when the extension is about to present UI.
         
         // Use this method to configure the extension and restore previously stored state.
+        
+    }
+    
+    private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
+        // Remove any child view controllers that have been presented.
+        removeAllChildViewControllers()
+        
+        // Determine the controller to present.
+        let controller: UIViewController
+        if presentationStyle == .compact {
+            // Show a list of previously created ice creams.
+            controller = instantiateIceCreamsController()
+        }
+        else {
+            /*
+             Parse an `IceCream` from the conversation's `selectedMessage` or
+             create a new `IceCream` if there isn't one associated with the message.
+             */
+            let iceCream = IceCream(message: conversation.selectedMessage) ?? IceCream()
+            
+            if iceCream.isComplete {
+                controller = instantiateCompletedIceCreamController(with: iceCream)
+            }
+            else {
+                controller = instantiateBuildIceCreamController(with: iceCream)
+            }
+        }
+        
+        // Embed the new controller.
+        addChildViewController(controller)
+        
+        controller.view.frame = view.bounds
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controller.view)
+        
+        NSLayoutConstraint.activate([
+            controller.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            controller.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+            controller.view.topAnchor.constraint(equalTo: view.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ])
+        
+        controller.didMove(toParentViewController: self)
+    }
+    
+    private func instantiateIceCreamsController() -> UIViewController {
+        // Instantiate a `IceCreamsViewController`.
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: IceCreamsViewController.storyboardIdentifier) as? IceCreamsViewController else { fatalError("Unable to instantiate an IceCreamsViewController from the storyboard") }
+        
+        controller.delegate = self
+        
+        return controller
+    }
+    
+    private func removeAllChildViewControllers() {
+        for child in childViewControllers {
+            child.willMove(toParentViewController: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParentViewController()
+        }
     }
     
     override func didResignActive(with conversation: MSConversation) {
