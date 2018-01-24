@@ -2,7 +2,7 @@
 //  MyGifsKit.h
 //  MyGifsKit
 //
-//  Created by Aaron Rosenberger on 1/13/18.
+//  Created by Aaron Rosenberger on 1/23/18.
 //  Copyright © 2018 Aaron Rosenberger. All rights reserved.
 //
 
