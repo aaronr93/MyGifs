@@ -21,6 +21,7 @@
 		9326FDCF2018405E00A87134 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDCB2018405D00A87134 /* MosaicCollectionViewLayout.swift */; };
 		9326FE032018417400A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE022018417400A87134 /* MyGifsKit.framework */; };
 		9326FE042018417400A87134 /* MyGifsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE022018417400A87134 /* MyGifsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9326FE092018424E00A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE0A2018424E00A87134 /* MyGifsKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,12 +72,12 @@
 		9326FDBB20183FFD00A87134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9326FDBD20183FFD00A87134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9326FDBF20183FFD00A87134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9326FDC72018405C00A87134 /* MyGifs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyGifs-Bridging-Header.h"; sourceTree = "<group>"; };
 		9326FDC82018405D00A87134 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
 		9326FDC92018405D00A87134 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
 		9326FDCA2018405D00A87134 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9326FDCB2018405D00A87134 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
 		9326FE022018417400A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9326FE0A2018424E00A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB4163ACF04B32968A9C7FC /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9326FE092018424E00A87134 /* MyGifsKit.framework in Frameworks */,
 				9326FDB620183FFD00A87134 /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +143,6 @@
 				9326FDA420183FE100A87134 /* Assets.xcassets */,
 				9326FDA620183FE100A87134 /* LaunchScreen.storyboard */,
 				9326FDA920183FE100A87134 /* Info.plist */,
-				9326FDC72018405C00A87134 /* MyGifs-Bridging-Header.h */,
 			);
 			path = MyGifs;
 			sourceTree = "<group>";
@@ -150,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9326FDB520183FFD00A87134 /* Messages.framework */,
+				9326FE0A2018424E00A87134 /* MyGifsKit.framework */,
 				00F48A243F9AF3EF0AD36A36 /* Pods_MyGifs.framework */,
 			);
 			name = Frameworks;
@@ -500,7 +502,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyGifs/MyGifs-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,7 +521,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rosenberger.MyGifs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyGifs/MyGifs-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

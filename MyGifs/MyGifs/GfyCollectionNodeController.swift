@@ -9,10 +9,15 @@
 import AsyncDisplayKit
 import MyGifsKit
 
+protocol GfyCollectionDelegate: class {
+    func didTap()
+}
+
 class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     
     var username = "aaronr93"
-    var numberOfColumns = 2
+    var numberOfColumns = 1
+    var loadingScreensForBatching: CGFloat = 2.5
     var feedModelType: FeedModelType = .feedModelTypeGfyUser
     private var gfyFeed: GfyFeed
     
@@ -20,6 +25,8 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     private let layoutInspector: MosaicCollectionViewLayoutInspector
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
+    
+    weak var delegate: GfyCollectionDelegate?
     
     init() {
         layout = MosaicCollectionViewLayout()
@@ -40,6 +47,7 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
         node.allowsSelection = false
         node.dataSource = self
         node.delegate = self
+        self.delegate = UIApplication.shared.delegate as! AppDelegate
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -48,8 +56,7 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActivityIndicator()
-        node.leadingScreensForBatching = 2.5
-        navigationController?.hidesBarsOnSwipe = true
+        node.leadingScreensForBatching = loadingScreensForBatching
     }
     
     func setupActivityIndicator() {
@@ -75,7 +82,9 @@ extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDeleg
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let gif = gfyFeed.gfys[indexPath.row]
         let nodeBlock: ASCellNodeBlock = {
-            return GifCollectionNode(gif: gif)
+            let node = GifCollectionNode(gif: gif)
+            node.gifNode.delegate = self
+            return node
         }
         return nodeBlock
     }
@@ -110,5 +119,11 @@ extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDeleg
 extension GfyCollectionNodeController: MosaicCollectionViewLayoutDelegate {
     internal func collectionView(_ collectionView: UICollectionView, layout: MosaicCollectionViewLayout, originalItemSizeAt indexPath: IndexPath) -> CGSize {
         return gfyFeed.gfys[indexPath.row].size()
+    }
+}
+
+extension GfyCollectionNodeController: ASVideoNodeDelegate {
+    func didTap(_ videoNode: ASVideoNode) {
+        delegate?.didTap()
     }
 }

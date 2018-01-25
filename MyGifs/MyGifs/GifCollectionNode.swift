@@ -25,8 +25,7 @@ class GifCollectionNode: ASCellNode {
         DispatchQueue.main.async {
             self.gifNode.asset = gif.thumbnailAsset
         }
-        //self.gifNode.style.maxWidth = ASDimension(unit: ASDimensionUnit.points, value: CGFloat(gif.width / 4))
-        //self.gifNode.style.maxHeight = ASDimension(unit: ASDimensionUnit.points, value: CGFloat(gif.height / 4))
+        self.gifNode.url = gif.imageUrl
         self.automaticallyManagesSubnodes = true
     }
     
