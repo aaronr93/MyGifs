@@ -10,7 +10,12 @@ import AsyncDisplayKit
 import MyGifsKit
 
 protocol GfyCollectionDelegate: class {
-    func didTap()
+    func didTap(_ gifUrlString: String)
+}
+
+public enum FeedModelType {
+    case feedModelTypeGfyUser
+    case feedModelTypeGfyTag
 }
 
 class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
@@ -124,6 +129,8 @@ extension GfyCollectionNodeController: MosaicCollectionViewLayoutDelegate {
 
 extension GfyCollectionNodeController: ASVideoNodeDelegate {
     func didTap(_ videoNode: ASVideoNode) {
-        delegate?.didTap()
+        guard let gifNode = videoNode as? ASGifNode else { return }
+        guard let gifUrlString = gifNode.gifUrlString else { return }
+        delegate?.didTap(gifUrlString)
     }
 }

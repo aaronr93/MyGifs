@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MessageUI
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,16 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.backgroundColor = .white
         return window
     }()
+    
+    var GfyNavController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // ASDK Home Feed viewController & navController
-        let GfyNavController = UINavigationController(rootViewController: GfyCollectionNodeController())
+        GfyNavController = UINavigationController(rootViewController: GfyCollectionNodeController())
         
         // UIWindow
         window?.rootViewController = GfyNavController
         window?.makeKeyAndVisible()
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+        } catch {
+            print("Error changing audio session settings")
+        }
         
         return true
     }
@@ -55,8 +65,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: GfyCollectionDelegate {
-    func didTap() {
-        print("TAP!")
+    func didTap(_ gifUrlString: String) {
+        sendTextMsg(gifUrlString)
+    }
+}
+
+extension AppDelegate: MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController,
+                                      didFinishWith result: MessageComposeResult) {
+        // Check the result or perform other tasks.
+        
+        // Dismiss the message compose view controller.
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func sendTextMsg(_ message: String) {
+        if MFMessageComposeViewController.canSendText() {
+            let composeVC = MFMessageComposeViewController()
+            composeVC.messageComposeDelegate = self
+            
+            // Configure the fields of the interface.
+            composeVC.body = message
+            
+            // Present the view controller modally.
+            self.GfyNavController?.present(composeVC, animated: true, completion: nil)
+        }
     }
 }
 

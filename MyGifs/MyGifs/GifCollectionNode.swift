@@ -12,8 +12,8 @@ import MyGifsKit
 
 class GifCollectionNode: ASCellNode {
     
-    let gifNode: ASVideoNode = {
-        let videoNode = ASVideoNode()
+    let gifNode: ASGifNode = {
+        let videoNode = ASGifNode()
         videoNode.contentMode = .scaleAspectFill
         videoNode.shouldAutorepeat = true
         videoNode.shouldAutoplay = true
@@ -23,9 +23,12 @@ class GifCollectionNode: ASCellNode {
     init(gif: Gfy) {
         super.init()
         DispatchQueue.main.async {
-            self.gifNode.asset = gif.thumbnailAsset
+            self.gifNode.asset = AVAsset(url: gif.smallUrl)
         }
         self.gifNode.url = gif.imageUrl
+        
+        
+        self.gifNode.gifUrlString = gif.fullResUrl.absoluteString
         self.automaticallyManagesSubnodes = true
     }
     
@@ -33,4 +36,8 @@ class GifCollectionNode: ASCellNode {
         return ASRatioLayoutSpec(ratio: 9/16, child: gifNode)
     }
     
+}
+
+class ASGifNode: ASVideoNode {
+    public var gifUrlString: String?
 }

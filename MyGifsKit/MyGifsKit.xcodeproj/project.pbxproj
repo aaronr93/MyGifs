@@ -13,7 +13,7 @@
 		9326FDFB201840B100A87134 /* GfyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF4201840B000A87134 /* GfyModel.swift */; };
 		9326FDFC201840B100A87134 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF5201840B000A87134 /* URL.swift */; };
 		9326FDFD201840B100A87134 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF6201840B000A87134 /* WebService.swift */; };
-		9326FDFE201840B100A87134 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF7201840B000A87134 /* Feed.swift */; };
+		9326FDFE201840B100A87134 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF7201840B000A87134 /* Protocols.swift */; };
 		9326FDFF201840B100A87134 /* GfyTagFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF8201840B000A87134 /* GfyTagFeedModel.swift */; };
 		9326FE00201840B100A87134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF9201840B000A87134 /* Constants.swift */; };
 		9326FE01201840B100A87134 /* GfyUserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDFA201840B000A87134 /* GfyUserFeedModel.swift */; };
@@ -43,7 +43,7 @@
 		9326FDF4201840B000A87134 /* GfyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyModel.swift; sourceTree = "<group>"; };
 		9326FDF5201840B000A87134 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		9326FDF6201840B000A87134 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		9326FDF7201840B000A87134 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		9326FDF7201840B000A87134 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9326FDF8201840B000A87134 /* GfyTagFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyTagFeedModel.swift; sourceTree = "<group>"; };
 		9326FDF9201840B000A87134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9326FDFA201840B000A87134 /* GfyUserFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyUserFeedModel.swift; sourceTree = "<group>"; };
@@ -109,15 +109,12 @@
 		9326FDDC2018408D00A87134 /* MyGifsKit */ = {
 			isa = PBXGroup;
 			children = (
+				93DB7C7A2025E95800E7C303 /* Project Items */,
 				9326FDF9201840B000A87134 /* Constants.swift */,
-				9326FDF7201840B000A87134 /* Feed.swift */,
-				9326FDF4201840B000A87134 /* GfyModel.swift */,
-				9326FDF8201840B000A87134 /* GfyTagFeedModel.swift */,
-				9326FDFA201840B000A87134 /* GfyUserFeedModel.swift */,
+				9326FDF7201840B000A87134 /* Protocols.swift */,
 				9326FDF5201840B000A87134 /* URL.swift */,
 				9326FDF6201840B000A87134 /* WebService.swift */,
-				9326FDDD2018408D00A87134 /* MyGifsKit.h */,
-				9326FDDE2018408D00A87134 /* Info.plist */,
+				93DB7C792025E89700E7C303 /* Models */,
 			);
 			path = MyGifsKit;
 			sourceTree = "<group>";
@@ -129,6 +126,25 @@
 				9326FDEA2018408D00A87134 /* Info.plist */,
 			);
 			path = MyGifsKitTests;
+			sourceTree = "<group>";
+		};
+		93DB7C792025E89700E7C303 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9326FDF4201840B000A87134 /* GfyModel.swift */,
+				9326FDFA201840B000A87134 /* GfyUserFeedModel.swift */,
+				9326FDF8201840B000A87134 /* GfyTagFeedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93DB7C7A2025E95800E7C303 /* Project Items */ = {
+			isa = PBXGroup;
+			children = (
+				9326FDDD2018408D00A87134 /* MyGifsKit.h */,
+				9326FDDE2018408D00A87134 /* Info.plist */,
+			);
+			name = "Project Items";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +299,7 @@
 				9326FE01201840B100A87134 /* GfyUserFeedModel.swift in Sources */,
 				9326FDFF201840B100A87134 /* GfyTagFeedModel.swift in Sources */,
 				9326FDFD201840B100A87134 /* WebService.swift in Sources */,
-				9326FDFE201840B100A87134 /* Feed.swift in Sources */,
+				9326FDFE201840B100A87134 /* Protocols.swift in Sources */,
 				9326FDFB201840B100A87134 /* GfyModel.swift in Sources */,
 				9326FDFC201840B100A87134 /* URL.swift in Sources */,
 				9326FE00201840B100A87134 /* Constants.swift in Sources */,
