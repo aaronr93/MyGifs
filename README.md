@@ -14,7 +14,21 @@ Curate your own gif sources. Download for MyGifs coming soon.
 
 ## Roadmap
 
-1. Settings Page for selecting a Gfycat user (and various view configurations for debugging purposes)
-2. Send gifs via iMessage with the iMessages Extension
-3. View a user's public albums of gifs on Imgur
-4. Browse by Tags and Searches in Gfycat and save your filters
+1. Implement Settings
+
+    a. Selecting current Gfycat user
+    
+    b. Selecting current Imgur user (if applicable)
+    
+    c. Configurations for debugging purposes
+    
+2. Show share menu on tap (configure action on tapping a gif in settings)
+2. Browse and send gifs from iMessage with the iMessages Extension
+3. Browse by Tags and Searches in Gfycat
+4. View a user's public albums of gifs on Imgur
+5. Implement Feeds
+
+    a. Save a Gfycat User, Tag, or Search feed
+    
+    b. Save gifs from Gfycat or Imgur to a MyGifs feed
+    
