@@ -52,7 +52,6 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
         node.allowsSelection = false
         node.dataSource = self
         node.delegate = self
-        self.delegate = UIApplication.shared.delegate as! AppDelegate
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

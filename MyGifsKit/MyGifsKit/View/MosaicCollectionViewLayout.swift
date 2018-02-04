@@ -89,8 +89,7 @@ class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]?
-    {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var includedAttributes: [UICollectionViewLayoutAttributes] = []
         // Slow search for small batches
         for attribute in allAttributes {
@@ -160,8 +159,7 @@ class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
     
 }
 
-class MosaicCollectionViewLayoutInspector: NSObject, ASCollectionViewLayoutInspecting
-{
+class MosaicCollectionViewLayoutInspector: NSObject, ASCollectionViewLayoutInspecting {
     func collectionView(_ collectionView: ASCollectionView, constrainedSizeForNodeAt indexPath: IndexPath) -> ASSizeRange {
         let layout = collectionView.collectionViewLayout as! MosaicCollectionViewLayout
         return ASSizeRangeMake(CGSize.zero, layout.itemSizeAtIndexPath(indexPath: indexPath))

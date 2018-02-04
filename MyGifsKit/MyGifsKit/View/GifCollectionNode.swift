@@ -20,14 +20,12 @@ class GifCollectionNode: ASCellNode {
         return videoNode
     }()
     
-    init(gif: Gfy) {
+    init(gif: Gif) {
         super.init()
         DispatchQueue.main.async {
             self.gifNode.asset = AVAsset(url: gif.smallUrl)
         }
         self.gifNode.url = gif.imageUrl
-        
-        
         self.gifNode.gifUrlString = gif.fullResUrl.absoluteString
         self.automaticallyManagesSubnodes = true
     }
