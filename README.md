@@ -32,3 +32,4 @@ Curate your own gif sources. Download for MyGifs coming soon.
     
     b. Save gifs from Gfycat or Imgur to a MyGifs feed
     
+6. Tagging minigame - add tags to gifs one at a time.
