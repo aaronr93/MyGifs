@@ -9,7 +9,7 @@ Curate your own gif sources. Download for MyGifs coming soon.
 
 ## Features
 
-- View a user's collection of gifs from Gfycat.com
+- View a Gfycat User Feed
 - Tap a gif to share in Messages
 
 ## Roadmap
