@@ -8,7 +8,6 @@
 
 import AsyncDisplayKit
 import AVFoundation
-import MyGifsKit
 
 class GifCollectionNode: ASCellNode {
     
@@ -25,7 +24,7 @@ class GifCollectionNode: ASCellNode {
         DispatchQueue.main.async {
             self.gifNode.asset = AVAsset(url: gif.smallUrl)
         }
-        self.gifNode.url = gif.imageUrl
+        self.gifNode.url = gif.thumbnailImageUrl
         self.gifNode.gifUrlString = gif.fullResUrl.absoluteString
         self.automaticallyManagesSubnodes = true
     }

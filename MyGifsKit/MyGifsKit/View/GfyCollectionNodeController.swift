@@ -7,9 +7,8 @@
 //
 
 import AsyncDisplayKit
-import MyGifsKit
 
-protocol GfyCollectionDelegate: class {
+public protocol GfyCollectionDelegate: class {
     func didTap(_ gifUrlString: String)
 }
 
@@ -18,12 +17,11 @@ public enum FeedModelType {
     case feedModelTypeGfyTag
 }
 
-class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
-    
+public class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     var username = "aaronr93"
     var numberOfColumns = 1
     var loadingScreensForBatching: CGFloat = 2.5
-    var feedModelType: FeedModelType = .feedModelTypeGfyUser
+    public var feedModelType: FeedModelType = .feedModelTypeGfyUser
     private var gfyFeed: GfyFeed
     
     private let layout: MosaicCollectionViewLayout
@@ -31,9 +29,9 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
     
-    weak var delegate: GfyCollectionDelegate?
+    weak public var delegate: GfyCollectionDelegate?
     
-    init() {
+    public init() {
         layout = MosaicCollectionViewLayout()
         layoutInspector = MosaicCollectionViewLayoutInspector()
         layout.numberOfColumns = numberOfColumns
@@ -53,11 +51,11 @@ class GfyCollectionNodeController: ASViewController<ASCollectionNode> {
         node.dataSource = self
         node.delegate = self
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupActivityIndicator()
         node.leadingScreensForBatching = loadingScreensForBatching
@@ -78,12 +76,12 @@ extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDeleg
     // MARK: ASCollectionDataSource, ASCollectionDelegate
     
     func shouldBatchFetchForCollectionNode(collectionNode: ASCollectionNode) -> Bool { return true }
-    func numberOfSections(in collectionNode: ASCollectionNode) -> Int { return 1 }
-    func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
+    public func numberOfSections(in collectionNode: ASCollectionNode) -> Int { return 1 }
+    public func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
         return gfyFeed.numberOfItemsInFeed
     }
     
-    func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
+    public func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let gif = gfyFeed.gfys[indexPath.row]
         let nodeBlock: ASCellNodeBlock = {
             let node = GifCollectionNode(gif: gif)
@@ -93,7 +91,7 @@ extension GfyCollectionNodeController: ASCollectionDataSource, ASCollectionDeleg
         return nodeBlock
     }
     
-    func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
         fetchNewBatchWithContext(context)
     }
     
@@ -127,7 +125,7 @@ extension GfyCollectionNodeController: MosaicCollectionViewLayoutDelegate {
 }
 
 extension GfyCollectionNodeController: ASVideoNodeDelegate {
-    func didTap(_ videoNode: ASVideoNode) {
+    public func didTap(_ videoNode: ASVideoNode) {
         guard let gifNode = videoNode as? ASGifNode else { return }
         guard let gifUrlString = gifNode.gifUrlString else { return }
         delegate?.didTap(gifUrlString)

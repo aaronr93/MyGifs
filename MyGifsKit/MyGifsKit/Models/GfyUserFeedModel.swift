@@ -9,7 +9,7 @@
 import Foundation
 
 final public class GfyUserFeed: GfyFeed {
-    public var gfys: [Gfy] = []
+    public var gfys: [Gif] = []
     private var cursor: String?
     private var url: URL?
     private var totalPagesSoFar: Int = 0
@@ -71,7 +71,7 @@ final public class GfyUserFeed: GfyFeed {
                     self.totalPagesSoFar += 1
                     self.cursor = userFeed.cursor
                     
-                    var gfys: [Gfy] = []
+                    var gfys: [Gif] = []
                     for gfyModel in userFeed.gfycats {
                         gfys.append(Gfy(model: gfyModel))
                     }

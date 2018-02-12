@@ -11,7 +11,7 @@ import Foundation
 final public class Gfy: Gif {
     public var smallUrl: URL
     public var fullResUrl: URL
-    public var imageUrl: URL
+    public var thumbnailImageUrl: URL?
     public var title: String?
     public var width: Int
     public var height: Int
@@ -24,7 +24,7 @@ final public class Gfy: Gif {
         } else {
             self.smallUrl = model.mp4Url
         }
-        self.imageUrl = model.miniPosterUrl
+        self.thumbnailImageUrl = model.miniPosterUrl
         self.fullResUrl = URL(string: Const.Gfy.baseUrlString + model.gfyId)!
         self.title = model.title
         self.width = model.width

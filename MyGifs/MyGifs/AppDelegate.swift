@@ -9,6 +9,7 @@
 import UIKit
 import MessageUI
 import AVFoundation
+import MyGifsKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,16 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return window
     }()
     
-    var GfyNavController: UINavigationController?
+    var MyGifsNavController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // ASDK Home Feed viewController & navController
-        GfyNavController = UINavigationController(rootViewController: GfyCollectionNodeController())
+        let mainFeedController = GfyCollectionNodeController()
+        mainFeedController.delegate = self
+        MyGifsNavController = UINavigationController(rootViewController: mainFeedController)
         
         // UIWindow
-        window?.rootViewController = GfyNavController
+        window?.rootViewController = MyGifsNavController
         window?.makeKeyAndVisible()
         
         do {
@@ -73,9 +75,6 @@ extension AppDelegate: GfyCollectionDelegate {
 extension AppDelegate: MFMessageComposeViewControllerDelegate {
     func messageComposeViewController(_ controller: MFMessageComposeViewController,
                                       didFinishWith result: MessageComposeResult) {
-        // Check the result or perform other tasks.
-        
-        // Dismiss the message compose view controller.
         controller.dismiss(animated: true, completion: nil)
     }
     
@@ -83,12 +82,8 @@ extension AppDelegate: MFMessageComposeViewControllerDelegate {
         if MFMessageComposeViewController.canSendText() {
             let composeVC = MFMessageComposeViewController()
             composeVC.messageComposeDelegate = self
-            
-            // Configure the fields of the interface.
             composeVC.body = message
-            
-            // Present the view controller modally.
-            self.GfyNavController?.present(composeVC, animated: true, completion: nil)
+            self.MyGifsNavController?.present(composeVC, animated: true, completion: nil)
         }
     }
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F8CA73E37E836CCE6064D52 /* Pods_MyGifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F48A243F9AF3EF0AD36A36 /* Pods_MyGifs.framework */; };
+		0CF18B6115692D09F5E6C6DD /* Pods_MyGifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D3E4CCF7C6B9A8E2C50AC1 /* Pods_MyGifs.framework */; };
 		9326FDA520183FE100A87134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9326FDA420183FE100A87134 /* Assets.xcassets */; };
 		9326FDA820183FE100A87134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9326FDA620183FE100A87134 /* LaunchScreen.storyboard */; };
 		9326FDB620183FFD00A87134 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FDB520183FFD00A87134 /* Messages.framework */; };
@@ -15,13 +15,11 @@
 		9326FDBC20183FFD00A87134 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9326FDBA20183FFD00A87134 /* MainInterface.storyboard */; };
 		9326FDBE20183FFD00A87134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9326FDBD20183FFD00A87134 /* Assets.xcassets */; };
 		9326FDC220183FFD00A87134 /* MyGifsMessages.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9326FDB320183FFD00A87134 /* MyGifsMessages.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9326FDCC2018405E00A87134 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDC82018405D00A87134 /* GfyCollectionNodeController.swift */; };
-		9326FDCD2018405E00A87134 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDC92018405D00A87134 /* GifCollectionNode.swift */; };
 		9326FDCE2018405E00A87134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDCA2018405D00A87134 /* AppDelegate.swift */; };
-		9326FDCF2018405E00A87134 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDCB2018405D00A87134 /* MosaicCollectionViewLayout.swift */; };
 		9326FE032018417400A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE022018417400A87134 /* MyGifsKit.framework */; };
 		9326FE042018417400A87134 /* MyGifsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE022018417400A87134 /* MyGifsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9326FE092018424E00A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE0A2018424E00A87134 /* MyGifsKit.framework */; };
+		D0764BE532CD2B5EA54797A0 /* Pods_MyGifs_MyGifsMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF467A648A78C81A91F0C37 /* Pods_MyGifs_MyGifsMessages.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +58,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00F48A243F9AF3EF0AD36A36 /* Pods_MyGifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C3E00D35A692FBFE410AE15 /* Pods-MyGifs-MyGifsMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs-MyGifsMessages.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MyGifs-MyGifsMessages/Pods-MyGifs-MyGifsMessages.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF467A648A78C81A91F0C37 /* Pods_MyGifs_MyGifsMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifs_MyGifsMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757910B4AF5213D593E59FB2 /* Pods-MyGifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.debug.xcconfig"; sourceTree = "<group>"; };
+		8BDDC3F79B15B9A873609FCF /* Pods-MyGifs-MyGifsMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs-MyGifsMessages.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyGifs-MyGifsMessages/Pods-MyGifs-MyGifsMessages.release.xcconfig"; sourceTree = "<group>"; };
 		9326FD9A20183FE100A87134 /* MyGifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9326FDA420183FE100A87134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9326FDA720183FE100A87134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,12 +72,10 @@
 		9326FDBB20183FFD00A87134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9326FDBD20183FFD00A87134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9326FDBF20183FFD00A87134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9326FDC82018405D00A87134 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
-		9326FDC92018405D00A87134 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
 		9326FDCA2018405D00A87134 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9326FDCB2018405D00A87134 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
 		9326FE022018417400A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9326FE0A2018424E00A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D3E4CCF7C6B9A8E2C50AC1 /* Pods_MyGifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB4163ACF04B32968A9C7FC /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9326FE032018417400A87134 /* MyGifsKit.framework in Frameworks */,
-				4F8CA73E37E836CCE6064D52 /* Pods_MyGifs.framework in Frameworks */,
+				0CF18B6115692D09F5E6C6DD /* Pods_MyGifs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +95,7 @@
 			files = (
 				9326FE092018424E00A87134 /* MyGifsKit.framework in Frameworks */,
 				9326FDB620183FFD00A87134 /* Messages.framework in Frameworks */,
+				D0764BE532CD2B5EA54797A0 /* Pods_MyGifs_MyGifsMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +107,8 @@
 			children = (
 				757910B4AF5213D593E59FB2 /* Pods-MyGifs.debug.xcconfig */,
 				DDB4163ACF04B32968A9C7FC /* Pods-MyGifs.release.xcconfig */,
+				5C3E00D35A692FBFE410AE15 /* Pods-MyGifs-MyGifsMessages.debug.xcconfig */,
+				8BDDC3F79B15B9A873609FCF /* Pods-MyGifs-MyGifsMessages.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -137,9 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				9326FDCA2018405D00A87134 /* AppDelegate.swift */,
-				9326FDC82018405D00A87134 /* GfyCollectionNodeController.swift */,
-				9326FDC92018405D00A87134 /* GifCollectionNode.swift */,
-				9326FDCB2018405D00A87134 /* MosaicCollectionViewLayout.swift */,
 				9326FDA420183FE100A87134 /* Assets.xcassets */,
 				9326FDA620183FE100A87134 /* LaunchScreen.storyboard */,
 				9326FDA920183FE100A87134 /* Info.plist */,
@@ -152,7 +150,8 @@
 			children = (
 				9326FDB520183FFD00A87134 /* Messages.framework */,
 				9326FE0A2018424E00A87134 /* MyGifsKit.framework */,
-				00F48A243F9AF3EF0AD36A36 /* Pods_MyGifs.framework */,
+				D9D3E4CCF7C6B9A8E2C50AC1 /* Pods_MyGifs.framework */,
+				5FF467A648A78C81A91F0C37 /* Pods_MyGifs_MyGifsMessages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9326FDC320183FFD00A87134 /* Build configuration list for PBXNativeTarget "MyGifsMessages" */;
 			buildPhases = (
+				0B2055E2C954C0F2761D12DB /* [CP] Check Pods Manifest.lock */,
 				9326FDAF20183FFD00A87134 /* Sources */,
 				9326FDB020183FFD00A87134 /* Frameworks */,
 				9326FDB120183FFD00A87134 /* Resources */,
+				413F923088951FD4B3B9228C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +274,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B2055E2C954C0F2761D12DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyGifs-MyGifsMessages-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		413F923088951FD4B3B9228C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-MyGifs-MyGifsMessages/Pods-MyGifs-MyGifsMessages-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		81D020BCC16B5F8B88F2769C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,10 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9326FDCF2018405E00A87134 /* MosaicCollectionViewLayout.swift in Sources */,
 				9326FDCE2018405E00A87134 /* AppDelegate.swift in Sources */,
-				9326FDCD2018405E00A87134 /* GifCollectionNode.swift in Sources */,
-				9326FDCC2018405E00A87134 /* GfyCollectionNodeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +561,7 @@
 		};
 		9326FDC420183FFD00A87134 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C3E00D35A692FBFE410AE15 /* Pods-MyGifs-MyGifsMessages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +578,7 @@
 		};
 		9326FDC520183FFD00A87134 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDDC3F79B15B9A873609FCF /* Pods-MyGifs-MyGifsMessages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;

@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MyGifsKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
+    
+    var MyGifsNavController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,10 @@ class MessagesViewController: MSMessagesAppViewController {
         // This will happen when the extension is about to present UI.
         
         // Use this method to configure the extension and restore previously stored state.
+        super.willBecomeActive(with: conversation)
+        
+        // Present the view controller appropriate for the conversation and presentation style.
+        presentViewController(for: conversation, with: presentationStyle)
     }
     
     override func didResignActive(with conversation: MSConversation) {
@@ -61,12 +68,69 @@ class MessagesViewController: MSMessagesAppViewController {
         // Called before the extension transitions to a new presentation style.
     
         // Use this method to prepare for the change in presentation style.
+        super.willTransition(to: presentationStyle)
+        
+        // Hide child view controllers during the transition.
+        removeAllChildViewControllers()
     }
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
+        super.didTransition(to: presentationStyle)
+        
+        // Present the view controller appropriate for the conversation and presentation style.
+        guard let conversation = activeConversation else { fatalError("Expected an active converstation") }
+        presentViewController(for: conversation, with: presentationStyle)
+    }
+    
+    // MARK: Child view controller presentation
+    
+    private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
+        // Remove any child view controllers that have been presented.
+        removeAllChildViewControllers()
+        
+        // Determine the controller to present.
+        let mainFeedController = GfyCollectionNodeController()
+        //MyGifsNavController = UINavigationController(rootViewController: mainFeedController)
+        addChildViewController(mainFeedController)
+        
+        if presentationStyle == .compact {
+            // Settings for compact view
+        } else {
+            // Settings for full-page view
+        }
+        
+        mainFeedController.view.frame = view.bounds
+        mainFeedController.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(mainFeedController.view)
+        
+        mainFeedController.didMove(toParentViewController: self)
+    }
+    
+    // MARK: Convenience
+    
+    private func removeAllChildViewControllers() {
+        for child in childViewControllers {
+            child.willMove(toParentViewController: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParentViewController()
+        }
+    }
+    
+    fileprivate func composeMessage(with gif: Gif, session: MSSession? = nil) -> MSMessage {
+        let layout = MSMessageTemplateLayout()
+        if let title = gif.title {
+            layout.caption = title
+        }
+        
+        let message = MSMessage(session: session ?? MSSession())
+        message.url = gif.fullResUrl
+        message.layout = layout
+        
+        return message
     }
 
 }
+

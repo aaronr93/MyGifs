@@ -75,6 +75,7 @@
 		21C00BAC847331A9C5C6F05E14C13310 /* ASPageTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D657174B50DE6A26BAC17FB05FBFABCE /* ASPageTable.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2261F0378A07FF0EFDFA8BA62834A94A /* ASDisplayNode+Ancestry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F339A78436FAA7ADF95372B9F24D9A4 /* ASDisplayNode+Ancestry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		22B58BDCFFD0811AAA08E8337827639E /* _ASCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AACB2944E5204CE5FF6142365AD73821 /* _ASCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		251D3C1E17DA968C56E5481CD1B9EADA /* Pods-MyGifsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43B56327FD767A5BDCCB576717CB8 /* Pods-MyGifsKit-dummy.m */; };
 		255553CFDE24049C4FF95CEBBF49710C /* ASDisplayNodeTipState.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9F5C6010B5D2D0F2FFAE73BBFEA377 /* ASDisplayNodeTipState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		25A89D1234656D3F759AF28DB7DDECEE /* _ASAsyncTransactionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E7E3107D5B00301A700203F85E84755 /* _ASAsyncTransactionGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25C59FB0B5EF2E7470B9275001D82D74 /* _ASDisplayViewAccessiblity.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF8F05753EEC93091111295406C63616 /* _ASDisplayViewAccessiblity.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -115,7 +116,7 @@
 		3520805D92A7F43DE331690BF622084A /* ASLayoutSpec+Subclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 657687A6C7F9F581C92EE59E2E9BBAF5 /* ASLayoutSpec+Subclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		368CEDC71D27275E2819CE23AE237281 /* NSArray+Diffing.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CCA3E1C6AAA55A7FEFCA61EC795A23 /* NSArray+Diffing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		36DC928D445FC7A1C6257BAC156FDB8B /* PINButton+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3FFE2974BD6BC2C798B64850F23C33 /* PINButton+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38E013EBCAA282D1B21C48D80EE386B9 /* Pods-MyGifs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCF0DB20E1A30D7070664F550501924B /* Pods-MyGifs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38E013EBCAA282D1B21C48D80EE386B9 /* Pods-MyGifs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E3DE4DDC3BC3A93A6EC31DA6D77E998 /* Pods-MyGifs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		390D787EE12522405DFCBE721F17EE36 /* ASStackPositionedLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0E689FCA73B0C0D339F8C66793CC9E /* ASStackPositionedLayout.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		398DF5632D5F97098647C38B8765EBB2 /* ASCollectionNode+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B1D3C0EE3F08B3CD8AA3D76DFE1012 /* ASCollectionNode+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A054CB9ABF02E6B03C924B1C4F376D4 /* ASTextRunDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4DBEC4802736594E604D9FBD2A438 /* ASTextRunDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -167,7 +168,7 @@
 		539DA1762825BF2070FEAA7C991E21D3 /* ASCenterLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 248DCB6CA36B83F82547EAC0DD66D6A0 /* ASCenterLayoutSpec.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5505348B6FCEE22F605C6DA65CAB74CB /* ASTipsWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C503C55E267628F778CF06005F24AD /* ASTipsWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5569F482D80206409B75635BC6B802A5 /* ASStackUnpositionedLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = B72E29E3B121B47C9F2AAE9C1FAB2AD3 /* ASStackUnpositionedLayout.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5583BA0F3439E1C92D2293CCB379A50F /* Pods-MyGifs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761DE08E8FD9B19F5551694549755F28 /* Pods-MyGifs-dummy.m */; };
+		5583BA0F3439E1C92D2293CCB379A50F /* Pods-MyGifs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3E8FE11C62E1392AD92D0A6005801B /* Pods-MyGifs-dummy.m */; };
 		55DCBB1979545A0C8C9F021F5307BFA6 /* PINRemoteImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AFA43E42A85B06963ED385A51A0A0145 /* PINRemoteImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F72C385FDE0454D3E7E0353E4B2F82 /* _ASPendingState.h in Headers */ = {isa = PBXBuildFile; fileRef = F4647AAE0711E7D79079396AB53BA972 /* _ASPendingState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5666D8DFAC902DDAA99E44F24BD406F3 /* _ASAsyncTransaction.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2D779859285C205CF489DB4B42924B2 /* _ASAsyncTransaction.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -195,6 +196,7 @@
 		6039685519D33E5EEB632D0F68978894 /* PINAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 40C99AECAD1FEE59857F0C70FD91308E /* PINAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60A77DBD42E1AC9B0014CE7569769F74 /* ASButtonNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12278ED399B5ADB99242AAD71C4C3F45 /* ASButtonNode.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		61153A9331B462D3AB78397CCEDBA112 /* PINRemoteImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DCEBFC74808D57A72614AC9F3CE1C6EB /* PINRemoteImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62D5E2BFDDACDB57AF945A66905D1BD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E073BA24369A62111653A7EB2F75EB8 /* Foundation.framework */; };
 		6302A68D6AD6AD69CFF81B11DC163C41 /* ASVisibilityProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E099F7BBACABF7BA9822B450869E657 /* ASVisibilityProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6500EDCDCC6C4F7AABD3F680DBF44E41 /* ASCellNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 771E614A88CC066327E17001BD339D73 /* ASCellNode.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		65767026A70465C740EC7A07C7D719C4 /* ASTextNodeWordKerner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1178EF64F0808369AE6E15C08E4F82 /* ASTextNodeWordKerner.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -217,6 +219,7 @@
 		6DB9F1E36DC736C9DD92445E42873539 /* ASCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1715A0B705502FB14EF8020386231E66 /* ASCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E1E60E54BD3CEC9EA69CEB65525ACE6 /* ASTipsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC1678D4173F4F0D91F66D67743A74 /* ASTipsWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6E3A2A77B13FB75585151F0ED34FE3B4 /* ASStackUnpositionedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D69D58B0DF7845CC694F4D1C94519626 /* ASStackUnpositionedLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E7C2C2C314C3D8EEF041520E5077AF0 /* Pods-MyGifsKit-MyGifsKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D0852C085FE440A506E8CFD792100 /* Pods-MyGifsKit-MyGifsKitTests-dummy.m */; };
 		6F1B31B8438021B19351F428F4990BC3 /* _ASCollectionGalleryLayoutItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B335D5B1F308C5FD844989CF404A681 /* _ASCollectionGalleryLayoutItem.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6F35D0173CD9B8521165425EA12194DF /* ASTextNode2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDEBC5EB296D0A973875E6C52576DA8 /* ASTextNode2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F7FA14F0E91A555EEFC972CFDBCA6DB /* PINCachedAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB40CDDCBD10253767FD3F22BEFBDA /* PINCachedAnimatedImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -268,6 +271,7 @@
 		874094968B925E32463EF1DBD079C470 /* ASInsetLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 029502A5B8E54CB79393BFD58B20A0F1 /* ASInsetLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		887D4522B5799CD7C945334D22ADED86 /* ASCollectionView+Undeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B436452ECD3E7217BEB61687690968E /* ASCollectionView+Undeprecated.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8A49E0C7A2809D38DC0E08C6710246C7 /* ASDisplayNode+FrameworkPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E87DDFF7AB22C8014F0EB23D36B10A52 /* ASDisplayNode+FrameworkPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8AD6EA75EDC94471DA1C6B0C329E7D85 /* Pods-MyGifs-MyGifsMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A56516562B15889327DE1B5773236205 /* Pods-MyGifs-MyGifsMessages-dummy.m */; };
 		8AE2A72EB324A8A1D7274C0284BD4A97 /* ASControlTargetAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C5428633AF09B00432F0DBEC5BA2DF /* ASControlTargetAction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8B182DA5A9A5CD2F1C5FDC164D711623 /* ASBasicImageDownloader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C18218A9FE09DA3D29F6FD65907CA /* ASBasicImageDownloader.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8B5E2864B83E1769C437D60FADC19847 /* PINRemoteImageCategoryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA6C06F533D9AD548FFAE799C637578 /* PINRemoteImageCategoryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -288,15 +292,16 @@
 		93FE6797FAFC5AF887AE40653AC6540D /* ASCollectionLayoutContext+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 39798953BE10A89837A4E85A45266ED6 /* ASCollectionLayoutContext+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		949C2991582817B45CF2D5CE1F5755DD /* ASCollectionView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFD91A482C2986DEE6701E5233075B1D /* ASCollectionView.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		951723F5B907EA359327D6C559EF5B36 /* PINRemoteImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F2102CCA83AB9D62CFA156AA000F2649 /* PINRemoteImageTask.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9520F359EA1F43E9A7A0440EDEC4206E /* Pods-MyGifsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B74F19D7E2D078028C4D116A29131322 /* Pods-MyGifsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		955134F75A5E20C6BD1A052E1F93D3FA /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9637FBA84E33900B35CDA79C9509EF42 /* PINCache.framework */; };
 		95688D2FAC2EBBBFD1D00BEE92382259 /* ASNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939B7E32680B7E1C56C8A42AA8DEB9C7 /* ASNavigationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		95A232E28BF3F1B3A6678395DA7B9032 /* ASObjectDescriptionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 227BB796B4FC0D9546814605770B4437 /* ASObjectDescriptionHelpers.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		95CD07B1A1E4CD5F8E07FB253A5C659D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E073BA24369A62111653A7EB2F75EB8 /* Foundation.framework */; };
 		96196277C6772585E893C150E42B747E /* ASMutableElementMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2921276341412FFD9C0290DD0FB36D48 /* ASMutableElementMap.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		964C6C5AF2C6EA7808E38BD0F5233597 /* ASBatchFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = D88587B7D19D75A49B7E6C47F7B22494 /* ASBatchFetching.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		96C282ACA0DD4BA55A3DFD7559C2116D /* ASWeakMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 52002C7ACDDDC41924B0C73E9C4779FB /* ASWeakMap.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		97000F726D69575349A9688430968E46 /* ASCollectionViewLayoutFacilitatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D332F7C9C117C24D279DF0B6F62991B0 /* ASCollectionViewLayoutFacilitatorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97197C11CF2000634EE9D5212AC164FB /* PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 345B6B695E5C37A98E3BB772CA33A005 /* PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		976ACDF3573D37301233EE8419CA3021 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E073BA24369A62111653A7EB2F75EB8 /* Foundation.framework */; };
 		98AC5B450B7291F384E164981BC3253A /* ASNodeController+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = 60E807E5FC8CA84D4460E415B33FE3E7 /* ASNodeController+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98C47BC3AC4F77FEF780D1CF72E4B2B8 /* ASContextTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 106C2AA7ACB7A96E6FF480FFBAC83578 /* ASContextTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9947870FB9200E03B988E1B36591E259 /* ASOverlayLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4ECBCAFC6173C75B8978A8CDF3F38D /* ASOverlayLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -362,7 +367,6 @@
 		BC21C51AC0DA41882706BACD7BC1811F /* ASCollectionInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D92EA0AC7C533E3AAC4D391C918ACF4 /* ASCollectionInternal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BC275D0FF39A5B7C2DFF59E0F0D2E6E0 /* PINRemoteImageCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE32ADC073DC874542BF1A66D382F5A /* PINRemoteImageCallbacks.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BD66858DA596CFBD390D909D001665D1 /* ASStackPositionedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C6503B28263C49C2A66DDD0043C093D2 /* ASStackPositionedLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BD9BCFF39847D7F86D20533C82D541B7 /* Pods-MyGifsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B57D79A43AF8B5E35B833054F9DA05D3 /* Pods-MyGifsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC4354D45234273C4D097A008B18DAD /* PINImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA5D3E889A1D2C9FF01777D47D6B195 /* PINImage+WebP.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BDD776D597DAB3D66BEC9170F404CF53 /* ASCollectionViewLayoutInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF83C1EC91DEB22A85710BB569B0D3 /* ASCollectionViewLayoutInspector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BFA693C165708E20DF7556441F9E58F0 /* ASEditableTextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D5727AA02E594E3622BDC15EDD8075 /* ASEditableTextNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -384,6 +388,7 @@
 		C84A69896103C81BAB20304DFA45F719 /* PINAlternateRepresentationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB9A08EFE017E7113E49A498FFA1865 /* PINAlternateRepresentationProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C8B728CCD5D5727488445F689F7C2458 /* ASPagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EAC6006534AF7F825F6AF481EC3A60 /* ASPagerNode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C8BB39501E5B42D087BF676B719B9E1B /* ASTextNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44911EBD4B4687C4112E9A1B0F5841A3 /* ASTextNode.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C8C64B10C2893F7835AB295404ADDA6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E073BA24369A62111653A7EB2F75EB8 /* Foundation.framework */; };
 		C8EC23D50BE28C52E1AAD62E34186502 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FB227BDFA96F1A43340867A728B9D5B5 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C990BC7CB8ED11C0F76A25F05DF353AC /* NSAttributedString+ASText.h in Headers */ = {isa = PBXBuildFile; fileRef = FF02991C727F0DE691A933F95977C8FC /* NSAttributedString+ASText.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C9B9393A3C5398C8B78C5DB170F29B21 /* ASStackLayoutSpecUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 21E7D667DA4814AA33E08372F1583E0A /* ASStackLayoutSpecUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -391,6 +396,7 @@
 		C9C0C0E2AAE212C14E7BFB200B9626CE /* ASTextRunDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA74687C1C1ACC5A8FB3A990D710F0A /* ASTextRunDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CA6ACFD9D7A01E76B726561877D70EA0 /* ASNodeController+Beta.m in Sources */ = {isa = PBXBuildFile; fileRef = 420F11920B7452FD3E2B1D282CBA47A6 /* ASNodeController+Beta.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CA7B66750544D088302683F0003E31BD /* ASHighlightOverlayLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1CA0C02326FC196D624121E0DBB4105 /* ASHighlightOverlayLayer.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CB59F68E2FA5EB0504CBBEF5C41F3671 /* Pods-MyGifs-MyGifsMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2A9C769ACAE5F033076BDA2241C0E6 /* Pods-MyGifs-MyGifsMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB5EC6E8DA6D2FF5945A4A28FD4CD43A /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E75BA99695D7559A801FCAE58D8B749 /* PINOperation.framework */; };
 		CBA12C8670A7FDFB949FB19F1F540D01 /* ASTableNode+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = 0293A5CB0B802E5E6150A85F9164A706 /* ASTableNode+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBCAEE094BFD7F0B01E3ED86E446F541 /* ASTextLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D30765AC7F47762B272AB423E5EF73EB /* ASTextLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -471,6 +477,7 @@
 		F5BE0E2DCF88312229774F5FE37FE710 /* NSIndexSet+ASHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B073D7746C672F37BE9EC24F745AA3E7 /* NSIndexSet+ASHelpers.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F7B10D7B9E3709AB9D08F6640A5836B4 /* ASResponderChainEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C03C1D7D929D527DD1A5DD6D4408E /* ASResponderChainEnumerator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F85201864DCD31FB14FD93974FB3C754 /* ASHighlightOverlayLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD82EEAA4B1D0F9F5ED81DF00479D10 /* ASHighlightOverlayLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F86B43C945A28FAFDF3072DCC3F43558 /* Pods-MyGifsKit-MyGifsKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F7B11254E83AB501D017552BD299BD3 /* Pods-MyGifsKit-MyGifsKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8809FF71EE24B0F53B8A153E1BD3AFC /* ASRangeControllerUpdateRangeProtocol+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = AADF5DC2DF6167E3D89A4B3F20186B16 /* ASRangeControllerUpdateRangeProtocol+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8AFE971EF36FE7E3DFE9C788A0A1CF8 /* ASDisplayNodeExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0DFDFCFAE8513FBB652ABB88C1827 /* ASDisplayNodeExtras.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F8C2668E78BA699F428E5445CC3A760A /* ASMapNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DE83B04C5F8EC97B1636766AD18C6B38 /* ASMapNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -490,19 +497,46 @@
 		FD6E1EF049741BB337B59184E710AA9B /* ASTipProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFC00897505687EA2007F64B38E839 /* ASTipProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FDCCDC61F9660840147889CAAFD39F1D /* ASDisplayNode+DebugTiming.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0006D44F4535FD5F4A047A9FD32F12 /* ASDisplayNode+DebugTiming.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FDF64C6D8BBF57EBBC6F0C62D004FECE /* PINSpeedRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0233021EE567B13A1F9C5F25EB192DA3 /* PINSpeedRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE5EF46500727E48BDC5D801D60C7CBA /* Pods-MyGifsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6F196BDF585340AD15863AF59A7A92 /* Pods-MyGifsKit-dummy.m */; };
 		FEE6393B3AE80DA8B180168AA29EF717 /* ASRunLoopQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 480F351D851EF181279DA52049504F1B /* ASRunLoopQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF04ACD242B7F612D8EC326E547B2DCA /* ASRelativeLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F497935DA36E932D21C2D1D4408E69 /* ASRelativeLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFE6345B499EDD22057C9072B3A81260 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E75BA99695D7559A801FCAE58D8B749 /* PINOperation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0DF5E251DB0767DA9CFEBC9CE1CA307B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C54A1E6C63EE30A5A98D49C537DF747;
+			remoteInfo = PINRemoteImage;
+		};
 		19DAA382FE21FCAC7665820ECDEAF9CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
 			remoteInfo = PINOperation;
+		};
+		251656469FB828D81A75157C551C9EFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C277C8A7D72555CB852615BA01019DA;
+			remoteInfo = Texture;
+		};
+		360533F6E65F4F3DCE8E0B0DCCA0B097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568185361EA6EEE89D2BC833905842FD;
+			remoteInfo = PINCache;
+		};
+		3B75C299E83ED86B3D9E79115F0331CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C54A1E6C63EE30A5A98D49C537DF747;
+			remoteInfo = PINRemoteImage;
 		};
 		50E9AC79F4FA4FBC68D72B61AFD9E01C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -517,6 +551,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
 			remoteInfo = PINOperation;
+		};
+		7004A8A7B45991D51C77CF4B50B3E5D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C277C8A7D72555CB852615BA01019DA;
+			remoteInfo = Texture;
 		};
 		7640B7AB2463FEC204AEA7A06C7266D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -539,6 +580,13 @@
 			remoteGlobalIDString = 568185361EA6EEE89D2BC833905842FD;
 			remoteInfo = PINCache;
 		};
+		B4BD24610A0AC3F166D1E6C156149B85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C277C8A7D72555CB852615BA01019DA;
+			remoteInfo = Texture;
+		};
 		BB9FF482D5E4678B11DC8A92BA7BCC29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -553,12 +601,54 @@
 			remoteGlobalIDString = 5C54A1E6C63EE30A5A98D49C537DF747;
 			remoteInfo = PINRemoteImage;
 		};
+		CF039B096EC5382E0D24ED28C9E101A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
+			remoteInfo = PINOperation;
+		};
 		DF45DB03475897BB8E0823F59997DC6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7C277C8A7D72555CB852615BA01019DA;
 			remoteInfo = Texture;
+		};
+		E391659D9B8C8254FB8218F8973355B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568185361EA6EEE89D2BC833905842FD;
+			remoteInfo = PINCache;
+		};
+		E66C6235312752BE095E040977025B55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
+			remoteInfo = PINOperation;
+		};
+		EADA712F9F05F74DEF2DEB2544BDE76B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
+			remoteInfo = PINOperation;
+		};
+		EB35FC12ECB9599C083192343CA7D797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568185361EA6EEE89D2BC833905842FD;
+			remoteInfo = PINCache;
+		};
+		F13FB7BC58830F8C41D8A9D739ED8E29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C54A1E6C63EE30A5A98D49C537DF747;
+			remoteInfo = PINRemoteImage;
 		};
 		F641BEA8F348DFD8D4DE37ACE72E272A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -571,7 +661,6 @@
 
 /* Begin PBXFileReference section */
 		000C3AB82BC2DC517BD4720F791E7535 /* ASYogaUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASYogaUtilities.h; path = Source/Layout/ASYogaUtilities.h; sourceTree = "<group>"; };
-		0069416A04F550CDED8883395BDE5B7D /* Pods_MyGifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyGifs.framework; path = "Pods-MyGifs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00948D18B179FCD98109E068926F5A54 /* ASMutableAttributedStringBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASMutableAttributedStringBuilder.m; path = Source/Details/ASMutableAttributedStringBuilder.m; sourceTree = "<group>"; };
 		0096159308E653F038710319AB4B6FB3 /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PINCache.modulemap; sourceTree = "<group>"; };
 		01FDAEA8856B42A5E660105C9628A908 /* ASTextKitComponents.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitComponents.mm; path = Source/TextKit/ASTextKitComponents.mm; sourceTree = "<group>"; };
@@ -587,7 +676,9 @@
 		02F497935DA36E932D21C2D1D4408E69 /* ASRelativeLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRelativeLayoutSpec.h; path = Source/Layout/ASRelativeLayoutSpec.h; sourceTree = "<group>"; };
 		03EEC30D500DD4D1A8506790709EAB24 /* ASLayoutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASLayoutManager.m; path = Source/TextKit/ASLayoutManager.m; sourceTree = "<group>"; };
 		042B4626D68298051E584B246B8D5452 /* ASLayoutElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutElement.h; path = Source/Layout/ASLayoutElement.h; sourceTree = "<group>"; };
+		045336591E8682A432323BB64E5A0951 /* Pods-MyGifsKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyGifsKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		047E43D228B31746D811D445FDD13F91 /* ASTextKitRenderer+TextChecking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTextKitRenderer+TextChecking.h"; path = "Source/TextKit/ASTextKitRenderer+TextChecking.h"; sourceTree = "<group>"; };
+		049253E4DDE92DE7C9445DBC5F9B1028 /* Pods_MyGifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyGifs.framework; path = "Pods-MyGifs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C3A926F44C593E2766C7A84D90EC95 /* ASDisplayNode+UIViewBridge.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASDisplayNode+UIViewBridge.mm"; path = "Source/Private/ASDisplayNode+UIViewBridge.mm"; sourceTree = "<group>"; };
 		055F7B9B937D00372DAD349C68AEE3B4 /* ASSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASSection.h; path = Source/Private/ASSection.h; sourceTree = "<group>"; };
 		05BF6B962932B9A248DC4E416EABE50A /* ASLayoutElementExtensibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutElementExtensibility.h; path = Source/Layout/ASLayoutElementExtensibility.h; sourceTree = "<group>"; };
@@ -596,7 +687,6 @@
 		06B61A2AFDFC8C7A416A2C1BF09EBAE1 /* PINRemoteImageProcessorTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageProcessorTask.h; path = Source/Classes/PINRemoteImageProcessorTask.h; sourceTree = "<group>"; };
 		07E4C4624DBBD8DD979DC55D144CD714 /* ASAsciiArtBoxCreator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASAsciiArtBoxCreator.m; path = Source/Layout/ASAsciiArtBoxCreator.m; sourceTree = "<group>"; };
 		0870E4B87242A175271343D5E70316AF /* _ASDisplayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASDisplayView.h; path = Source/Details/_ASDisplayView.h; sourceTree = "<group>"; };
-		08BD9CDCE546761FD8578504AAE8B811 /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINRemoteImage.framework; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09692C50D7974F0889B8ED4531649D17 /* ASMultiplexImageNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASMultiplexImageNode.mm; path = Source/ASMultiplexImageNode.mm; sourceTree = "<group>"; };
 		0A3AC1A7447B6806BF0ED14963CAE2C7 /* PINResume.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINResume.m; path = Source/Classes/PINResume.m; sourceTree = "<group>"; };
 		0A64F7C6871D99580E3314264CD77AE5 /* PINRemoteImageManager+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINRemoteImageManager+Private.h"; path = "Source/Classes/PINRemoteImageManager+Private.h"; sourceTree = "<group>"; };
@@ -606,6 +696,7 @@
 		0D92EA0AC7C533E3AAC4D391C918ACF4 /* ASCollectionInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionInternal.m; path = Source/Details/ASCollectionInternal.m; sourceTree = "<group>"; };
 		0DE4AE013A820831C97CAAFAF1274507 /* ASTraitCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTraitCollection.m; path = Source/Details/ASTraitCollection.m; sourceTree = "<group>"; };
 		0E1B1B8A4279879CCC7D5E9568EA0F84 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		0E71BA2535B3FFAC617BCD8F43C1877B /* Pods_MyGifsKit_MyGifsKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyGifsKit_MyGifsKitTests.framework; path = "Pods-MyGifsKit-MyGifsKitTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E74BFA48937EEDBF75EC083929A1F38 /* ASControlNode+tvOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASControlNode+tvOS.m"; path = "Source/tvOS/ASControlNode+tvOS.m"; sourceTree = "<group>"; };
 		0E75BA99695D7559A801FCAE58D8B749 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E827B3D28E5B9F115BE57D780B3C792 /* PINOperationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationTypes.h; path = Source/PINOperationTypes.h; sourceTree = "<group>"; };
@@ -624,6 +715,7 @@
 		145EA24576A4BCC3BBC9BB4F2C5CF349 /* _ASCollectionGalleryLayoutInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASCollectionGalleryLayoutInfo.h; path = Source/Private/_ASCollectionGalleryLayoutInfo.h; sourceTree = "<group>"; };
 		14B7DA829CC671A7B33CB86B86C43C46 /* PINRemoteImageDownloadQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageDownloadQueue.h; path = Source/Classes/PINRemoteImageDownloadQueue.h; sourceTree = "<group>"; };
 		14D76713F1A5A46FF2A5CDE0B1E550F2 /* PINGIFAnimatedImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINGIFAnimatedImageManager.h; path = Source/Classes/PINGIFAnimatedImageManager.h; sourceTree = "<group>"; };
+		1534A9388D5BDFD6953CFFE6EADB1202 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		154AF866BF3C18303D793E6D4B0F4E6C /* ASLayoutSpec+Subclasses.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASLayoutSpec+Subclasses.mm"; path = "Source/Layout/ASLayoutSpec+Subclasses.mm"; sourceTree = "<group>"; };
 		1715A0B705502FB14EF8020386231E66 /* ASCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionView.h; path = Source/ASCollectionView.h; sourceTree = "<group>"; };
 		18C0DD6FB75C3D601C587C4C46E669A9 /* ASTableLayoutController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTableLayoutController.m; path = Source/Details/ASTableLayoutController.m; sourceTree = "<group>"; };
@@ -635,7 +727,9 @@
 		1ACD326A70A2D6AE84224E22DDB0F1FA /* ASCellNode+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCellNode+Internal.h"; path = "Source/Private/ASCellNode+Internal.h"; sourceTree = "<group>"; };
 		1B335D5B1F308C5FD844989CF404A681 /* _ASCollectionGalleryLayoutItem.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASCollectionGalleryLayoutItem.mm; path = Source/Private/_ASCollectionGalleryLayoutItem.mm; sourceTree = "<group>"; };
 		1B436452ECD3E7217BEB61687690968E /* ASCollectionView+Undeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionView+Undeprecated.h"; path = "Source/Private/ASCollectionView+Undeprecated.h"; sourceTree = "<group>"; };
+		1C10D6CB126109826993DEA8E0612490 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1178EF64F0808369AE6E15C08E4F82 /* ASTextNodeWordKerner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextNodeWordKerner.h; path = Source/TextKit/ASTextNodeWordKerner.h; sourceTree = "<group>"; };
+		1C570C5B57770485B3668C854D9D14AB /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
 		1C8A74AC3917A13DB9F6A1C41BD7B802 /* ASNetworkImageNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASNetworkImageNode.mm; path = Source/ASNetworkImageNode.mm; sourceTree = "<group>"; };
 		1CF98779D9D4F6A9626FE78D36B6BABC /* ASImageNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASImageNode.mm; path = Source/ASImageNode.mm; sourceTree = "<group>"; };
 		1D29D48FE6C8FC3EDD2FD85AA81E2BB9 /* ASTip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTip.m; path = Source/Private/ASTip.m; sourceTree = "<group>"; };
@@ -647,6 +741,7 @@
 		21E7D667DA4814AA33E08372F1583E0A /* ASStackLayoutSpecUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutSpecUtilities.h; path = Source/Private/Layout/ASStackLayoutSpecUtilities.h; sourceTree = "<group>"; };
 		22339202CB1B1E301F786DCFED210355 /* ASCollectionViewLayoutController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionViewLayoutController.m; path = Source/Details/ASCollectionViewLayoutController.m; sourceTree = "<group>"; };
 		227BB796B4FC0D9546814605770B4437 /* ASObjectDescriptionHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASObjectDescriptionHelpers.m; path = Source/Details/ASObjectDescriptionHelpers.m; sourceTree = "<group>"; };
+		22A940394719A0786C9763BF4C9F58F8 /* Pods-MyGifsKit-MyGifsKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyGifsKit-MyGifsKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22BECCBD2AC4A827B661D19C6DFE2160 /* ASTextKitFontSizeAdjuster.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitFontSizeAdjuster.mm; path = Source/TextKit/ASTextKitFontSizeAdjuster.mm; sourceTree = "<group>"; };
 		236E2A4DFFE288B6C3A373DFFDEAB1C7 /* ASTraitCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTraitCollection.h; path = Source/Details/ASTraitCollection.h; sourceTree = "<group>"; };
 		23714DCEADFD0A06F240AEAF3F7E4C6A /* ASImageContainerProtocolCategories.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASImageContainerProtocolCategories.m; path = Source/Details/ASImageContainerProtocolCategories.m; sourceTree = "<group>"; };
@@ -662,14 +757,17 @@
 		28C220DCD8E341B2D1A8BDCA45D92DAD /* ASAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASAssert.m; path = Source/Base/ASAssert.m; sourceTree = "<group>"; };
 		28D191DF10A2F3C7A052AC0A068F284B /* ASTextAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextAttribute.h; path = Source/Private/TextExperiment/String/ASTextAttribute.h; sourceTree = "<group>"; };
 		28D74BC179E0659924C15597DD9833B3 /* ASBatchContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBatchContext.h; path = Source/Details/ASBatchContext.h; sourceTree = "<group>"; };
+		290632FA1DC976F36C500842C3D8ED29 /* Pods-MyGifs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyGifs.modulemap"; sourceTree = "<group>"; };
 		2921276341412FFD9C0290DD0FB36D48 /* ASMutableElementMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASMutableElementMap.m; path = Source/Private/ASMutableElementMap.m; sourceTree = "<group>"; };
 		2AF481FF36259A59480523D5B184B22B /* ASTextKitRenderer+TextChecking.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASTextKitRenderer+TextChecking.mm"; path = "Source/TextKit/ASTextKitRenderer+TextChecking.mm"; sourceTree = "<group>"; };
 		2AF4FA3D53A41C6064F2C8E96A0EBCC6 /* ASDisplayNodeLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDisplayNodeLayout.mm; path = Source/Private/ASDisplayNodeLayout.mm; sourceTree = "<group>"; };
 		2B0F9B84742BEA27ACE887A23D798292 /* ASControlNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASControlNode.mm; path = Source/ASControlNode.mm; sourceTree = "<group>"; };
 		2B37C0FD3DA4956FF753EC09514D87E7 /* ASVideoNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASVideoNode.mm; path = Source/ASVideoNode.mm; sourceTree = "<group>"; };
+		2BCA9448635DD459CF9131FA3825826D /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINRemoteImage.framework; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0DACA0DE6C9BC40FA5ED6A79A6CD7C /* ASBatchFetchingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBatchFetchingDelegate.h; path = Source/Details/ASBatchFetchingDelegate.h; sourceTree = "<group>"; };
 		2C190F6A02FD95E5F15719E176E19E1B /* PINRemoteImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PINRemoteImage.modulemap; sourceTree = "<group>"; };
 		2C19C0EADB6BF939317F105B581093C8 /* ASTextLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextLine.m; path = Source/Private/TextExperiment/Component/ASTextLine.m; sourceTree = "<group>"; };
+		2C2A9C769ACAE5F033076BDA2241C0E6 /* Pods-MyGifs-MyGifsMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyGifs-MyGifsMessages-umbrella.h"; sourceTree = "<group>"; };
 		2C3FC80F16C8519CEE16CF725761C86B /* ASScrollDirection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASScrollDirection.m; path = Source/Details/ASScrollDirection.m; sourceTree = "<group>"; };
 		2CDD96B942692A4D91D086446FEE394D /* ASDisplayNode+Convenience.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASDisplayNode+Convenience.m"; path = "Source/ASDisplayNode+Convenience.m"; sourceTree = "<group>"; };
 		2D1E437A5DABE2FE2458ACBC0FA9B2C4 /* ASDisplayNode+Yoga.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASDisplayNode+Yoga.mm"; path = "Source/ASDisplayNode+Yoga.mm"; sourceTree = "<group>"; };
@@ -677,6 +775,7 @@
 		2DF473552A013C646803661DF7E9FAE8 /* ASDefaultPlayButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDefaultPlayButton.h; path = Source/Private/ASDefaultPlayButton.h; sourceTree = "<group>"; };
 		2E09B953814BCA238D97E65669A88430 /* IGListAdapter+AsyncDisplayKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListAdapter+AsyncDisplayKit.m"; path = "Source/IGListAdapter+AsyncDisplayKit.m"; sourceTree = "<group>"; };
 		2E1B3A42806C0D51A8A2A5A275C7A8E8 /* PINCacheMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheMacros.h; path = Source/PINCacheMacros.h; sourceTree = "<group>"; };
+		2E3DE4DDC3BC3A93A6EC31DA6D77E998 /* Pods-MyGifs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyGifs-umbrella.h"; sourceTree = "<group>"; };
 		2E50CC25CD7EBDEE04636B6682CD5D31 /* PINRemoteImageManagerResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerResult.m; path = Source/Classes/PINRemoteImageManagerResult.m; sourceTree = "<group>"; };
 		2EF0DFDFCFAE8513FBB652ABB88C1827 /* ASDisplayNodeExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDisplayNodeExtras.mm; path = Source/ASDisplayNodeExtras.mm; sourceTree = "<group>"; };
 		2F453FBD4E495BC8B3C4CBACC907869F /* ASDisplayNode+Layout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASDisplayNode+Layout.mm"; path = "Source/ASDisplayNode+Layout.mm"; sourceTree = "<group>"; };
@@ -699,11 +798,15 @@
 		3548FD0A1F4F1A08E938688D9DE6DD6D /* _ASAsyncTransactionContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASAsyncTransactionContainer.m; path = Source/Details/Transactions/_ASAsyncTransactionContainer.m; sourceTree = "<group>"; };
 		356E8E4293170453222CA5F1B884547E /* ASWeakMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASWeakMap.m; path = Source/Private/ASWeakMap.m; sourceTree = "<group>"; };
 		35F18DD500476A604F1682A7630CE988 /* ASCollectionLayoutState+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionLayoutState+Private.h"; path = "Source/Private/ASCollectionLayoutState+Private.h"; sourceTree = "<group>"; };
+		3630C6B212BE14DFFD62805286D45195 /* Pods-MyGifsKit-MyGifsKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifsKit-MyGifsKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		367CFFC7887D897EFA05EB00A9F34F03 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368897C62EE3E382CB3243F19FD525A2 /* ASTableViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableViewInternal.h; path = Source/ASTableViewInternal.h; sourceTree = "<group>"; };
+		37769131EE45697BBAF029BD2755EB11 /* Pods-MyGifs-MyGifsMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifs-MyGifsMessages.debug.xcconfig"; sourceTree = "<group>"; };
 		37D0BD2AAB3480650A9A926672171E85 /* ASTextNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTextNode+Beta.h"; path = "Source/ASTextNode+Beta.h"; sourceTree = "<group>"; };
 		38663FCF5CDD57BEAE09A2E6892D9D34 /* ASTextKitContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitContext.mm; path = Source/TextKit/ASTextKitContext.mm; sourceTree = "<group>"; };
 		3883A9C9CB4AB9B6DDB4ED66D1B29222 /* ASLayoutElement.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASLayoutElement.mm; path = Source/Layout/ASLayoutElement.mm; sourceTree = "<group>"; };
 		39798953BE10A89837A4E85A45266ED6 /* ASCollectionLayoutContext+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionLayoutContext+Private.h"; path = "Source/Private/ASCollectionLayoutContext+Private.h"; sourceTree = "<group>"; };
+		3AA43B56327FD767A5BDCCB576717CB8 /* Pods-MyGifsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyGifsKit-dummy.m"; sourceTree = "<group>"; };
 		3B45AF0BAF42311BAD1057011E7F1273 /* PINRemoteImageMemoryContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMemoryContainer.h; path = Source/Classes/PINRemoteImageMemoryContainer.h; sourceTree = "<group>"; };
 		3BECA05814CF4E2D19776883D3E1BE0C /* ASTextKitComponents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitComponents.h; path = Source/TextKit/ASTextKitComponents.h; sourceTree = "<group>"; };
 		3DA6C06F533D9AD548FFAE799C637578 /* PINRemoteImageCategoryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCategoryManager.h; path = Source/Classes/PINRemoteImageCategoryManager.h; sourceTree = "<group>"; };
@@ -715,8 +818,10 @@
 		3FCEF6145F8906E4F811AB0DA4E1D5FC /* ASTip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTip.h; path = Source/Private/ASTip.h; sourceTree = "<group>"; };
 		406C8295DF54D337D66BF4946745B936 /* UIImage+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ASConvenience.h"; path = "Source/UIImage+ASConvenience.h"; sourceTree = "<group>"; };
 		40C99AECAD1FEE59857F0C70FD91308E /* PINAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImage.h; path = Source/Classes/AnimatedImages/PINAnimatedImage.h; sourceTree = "<group>"; };
+		411AF02CC76B79A14994EB99C15FEE39 /* Pods-MyGifs-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifs-resources.sh"; sourceTree = "<group>"; };
 		41C7320B802E9C8629AC79941463B176 /* ASCollectionElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionElement.h; path = Source/Details/ASCollectionElement.h; sourceTree = "<group>"; };
 		420F11920B7452FD3E2B1D282CBA47A6 /* ASNodeController+Beta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASNodeController+Beta.m"; path = "Source/ASNodeController+Beta.m"; sourceTree = "<group>"; };
+		422836FB835B590D0CCE437DCA2197A5 /* Pods-MyGifs-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyGifs-acknowledgements.plist"; sourceTree = "<group>"; };
 		42C6C5B144BB31D45491C8182E4EDD4A /* ASTextKitTruncating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitTruncating.h; path = Source/TextKit/ASTextKitTruncating.h; sourceTree = "<group>"; };
 		4335083DE23F3F80E88F575ED7980183 /* AsyncDisplayKit+Tips.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AsyncDisplayKit+Tips.m"; path = "Source/Debug/AsyncDisplayKit+Tips.m"; sourceTree = "<group>"; };
 		43683D45A96A1691CF8F9DBAEACF4253 /* ASTextKitRenderer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitRenderer.mm; path = Source/TextKit/ASTextKitRenderer.mm; sourceTree = "<group>"; };
@@ -747,6 +852,7 @@
 		5148221DA093626B9A29EC35A71915E5 /* ASBlockTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBlockTypes.h; path = Source/ASBlockTypes.h; sourceTree = "<group>"; };
 		52002C7ACDDDC41924B0C73E9C4779FB /* ASWeakMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASWeakMap.h; path = Source/Private/ASWeakMap.h; sourceTree = "<group>"; };
 		532C4EF24C82FCE8EC35F0C50ED89087 /* ASElementMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASElementMap.h; path = Source/Details/ASElementMap.h; sourceTree = "<group>"; };
+		534C40481090F4E0F7C2907827EEC083 /* Pods-MyGifs-MyGifsMessages-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyGifs-MyGifsMessages-acknowledgements.markdown"; sourceTree = "<group>"; };
 		53D3EA345A1D4683FB5CFDE1C1FD40E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5481248E0FC8CC73BFB134083E1D88FF /* ASCollectionViewProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionViewProtocols.h; path = Source/ASCollectionViewProtocols.h; sourceTree = "<group>"; };
 		5538DD42632893AAD4712F42CFC34FC5 /* ASObjectDescriptionHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASObjectDescriptionHelpers.h; path = Source/Details/ASObjectDescriptionHelpers.h; sourceTree = "<group>"; };
@@ -754,6 +860,7 @@
 		556BAF3FC36FBC058B466A9940A43FB5 /* PINCache+PINRemoteImageCaching.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINCache+PINRemoteImageCaching.m"; path = "Source/Classes/PINCache/PINCache+PINRemoteImageCaching.m"; sourceTree = "<group>"; };
 		557CDBF3F8D009A5B99940214410CC85 /* ASTextLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextLayout.m; path = Source/Private/TextExperiment/Component/ASTextLayout.m; sourceTree = "<group>"; };
 		57A250D3B01D1C23C0368BFB57E51131 /* ASAbsoluteLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASAbsoluteLayoutSpec.mm; path = Source/Layout/ASAbsoluteLayoutSpec.mm; sourceTree = "<group>"; };
+		57B89F2AAA36C9544B587D2254648D92 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58E749951C5033E8E0A95FB1AE0AE8E9 /* ASScrollDirection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASScrollDirection.h; path = Source/Details/ASScrollDirection.h; sourceTree = "<group>"; };
 		596B019D19DDEF5BC2233DAFA59BF5AB /* ASCollectionLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASCollectionLayout.mm; path = Source/Private/ASCollectionLayout.mm; sourceTree = "<group>"; };
 		59A6AB21BE1EB01BD32440CA2108B841 /* ASIntegerMap.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASIntegerMap.mm; path = Source/Details/ASIntegerMap.mm; sourceTree = "<group>"; };
@@ -761,14 +868,16 @@
 		59EAC6006534AF7F825F6AF481EC3A60 /* ASPagerNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASPagerNode.m; path = Source/ASPagerNode.m; sourceTree = "<group>"; };
 		5BD95A3AE12EEE0EF6BAAB0A04D0087B /* ASDispatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASDispatch.m; path = Source/Private/ASDispatch.m; sourceTree = "<group>"; };
 		5BFF83C1EC91DEB22A85710BB569B0D3 /* ASCollectionViewLayoutInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionViewLayoutInspector.m; path = Source/Details/ASCollectionViewLayoutInspector.m; sourceTree = "<group>"; };
-		5C66504CF79983EC454D21EAE3111E59 /* Pods-MyGifs-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifs-frameworks.sh"; sourceTree = "<group>"; };
+		5CC35FFBFF3DE43AF6F6983DAB9DB779 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CD58E1F2A28639DDDCC04B545D131D1 /* ASControlNode+tvOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASControlNode+tvOS.h"; path = "Source/tvOS/ASControlNode+tvOS.h"; sourceTree = "<group>"; };
 		5E4B0FE4BEDAC7C302A02E40005597F7 /* ASStackLayoutElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutElement.h; path = Source/Layout/ASStackLayoutElement.h; sourceTree = "<group>"; };
+		5E5F1265EB831A8D4315869CA1A51F9B /* Pods-MyGifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifs.debug.xcconfig"; sourceTree = "<group>"; };
 		5E89F65807249A57DD86C8BC5AAAEFDB /* ASTextKitAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitAttributes.h; path = Source/TextKit/ASTextKitAttributes.h; sourceTree = "<group>"; };
 		5EA3030CE4422BF0DA7B1761506980CA /* ASTableLayoutController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableLayoutController.h; path = Source/Details/ASTableLayoutController.h; sourceTree = "<group>"; };
 		5EA49C00C499F5F40179FBCE8AF6CAA5 /* ASSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASSection.m; path = Source/Private/ASSection.m; sourceTree = "<group>"; };
 		5F03B6F59AE9F6C663D1976E2244E932 /* ASBatchContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASBatchContext.mm; path = Source/Details/ASBatchContext.mm; sourceTree = "<group>"; };
 		5F6EAB76AD47933B7CE21A884DBCF85F /* _ASTransitionContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASTransitionContext.m; path = Source/_ASTransitionContext.m; sourceTree = "<group>"; };
+		5F7B11254E83AB501D017552BD299BD3 /* Pods-MyGifsKit-MyGifsKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyGifsKit-MyGifsKitTests-umbrella.h"; sourceTree = "<group>"; };
 		606F7F16AFC7B8F87F6C36AEC979D38C /* ASCenterLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCenterLayoutSpec.h; path = Source/Layout/ASCenterLayoutSpec.h; sourceTree = "<group>"; };
 		60E807E5FC8CA84D4460E415B33FE3E7 /* ASNodeController+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASNodeController+Beta.h"; path = "Source/ASNodeController+Beta.h"; sourceTree = "<group>"; };
 		6131DBD822E5B4DC6457AA344237E838 /* ASTextNodeWordKerner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextNodeWordKerner.m; path = Source/TextKit/ASTextNodeWordKerner.m; sourceTree = "<group>"; };
@@ -776,19 +885,18 @@
 		61CDBA2D473303FC56BEFB1D365C8D41 /* ASDispatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDispatch.h; path = Source/Private/ASDispatch.h; sourceTree = "<group>"; };
 		61EAA5434687D9E5C5A90B26BC7EB3FC /* ASStackLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutDefines.h; path = Source/Layout/ASStackLayoutDefines.h; sourceTree = "<group>"; };
 		61F41804DC23F7351CDF2E06A371CAFA /* ASTextKitTailTruncater.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitTailTruncater.mm; path = Source/TextKit/ASTextKitTailTruncater.mm; sourceTree = "<group>"; };
-		62991FE7FC595B1AD2E397795FBBBC48 /* Pods-MyGifs-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifs-resources.sh"; sourceTree = "<group>"; };
 		62FEAC97F33D7ABF48DB8028A5F6FB5D /* ASLayoutElementPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutElementPrivate.h; path = Source/Layout/ASLayoutElementPrivate.h; sourceTree = "<group>"; };
 		63F1C7A386106FBA39E50AC5A371C6FC /* PINRemoteImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-umbrella.h"; sourceTree = "<group>"; };
 		64D5727AA02E594E3622BDC15EDD8075 /* ASEditableTextNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASEditableTextNode.h; path = Source/ASEditableTextNode.h; sourceTree = "<group>"; };
 		656C03C1D7D929D527DD1A5DD6D4408E /* ASResponderChainEnumerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASResponderChainEnumerator.m; path = Source/Private/ASResponderChainEnumerator.m; sourceTree = "<group>"; };
 		657687A6C7F9F581C92EE59E2E9BBAF5 /* ASLayoutSpec+Subclasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASLayoutSpec+Subclasses.h"; path = "Source/Layout/ASLayoutSpec+Subclasses.h"; sourceTree = "<group>"; };
 		65E45E8712462B0C19E1E0B8A7334F46 /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = Source/PINMemoryCache.h; sourceTree = "<group>"; };
+		66BB4948A0FD8A04F4F40B3027FAFABB /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AsyncDisplayKit.framework; path = Texture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BDAA1EFB1027F62499B78144C60A88 /* ASLayoutManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutManager.h; path = Source/TextKit/ASLayoutManager.h; sourceTree = "<group>"; };
 		6741CCF6741B70282815C02B134AE8D2 /* IGListAdapter+AsyncDisplayKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListAdapter+AsyncDisplayKit.h"; path = "Source/IGListAdapter+AsyncDisplayKit.h"; sourceTree = "<group>"; };
 		67A34D00DB0247C3F4BE939F49BD9ED5 /* ASVisibilityProtocols.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASVisibilityProtocols.m; path = Source/ASVisibilityProtocols.m; sourceTree = "<group>"; };
 		6880A7E08680D997A583D743670E8CE7 /* PINOperationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationMacros.h; path = Source/PINOperationMacros.h; sourceTree = "<group>"; };
 		69A4159A61BA848274886EB2C9E94678 /* PINRemoteImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-prefix.pch"; sourceTree = "<group>"; };
-		69A5CEC99D47C65D9034998007C50EFE /* Pods-MyGifsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyGifsKit.modulemap"; sourceTree = "<group>"; };
 		69BA6D9DBBF5050FC1EEE07B4E7CE86E /* PINRemoteImageBasicCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageBasicCache.m; path = Source/Classes/PINRemoteImageBasicCache.m; sourceTree = "<group>"; };
 		6A0A7E2373333129C84FEF48B8CB579D /* ASAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAssert.h; path = Source/Base/ASAssert.h; sourceTree = "<group>"; };
 		6B4EF8A9A8A3E5231DFCDC7E30D5E740 /* ASRangeManagingNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRangeManagingNode.h; path = Source/ASRangeManagingNode.h; sourceTree = "<group>"; };
@@ -801,28 +909,29 @@
 		6DDF2EBB1F1BD7E472B8FC1BB167E4E7 /* ASImageProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASImageProtocols.h; path = Source/Details/ASImageProtocols.h; sourceTree = "<group>"; };
 		6E0C3E22B9A71591F145FBD4533B4E12 /* ASTextUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextUtilities.h; path = Source/Private/TextExperiment/Utility/ASTextUtilities.h; sourceTree = "<group>"; };
 		6E22F07DCCB8AA16BE0B04CDC3523BBA /* ASCollectionLayoutContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionLayoutContext.m; path = Source/Details/ASCollectionLayoutContext.m; sourceTree = "<group>"; };
+		6E9D0852C085FE440A506E8CFD792100 /* Pods-MyGifsKit-MyGifsKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyGifsKit-MyGifsKitTests-dummy.m"; sourceTree = "<group>"; };
 		6EDCE865BEA3D9A1675E9B81665BA7D9 /* ASBackgroundLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBackgroundLayoutSpec.h; path = Source/Layout/ASBackgroundLayoutSpec.h; sourceTree = "<group>"; };
 		6F5945981C87E678CCB0F8C7582D263A /* ASMainSerialQueue.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASMainSerialQueue.mm; path = Source/Details/ASMainSerialQueue.mm; sourceTree = "<group>"; };
+		6F7A8D1CAB23CE3E755C6A1555178C97 /* Pods-MyGifsKit-MyGifsKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifsKit-MyGifsKitTests-frameworks.sh"; sourceTree = "<group>"; };
 		721C39262FDFB60F57807AC409115AED /* ASStackLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASStackLayoutSpec.mm; path = Source/Layout/ASStackLayoutSpec.mm; sourceTree = "<group>"; };
 		7270535F5B9D781ABDCFE9365410D0E4 /* PINImage+ScaledImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+ScaledImage.m"; path = "Source/Classes/Categories/PINImage+ScaledImage.m"; sourceTree = "<group>"; };
 		73E5FE7E7157CD405B5D062B8D7EC093 /* _ASHierarchyChangeSet.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASHierarchyChangeSet.mm; path = Source/Private/_ASHierarchyChangeSet.mm; sourceTree = "<group>"; };
 		73F7E42B0D21218295F242F2B2A2D2C8 /* ASMultiplexImageNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASMultiplexImageNode.h; path = Source/ASMultiplexImageNode.h; sourceTree = "<group>"; };
 		741DCE0F3B501FD634A16DCE01791190 /* PINRemoteLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteLock.m; path = Source/Classes/PINRemoteLock.m; sourceTree = "<group>"; };
 		7564AC0785C5D6050E37EE67A2FB0312 /* ASResponderChainEnumerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASResponderChainEnumerator.h; path = Source/Private/ASResponderChainEnumerator.h; sourceTree = "<group>"; };
-		761DE08E8FD9B19F5551694549755F28 /* Pods-MyGifs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyGifs-dummy.m"; sourceTree = "<group>"; };
 		761F846A4D4C7A757BB53FB84136C0D4 /* ASDimension.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDimension.mm; path = Source/Layout/ASDimension.mm; sourceTree = "<group>"; };
 		764400190B7B267F5F7EAFA3E7ABE7F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E3AB04D98D6620D100FCC48B7EEFC4 /* _ASScopeTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASScopeTimer.h; path = Source/Private/_ASScopeTimer.h; sourceTree = "<group>"; };
 		771E614A88CC066327E17001BD339D73 /* ASCellNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASCellNode.mm; path = Source/ASCellNode.mm; sourceTree = "<group>"; };
 		773113EAF5C1076F145F60E790C91C13 /* ASDefaultPlaybackButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASDefaultPlaybackButton.m; path = Source/Private/ASDefaultPlaybackButton.m; sourceTree = "<group>"; };
 		773CA7102A69128B84540FA1F9DF6531 /* ASMutableElementMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASMutableElementMap.h; path = Source/Private/ASMutableElementMap.h; sourceTree = "<group>"; };
+		776CB568C9A692F7C6332856AB3EC941 /* Pods-MyGifsKit-MyGifsKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifsKit-MyGifsKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		786ABC65524491F9F6E6438B1B6B08B1 /* _ASAsyncTransactionGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASAsyncTransactionGroup.m; path = Source/Details/Transactions/_ASAsyncTransactionGroup.m; sourceTree = "<group>"; };
 		789C32236F89AF2EE7A5F8EBD54A8B47 /* ASImageNode+AnimatedImagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASImageNode+AnimatedImagePrivate.h"; path = "Source/Private/ASImageNode+AnimatedImagePrivate.h"; sourceTree = "<group>"; };
 		78BAC4F89021A0B0FC42C1E7E0504526 /* ASViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASViewController.h; path = Source/ASViewController.h; sourceTree = "<group>"; };
-		7A5EBB6D31F288C138DCDDA7990AC50F /* Pods-MyGifs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyGifs.modulemap"; sourceTree = "<group>"; };
 		7B85EC2365020D3A5E90C6AFD568DFBE /* ASWeakSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASWeakSet.h; path = Source/Details/ASWeakSet.h; sourceTree = "<group>"; };
 		7C28735D2E134F613E75ABCE41CA9386 /* ASEventLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASEventLog.h; path = Source/Details/ASEventLog.h; sourceTree = "<group>"; };
-		7D2A67AB53F9C0FEFA6BF1CF0416E9E3 /* Pods-MyGifs-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyGifs-acknowledgements.plist"; sourceTree = "<group>"; };
+		7C71850CB0EBF7C5A20793CC98A6FF62 /* Pods-MyGifs-MyGifsMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifs-MyGifsMessages.release.xcconfig"; sourceTree = "<group>"; };
 		7D8D9F6641C61B3D00F9C7F62F79D110 /* AsyncDisplayKit+Debug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AsyncDisplayKit+Debug.m"; path = "Source/Debug/AsyncDisplayKit+Debug.m"; sourceTree = "<group>"; };
 		7E347E8BDFFCD33E2B8DDFDF3AD59B9D /* NSIndexSet+ASHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSIndexSet+ASHelpers.h"; path = "Source/Details/NSIndexSet+ASHelpers.h"; sourceTree = "<group>"; };
 		7E7E3107D5B00301A700203F85E84755 /* _ASAsyncTransactionGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASAsyncTransactionGroup.h; path = Source/Details/Transactions/_ASAsyncTransactionGroup.h; sourceTree = "<group>"; };
@@ -832,8 +941,8 @@
 		805741D21B938F7B41B0F0D7DADAD765 /* ASLayoutRangeType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutRangeType.h; path = Source/Details/ASLayoutRangeType.h; sourceTree = "<group>"; };
 		80C652E7C33DBF503D5D4A46D070FF6A /* NSParagraphStyle+ASText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSParagraphStyle+ASText.h"; path = "Source/Private/TextExperiment/Utility/NSParagraphStyle+ASText.h"; sourceTree = "<group>"; };
 		8100C931413C3029638710FCB6F6262F /* Texture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Texture-umbrella.h"; sourceTree = "<group>"; };
-		813C2ECBA5CF3AD1853F454FE9BC517D /* Pods-MyGifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifs.debug.xcconfig"; sourceTree = "<group>"; };
 		816680965886310C75A52088A3D4F694 /* ASEventLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASEventLog.mm; path = Source/Details/ASEventLog.mm; sourceTree = "<group>"; };
+		81CE706815876049C457B1C466E103DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826BEEA3E5A4122CF0BE20FB26E2D121 /* ASVideoPlayerNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASVideoPlayerNode.h; path = Source/ASVideoPlayerNode.h; sourceTree = "<group>"; };
 		8294B2C2D3655C9DF0618628768688AE /* NSAttributedString+ASText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+ASText.m"; path = "Source/Private/TextExperiment/Utility/NSAttributedString+ASText.m"; sourceTree = "<group>"; };
 		840098F554C29F867AB08E6796FFED42 /* ASTextKitCoreTextAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextKitCoreTextAdditions.m; path = Source/TextKit/ASTextKitCoreTextAdditions.m; sourceTree = "<group>"; };
@@ -848,15 +957,15 @@
 		8C6DC8AEFFE09F4F77D3F4F0C3DA0328 /* PINMemMapAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemMapAnimatedImage.m; path = Source/Classes/AnimatedImages/PINMemMapAnimatedImage.m; sourceTree = "<group>"; };
 		8C9F5C6010B5D2D0F2FFAE73BBFEA377 /* ASDisplayNodeTipState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeTipState.h; path = Source/Private/ASDisplayNodeTipState.h; sourceTree = "<group>"; };
 		8D22E1781011705F2041E966B192D91A /* ASDisplayNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDisplayNode.mm; path = Source/ASDisplayNode.mm; sourceTree = "<group>"; };
-		8D23B5D8162867894C048AE32E86F115 /* Pods-MyGifsKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifsKit.release.xcconfig"; sourceTree = "<group>"; };
 		8DDD98165AB7570FD884ED23CDBB12EF /* PINRemoteImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINRemoteImage-dummy.m"; sourceTree = "<group>"; };
 		8E9C5AC96F956BECD24753123C10BD17 /* PINOperationGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationGroup.m; path = Source/PINOperationGroup.m; sourceTree = "<group>"; };
 		8F1585D5647B481C3ED401AA394B61B1 /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
-		8F5D2B24F7D5DDC668216B9BB90F43C3 /* Pods-MyGifsKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifsKit-resources.sh"; sourceTree = "<group>"; };
 		911B914F622879374216FD4DCF866E19 /* PINOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationQueue.m; path = Source/PINOperationQueue.m; sourceTree = "<group>"; };
+		916F0A23ED4673E0EA073A09F359B0EF /* Pods-MyGifsKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyGifsKit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		936C6170D92E8C07C2CB35606D56725C /* ASCollectionLayoutDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionLayoutDefines.m; path = Source/Private/ASCollectionLayoutDefines.m; sourceTree = "<group>"; };
 		939B7E32680B7E1C56C8A42AA8DEB9C7 /* ASNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASNavigationController.m; path = Source/ASNavigationController.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93F4D605ADF1019659C8B7ABE904A32A /* Pods-MyGifsKit-MyGifsKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifsKit-MyGifsKitTests-resources.sh"; sourceTree = "<group>"; };
 		94106430C01FC4CABBDE9466B4450A8D /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = Source/PINDiskCache.h; sourceTree = "<group>"; };
 		945F832A7B52B86D71607730FC32C4CC /* PINOperation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-prefix.pch"; sourceTree = "<group>"; };
 		94B7EBC3E1447B884DB9E17A579D5B84 /* PINOperation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-umbrella.h"; sourceTree = "<group>"; };
@@ -869,7 +978,6 @@
 		969ED9C62592BD6E761612C7FFE09E1C /* _ASCoreAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASCoreAnimationExtras.mm; path = Source/Private/_ASCoreAnimationExtras.mm; sourceTree = "<group>"; };
 		96DD7469305D93B5C3B9FD3EFE86BA6A /* ASWeakSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASWeakSet.m; path = Source/Details/ASWeakSet.m; sourceTree = "<group>"; };
 		979C4AB3D46A362186495CF49375C288 /* PINProgressiveImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINProgressiveImage.m; path = Source/Classes/PINProgressiveImage.m; sourceTree = "<group>"; };
-		97DBAD33F0F78F7ABF3AA25FE0271C54 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9839CF4773817F125F36D8A59421918E /* ASTextKitFontSizeAdjuster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitFontSizeAdjuster.h; path = Source/TextKit/ASTextKitFontSizeAdjuster.h; sourceTree = "<group>"; };
 		9867D2D4E018636DF16D2E62C4CB13BA /* ASLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASLayout.mm; path = Source/Layout/ASLayout.mm; sourceTree = "<group>"; };
 		9899523C3FEBE843693B37F5E8C1FC31 /* ASDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDelegateProxy.h; path = Source/Details/ASDelegateProxy.h; sourceTree = "<group>"; };
@@ -880,6 +988,7 @@
 		9AD82EEAA4B1D0F9F5ED81DF00479D10 /* ASHighlightOverlayLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASHighlightOverlayLayer.h; path = Source/Details/ASHighlightOverlayLayer.h; sourceTree = "<group>"; };
 		9B3EF8C2EED478AC55D9527ECF606ED1 /* ASScrollNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASScrollNode.h; path = Source/ASScrollNode.h; sourceTree = "<group>"; };
 		9C063F08451E9C31C627F823087C15FF /* PINGIFAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINGIFAnimatedImage.m; path = Source/Classes/AnimatedImages/PINGIFAnimatedImage.m; sourceTree = "<group>"; };
+		9DB55CB097110A180C88A28979D2EE71 /* Pods-MyGifsKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifsKit.release.xcconfig"; sourceTree = "<group>"; };
 		9DF45274E4C03A05A5D2DAE14A219E99 /* PINRemoteImageMemoryContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageMemoryContainer.m; path = Source/Classes/PINRemoteImageMemoryContainer.m; sourceTree = "<group>"; };
 		9E1A6C9F11B438133E4F0B86798F6AFC /* ASCollectionViewLayoutInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionViewLayoutInspector.h; path = Source/Details/ASCollectionViewLayoutInspector.h; sourceTree = "<group>"; };
 		9EA311C7FFD0983A293F4F69790E47A5 /* ASTextNode2.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextNode2.mm; path = Source/ASTextNode2.mm; sourceTree = "<group>"; };
@@ -888,12 +997,14 @@
 		A048894214ED75CD95330787723D53CD /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = Source/PINMemoryCache.m; sourceTree = "<group>"; };
 		A061E6848331128ED61674C46496FB33 /* ASPINRemoteImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPINRemoteImageDownloader.h; path = Source/Details/ASPINRemoteImageDownloader.h; sourceTree = "<group>"; };
 		A0C4DBEC4802736594E604D9FBD2A438 /* ASTextRunDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextRunDelegate.m; path = Source/Private/TextExperiment/String/ASTextRunDelegate.m; sourceTree = "<group>"; };
+		A17CDEA7780908D6C734D3CC7A32F9C8 /* Pods-MyGifs-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyGifs-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A2A252ADAC05D0571BFC94A0C8BE2DFE /* ASSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASSectionController.h; path = Source/ASSectionController.h; sourceTree = "<group>"; };
 		A2DF300998CB24A3E03C1DA082DE0187 /* ASOverlayLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASOverlayLayoutSpec.mm; path = Source/Layout/ASOverlayLayoutSpec.mm; sourceTree = "<group>"; };
 		A3F26F96246ED63E979EDB8CC4898F29 /* ASLayoutTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutTransition.h; path = Source/Private/ASLayoutTransition.h; sourceTree = "<group>"; };
 		A48F89E9FAEF6981CF7685600446A646 /* ASCollectionViewFlowLayoutInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionViewFlowLayoutInspector.m; path = Source/Private/ASCollectionViewFlowLayoutInspector.m; sourceTree = "<group>"; };
 		A4D7CCE82C163EC9968D25F1FD93BFAD /* PINRemoteImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManager.m; path = Source/Classes/PINRemoteImageManager.m; sourceTree = "<group>"; };
 		A5440994A546EB268F87134410DF5198 /* ASTextKitEntityAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitEntityAttribute.h; path = Source/TextKit/ASTextKitEntityAttribute.h; sourceTree = "<group>"; };
+		A56516562B15889327DE1B5773236205 /* Pods-MyGifs-MyGifsMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyGifs-MyGifsMessages-dummy.m"; sourceTree = "<group>"; };
 		A5FC41887AB05701FC36892C855A9D21 /* ASControlNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASControlNode.h; path = Source/ASControlNode.h; sourceTree = "<group>"; };
 		A6355FF165FD409561CEED24FA01C32B /* ASTableNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableNode.h; path = Source/ASTableNode.h; sourceTree = "<group>"; };
 		A6BCBE94E4006B09E8FE53A34651D9DD /* _ASCollectionReusableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASCollectionReusableView.m; path = Source/Details/_ASCollectionReusableView.m; sourceTree = "<group>"; };
@@ -904,6 +1015,7 @@
 		AB9DD25B08EF7C8FC2E09E01D3D23F8E /* ASPagerFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPagerFlowLayout.h; path = Source/ASPagerFlowLayout.h; sourceTree = "<group>"; };
 		AD2ED8B064C6D39ED621A0CD302B44D1 /* UICollectionViewLayout+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionViewLayout+ASConvenience.h"; path = "Source/Details/UICollectionViewLayout+ASConvenience.h"; sourceTree = "<group>"; };
 		AD4117469671158F8806F3BDA31FEA76 /* ASScrollNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASScrollNode.mm; path = Source/ASScrollNode.mm; sourceTree = "<group>"; };
+		AD5947FD5322261815BC58846412D1D2 /* Pods-MyGifs-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifs-frameworks.sh"; sourceTree = "<group>"; };
 		AD6C87B0FE8887C5D04EE2C0783B3BC7 /* ASDisplayNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+Beta.h"; path = "Source/ASDisplayNode+Beta.h"; sourceTree = "<group>"; };
 		AD78E640D817220EE7896C940A9500A8 /* PINRemoteImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINRemoteImage.xcconfig; sourceTree = "<group>"; };
 		AE31861E40EA99EFA522EF98920DF609 /* ASLayoutSpecUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutSpecUtilities.h; path = Source/Private/Layout/ASLayoutSpecUtilities.h; sourceTree = "<group>"; };
@@ -912,9 +1024,9 @@
 		AF3FF0AD3548B3561B410A6C33353537 /* _ASHierarchyChangeSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASHierarchyChangeSet.h; path = Source/Private/_ASHierarchyChangeSet.h; sourceTree = "<group>"; };
 		AF42699C11C9E1A1D31CBA3893194829 /* PINImage+DecodedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+DecodedImage.h"; path = "Source/Classes/Categories/PINImage+DecodedImage.h"; sourceTree = "<group>"; };
 		AFA43E42A85B06963ED385A51A0A0145 /* PINRemoteImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManager.h; path = Source/Classes/PINRemoteImageManager.h; sourceTree = "<group>"; };
-		AFB77537404C309EB65FBC4B650B9DF6 /* Pods_MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyGifsKit.framework; path = "Pods-MyGifsKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B073D7746C672F37BE9EC24F745AA3E7 /* NSIndexSet+ASHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSIndexSet+ASHelpers.m"; path = "Source/Details/NSIndexSet+ASHelpers.m"; sourceTree = "<group>"; };
 		B0B316302ED129254E5F6AF12D750BE3 /* PINImage+WebP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+WebP.h"; path = "Source/Classes/Categories/PINImage+WebP.h"; sourceTree = "<group>"; };
+		B0B71DAAA03B7A9E64928E72F6E85348 /* Pods-MyGifs-MyGifsMessages-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifs-MyGifsMessages-resources.sh"; sourceTree = "<group>"; };
 		B155ECE0D11210365A835B9179D6A38D /* ASPhotosFrameworkImageRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPhotosFrameworkImageRequest.h; path = Source/Details/ASPhotosFrameworkImageRequest.h; sourceTree = "<group>"; };
 		B24352B41B122A51F2D73921784ECB6F /* PINRequestRetryStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRequestRetryStrategy.h; path = Source/Classes/PINRequestRetryStrategy.h; sourceTree = "<group>"; };
 		B26E0691BE361445A3A753388CC92F6E /* ASTextKitAttributes.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitAttributes.mm; path = Source/TextKit/ASTextKitAttributes.mm; sourceTree = "<group>"; };
@@ -925,21 +1037,20 @@
 		B34A5DC75CAB9AA70826D914AB771B95 /* ASMutableAttributedStringBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASMutableAttributedStringBuilder.h; path = Source/Details/ASMutableAttributedStringBuilder.h; sourceTree = "<group>"; };
 		B40F9CBD712669B6184251D568CD1EB0 /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = Source/PINCache.m; sourceTree = "<group>"; };
 		B476011260F9D9D1A13FCF045226766D /* ASRectTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASRectTable.m; path = Source/Private/ASRectTable.m; sourceTree = "<group>"; };
-		B57D79A43AF8B5E35B833054F9DA05D3 /* Pods-MyGifsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyGifsKit-umbrella.h"; sourceTree = "<group>"; };
+		B4E6ABA68858365263833E60B019E9A4 /* Pods-MyGifsKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyGifsKit-resources.sh"; sourceTree = "<group>"; };
 		B5959F3013986A12534ED0C2DB398A87 /* ASAbstractLayoutController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASAbstractLayoutController.mm; path = Source/Details/ASAbstractLayoutController.mm; sourceTree = "<group>"; };
 		B5CB7EA41126410DA4328CF71D2292A3 /* ASIGListAdapterBasedDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIGListAdapterBasedDataSource.m; path = Source/Private/ASIGListAdapterBasedDataSource.m; sourceTree = "<group>"; };
 		B6A1B2B94EE69700D38DA5D9D4D0499D /* UIImage+ASConvenience.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ASConvenience.m"; path = "Source/UIImage+ASConvenience.m"; sourceTree = "<group>"; };
 		B6FB4440E7A10F4B722DBCCDC038EB00 /* ASCollectionLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionLayout.h; path = Source/Private/ASCollectionLayout.h; sourceTree = "<group>"; };
 		B72E29E3B121B47C9F2AAE9C1FAB2AD3 /* ASStackUnpositionedLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASStackUnpositionedLayout.mm; path = Source/Private/Layout/ASStackUnpositionedLayout.mm; sourceTree = "<group>"; };
+		B74F19D7E2D078028C4D116A29131322 /* Pods-MyGifsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyGifsKit-umbrella.h"; sourceTree = "<group>"; };
 		B7B61C907F318AACE91CA2A8A7446EF8 /* ASBasicImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBasicImageDownloader.h; path = Source/Details/ASBasicImageDownloader.h; sourceTree = "<group>"; };
 		B95A8A3888206F8BBE77633868DC9BAB /* Texture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Texture-prefix.pch"; sourceTree = "<group>"; };
 		BA4A2A97B1B26F023457632CDF432939 /* PINImageView+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImageView+PINRemoteImage.h"; path = "Source/Classes/ImageCategories/PINImageView+PINRemoteImage.h"; sourceTree = "<group>"; };
 		BBA2169F2999CB4ECC4E90504198599E /* ASTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableView.h; path = Source/ASTableView.h; sourceTree = "<group>"; };
 		BBAB91D86794B4EC6A5C9BBD6338BB23 /* NSData+ImageDetectors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageDetectors.m"; path = "Source/Classes/Categories/NSData+ImageDetectors.m"; sourceTree = "<group>"; };
 		BC29FEFB69833FBA0941BBA88E531F6B /* ASTextKitShadower.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitShadower.mm; path = Source/TextKit/ASTextKitShadower.mm; sourceTree = "<group>"; };
-		BC78C964CBA1424CEFA9F9294BBA614F /* Pods-MyGifsKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyGifsKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		BCC095D2174848C61B85F92B1475ABF9 /* ASCollectionLayoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionLayoutDelegate.h; path = Source/Details/ASCollectionLayoutDelegate.h; sourceTree = "<group>"; };
-		BD08FD43C2C50D4625622BA39052444A /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9EE8F54EF6E81E854DA0895C3CB5C5 /* ASThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASThread.h; path = Source/Details/ASThread.h; sourceTree = "<group>"; };
 		BDBB279876A59281E608615FCFFF0306 /* _ASDisplayLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASDisplayLayer.mm; path = Source/Details/_ASDisplayLayer.mm; sourceTree = "<group>"; };
 		BEBE5B912186E0DBD6C696C27F884BE0 /* ASDefaultPlaybackButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDefaultPlaybackButton.h; path = Source/Private/ASDefaultPlaybackButton.h; sourceTree = "<group>"; };
@@ -952,11 +1063,10 @@
 		C21D445028440D3C88DF6147BEAED33A /* ASYogaLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASYogaLayoutSpec.mm; path = Source/Layout/ASYogaLayoutSpec.mm; sourceTree = "<group>"; };
 		C2A442CDEFC0660293CE61C26E94993A /* ASTextKitRenderer+Positioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTextKitRenderer+Positioning.h"; path = "Source/TextKit/ASTextKitRenderer+Positioning.h"; sourceTree = "<group>"; };
 		C2C717C939BCD2B94D6862BFC43DF3B6 /* ASWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASWeakProxy.m; path = Source/Details/ASWeakProxy.m; sourceTree = "<group>"; };
+		C2EB373B2997F74DDA339D2D717975A7 /* Pods-MyGifsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyGifsKit.modulemap"; sourceTree = "<group>"; };
 		C34DF4C7B55BB8332551AEA85198AF37 /* ASTipNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTipNode.h; path = Source/Private/ASTipNode.h; sourceTree = "<group>"; };
-		C355DC708014F16277E206EF5BD670F9 /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
 		C40D266B31A6CFDE0A22274D4BEF0C25 /* ASBaseDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBaseDefines.h; path = Source/Base/ASBaseDefines.h; sourceTree = "<group>"; };
 		C5667E1D946ECA69FDFFB7EFDEA6DC68 /* ASDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASDelegateProxy.m; path = Source/Details/ASDelegateProxy.m; sourceTree = "<group>"; };
-		C585FBBA8815BB22074D100A328F8A79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6503B28263C49C2A66DDD0043C093D2 /* ASStackPositionedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackPositionedLayout.h; path = Source/Private/Layout/ASStackPositionedLayout.h; sourceTree = "<group>"; };
 		C66E0F737EB81FEF99305BFD2C7757A5 /* ASImageNode+CGExtras.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASImageNode+CGExtras.m"; path = "Source/Private/ASImageNode+CGExtras.m"; sourceTree = "<group>"; };
 		C6D9C00B38B9F8E8A80288E5DC77CEFF /* _ASAsyncTransactionContainer+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "_ASAsyncTransactionContainer+Private.h"; path = "Source/Details/Transactions/_ASAsyncTransactionContainer+Private.h"; sourceTree = "<group>"; };
@@ -967,6 +1077,7 @@
 		C852F84A305C62EB1653E4F2385FCDBB /* ASPagerFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASPagerFlowLayout.m; path = Source/ASPagerFlowLayout.m; sourceTree = "<group>"; };
 		C85A3F679640F6176E0D543BA0623B27 /* ASTextDebugOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextDebugOption.h; path = Source/Private/TextExperiment/Component/ASTextDebugOption.h; sourceTree = "<group>"; };
 		C8AE4D02A5DA9348E18627E8027C4DCD /* ASTextKitTailTruncater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitTailTruncater.h; path = Source/TextKit/ASTextKitTailTruncater.h; sourceTree = "<group>"; };
+		C9951500223C5B5635CE91066025263E /* Pods-MyGifs-MyGifsMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyGifs-MyGifsMessages.modulemap"; sourceTree = "<group>"; };
 		C9B1D3C0EE3F08B3CD8AA3D76DFE1012 /* ASCollectionNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionNode+Beta.h"; path = "Source/ASCollectionNode+Beta.h"; sourceTree = "<group>"; };
 		CA0E689FCA73B0C0D339F8C66793CC9E /* ASStackPositionedLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASStackPositionedLayout.mm; path = Source/Private/Layout/ASStackPositionedLayout.mm; sourceTree = "<group>"; };
 		CA53A0E003E9BC095B79C30FB47F7CBE /* PINRemoteImageCategoryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCategoryManager.m; path = Source/Classes/PINRemoteImageCategoryManager.m; sourceTree = "<group>"; };
@@ -975,11 +1086,10 @@
 		CAB3AE731769BF6E5FA8FBDAEC77AF68 /* ASTraceEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTraceEvent.h; path = Source/Details/ASTraceEvent.h; sourceTree = "<group>"; };
 		CB0BB71B5DF652E6F9F8B8524F91C084 /* ASDataController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDataController.h; path = Source/Details/ASDataController.h; sourceTree = "<group>"; };
 		CBEE0BA0C73470E06538DB0E5922AF75 /* ASLayoutElementStylePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutElementStylePrivate.h; path = Source/Private/Layout/ASLayoutElementStylePrivate.h; sourceTree = "<group>"; };
+		CC3E8FE11C62E1392AD92D0A6005801B /* Pods-MyGifs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyGifs-dummy.m"; sourceTree = "<group>"; };
 		CC5BC3FF1875888E0DBD0ADEBC96FB6F /* ASImageNode+tvOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASImageNode+tvOS.h"; path = "Source/tvOS/ASImageNode+tvOS.h"; sourceTree = "<group>"; };
-		CC6F196BDF585340AD15863AF59A7A92 /* Pods-MyGifsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyGifsKit-dummy.m"; sourceTree = "<group>"; };
 		CCCF6996F9C183A132FE61B3CD3D2A79 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		CCDA4DBBF6090774F1B29F5B6DF00F9E /* PINCache+PINRemoteImageCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINCache+PINRemoteImageCaching.h"; path = "Source/Classes/PINCache/PINCache+PINRemoteImageCaching.h"; sourceTree = "<group>"; };
-		CD690B8170AA864862FE6FC6BC918209 /* Pods-MyGifsKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyGifsKit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFD91A482C2986DEE6701E5233075B1D /* ASCollectionView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASCollectionView.mm; path = Source/ASCollectionView.mm; sourceTree = "<group>"; };
 		D0A52A3A8F2D1A1341DB2F8B1A890A83 /* PINRemoteImageBasicCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageBasicCache.h; path = Source/Classes/PINRemoteImageBasicCache.h; sourceTree = "<group>"; };
 		D0F3176454C1AB5676DC80C2F1BB9CB6 /* ASInternalHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASInternalHelpers.h; path = Source/Private/ASInternalHelpers.h; sourceTree = "<group>"; };
@@ -996,17 +1106,18 @@
 		D847D887AAF7613ED5DDF082C6E91AF9 /* PINWebPAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINWebPAnimatedImage.m; path = Source/Classes/AnimatedImages/PINWebPAnimatedImage.m; sourceTree = "<group>"; };
 		D88587B7D19D75A49B7E6C47F7B22494 /* ASBatchFetching.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASBatchFetching.m; path = Source/Private/ASBatchFetching.m; sourceTree = "<group>"; };
 		D897C499471F5D6756E43CC09F5788C0 /* ASTipsController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTipsController.m; path = Source/Private/ASTipsController.m; sourceTree = "<group>"; };
+		D89DD32C4A89DE225C90485E91534CC5 /* Pods_MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyGifsKit.framework; path = "Pods-MyGifsKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CE4CECEC38A9903BE6F6AB19350209 /* Texture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Texture.modulemap; sourceTree = "<group>"; };
 		D908C5201E0E1EF61823F261AFFDBB82 /* ASDisplayNodeLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeLayout.h; path = Source/Private/ASDisplayNodeLayout.h; sourceTree = "<group>"; };
 		D96844CB0DD885227A765053B28EEB36 /* ASAbsoluteLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAbsoluteLayoutSpec.h; path = Source/Layout/ASAbsoluteLayoutSpec.h; sourceTree = "<group>"; };
 		D9B4037E5109C808CD7FA25B0A41032A /* _ASPendingState.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASPendingState.mm; path = Source/Private/_ASPendingState.mm; sourceTree = "<group>"; };
 		D9E3A98B1D80744C5C8D08509233C003 /* ASDisplayNodeInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeInternal.h; path = Source/Private/ASDisplayNodeInternal.h; sourceTree = "<group>"; };
 		DA8DDD52DADDFB53F1875EC634BB370F /* PINOperation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.xcconfig; sourceTree = "<group>"; };
+		DB74E86EFD59701E1B46DCB3F7E199B2 /* Pods-MyGifsKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifsKit.debug.xcconfig"; sourceTree = "<group>"; };
 		DB848F261890E3EB770A1D63BA550787 /* PINImage+ScaledImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+ScaledImage.h"; path = "Source/Classes/Categories/PINImage+ScaledImage.h"; sourceTree = "<group>"; };
 		DB9AC14D0A72F1F7A8065E39F7D35452 /* CoreGraphics+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CoreGraphics+ASConvenience.h"; path = "Source/Details/CoreGraphics+ASConvenience.h"; sourceTree = "<group>"; };
 		DBF0BC33C8739D60524424B1CAD68CC0 /* PINResume.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINResume.h; path = Source/Classes/PINResume.h; sourceTree = "<group>"; };
 		DCEBFC74808D57A72614AC9F3CE1C6EB /* PINRemoteImageMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMacros.h; path = Source/Classes/PINRemoteImageMacros.h; sourceTree = "<group>"; };
-		DCF0DB20E1A30D7070664F550501924B /* Pods-MyGifs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyGifs-umbrella.h"; sourceTree = "<group>"; };
 		DD0D6F7DBA292C79BB6872206B45755F /* PINRemoteImageProcessorTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageProcessorTask.m; path = Source/Classes/PINRemoteImageProcessorTask.m; sourceTree = "<group>"; };
 		DD37CCE32FAD6DB70E4B1D4F4DBE7F99 /* ASDimensionInternal.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDimensionInternal.mm; path = Source/Layout/ASDimensionInternal.mm; sourceTree = "<group>"; };
 		DD3EA2479320097A6701DBAEBBA7F917 /* ASTextUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextUtilities.m; path = Source/Private/TextExperiment/Utility/ASTextUtilities.m; sourceTree = "<group>"; };
@@ -1021,22 +1132,21 @@
 		E273B32DBF32C28F4009D09E22F123FA /* ASImageContainerProtocolCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASImageContainerProtocolCategories.h; path = Source/Details/ASImageContainerProtocolCategories.h; sourceTree = "<group>"; };
 		E2B07F5B5FC08D30805BF93E9CEC8AC0 /* ASTextAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextAttribute.m; path = Source/Private/TextExperiment/String/ASTextAttribute.m; sourceTree = "<group>"; };
 		E2D19B159BC28D108BE28D7AC56D95EF /* _ASAsyncTransactionContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASAsyncTransactionContainer.h; path = Source/Details/Transactions/_ASAsyncTransactionContainer.h; sourceTree = "<group>"; };
-		E2D8EECFC3141061AB76E1C940891D7D /* Pods-MyGifs-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyGifs-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E3E36C13409D198A6AA28003F6DB3C87 /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
 		E419CA781EAD366C49A88702070128FB /* ASCollectionLayoutCache.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASCollectionLayoutCache.mm; path = Source/Private/ASCollectionLayoutCache.mm; sourceTree = "<group>"; };
 		E4207EE9D5A9DD92859C35C35DAD627F /* ASTableView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTableView.mm; path = Source/ASTableView.mm; sourceTree = "<group>"; };
 		E5562ED9F7B3516DF1E2450B6F3C944E /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
 		E5821473143C768338C9E961790BD061 /* Texture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Texture.xcconfig; sourceTree = "<group>"; };
-		E5FA64BBC3B555A4C0695479350649F6 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AsyncDisplayKit.framework; path = Texture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6071FBB4F4DBDA5F3F309EFD5B26CC6 /* ASTraceEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTraceEvent.m; path = Source/Details/ASTraceEvent.m; sourceTree = "<group>"; };
+		E60A5282A1EE612FEE29850AAFD9CEF0 /* Pods-MyGifsKit-MyGifsKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyGifsKit-MyGifsKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E62E1C30E81143368173AF46B2119E76 /* ASImageNode+CGExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASImageNode+CGExtras.h"; path = "Source/Private/ASImageNode+CGExtras.h"; sourceTree = "<group>"; };
 		E74C652694F09972475956255CC54413 /* ASCollectionInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionInternal.h; path = Source/Details/ASCollectionInternal.h; sourceTree = "<group>"; };
 		E77901B196B206B16378AA1096B99CAA /* PINOperation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINOperation-dummy.m"; sourceTree = "<group>"; };
 		E87DDFF7AB22C8014F0EB23D36B10A52 /* ASDisplayNode+FrameworkPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+FrameworkPrivate.h"; path = "Source/Private/ASDisplayNode+FrameworkPrivate.h"; sourceTree = "<group>"; };
 		E89B79CB4F7237CA13AF4DC667B9F04D /* ASCollectionLayoutContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionLayoutContext.h; path = Source/Details/ASCollectionLayoutContext.h; sourceTree = "<group>"; };
 		E9BB768DFADAA98E5C2B35314CA84225 /* ASAbsoluteLayoutElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAbsoluteLayoutElement.h; path = Source/Layout/ASAbsoluteLayoutElement.h; sourceTree = "<group>"; };
+		E9EBADFEDCBC0A740AEFC3A118789FE0 /* Pods-MyGifsKit-MyGifsKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyGifsKit-MyGifsKitTests.modulemap"; sourceTree = "<group>"; };
 		EA2B83022CB8732B3214BC4CC04C80AA /* ASImageNode+tvOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASImageNode+tvOS.m"; path = "Source/tvOS/ASImageNode+tvOS.m"; sourceTree = "<group>"; };
-		EA57139B0140848F051FD0492D6D736A /* Pods-MyGifsKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyGifsKit.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0FE8C73E8DC3378B62BFD0A2D74E0B /* ASSignpost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASSignpost.h; path = Source/Base/ASSignpost.h; sourceTree = "<group>"; };
 		EB3907FA3D25E9C6480CA5E00184A5BB /* ASDisplayNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNode.h; path = Source/ASDisplayNode.h; sourceTree = "<group>"; };
 		ECE32ADC073DC874542BF1A66D382F5A /* PINRemoteImageCallbacks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCallbacks.m; path = Source/Classes/PINRemoteImageCallbacks.m; sourceTree = "<group>"; };
@@ -1062,6 +1172,7 @@
 		F8994F0A46EA8C5E5D6CB68702AEB19B /* PINOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperation.h; path = Source/PINOperation.h; sourceTree = "<group>"; };
 		F8DAA28C0C588067F99D73AB926C3C54 /* PINRemoteImageTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageTask.h; path = Source/Classes/PINRemoteImageTask.h; sourceTree = "<group>"; };
 		F94CCC16BC9856F66F5AAF45C91B8748 /* ASTextKitRenderer+Positioning.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASTextKitRenderer+Positioning.mm"; path = "Source/TextKit/ASTextKitRenderer+Positioning.mm"; sourceTree = "<group>"; };
+		F9834719E62BAE65FDA7052B114018FE /* Pods-MyGifs-MyGifsMessages-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyGifs-MyGifsMessages-acknowledgements.plist"; sourceTree = "<group>"; };
 		F9AB86FDE0625F8EF9218B259A6BF5F6 /* AsyncDisplayKit+IGListKitMethods.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AsyncDisplayKit+IGListKitMethods.m"; path = "Source/AsyncDisplayKit+IGListKitMethods.m"; sourceTree = "<group>"; };
 		F9C503C55E267628F778CF06005F24AD /* ASTipsWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTipsWindow.h; path = Source/Private/ASTipsWindow.h; sourceTree = "<group>"; };
 		F9DFD3E4351173094AAE167E92243EC9 /* ASCollectionFlowLayoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionFlowLayoutDelegate.h; path = Source/Details/ASCollectionFlowLayoutDelegate.h; sourceTree = "<group>"; };
@@ -1075,10 +1186,10 @@
 		FC1AFD57B6F4E34680349AA3E6D267B6 /* ASPagerNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASPagerNode+Beta.h"; path = "Source/ASPagerNode+Beta.h"; sourceTree = "<group>"; };
 		FC3FFE2974BD6BC2C798B64850F23C33 /* PINButton+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINButton+PINRemoteImage.h"; path = "Source/Classes/ImageCategories/PINButton+PINRemoteImage.h"; sourceTree = "<group>"; };
 		FC59647E0CADDA7210EF3A845D87AE28 /* ASTwoDimensionalArrayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTwoDimensionalArrayUtils.m; path = Source/Private/ASTwoDimensionalArrayUtils.m; sourceTree = "<group>"; };
-		FC8D160B54AAA1590F0A5AA8BDADFB4D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6E300FA2748B377BD9988603219041 /* ASCellNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCellNode.h; path = Source/ASCellNode.h; sourceTree = "<group>"; };
 		FD881579B187447CE2A5D00281C651BA /* PINRemoteImageTask+Subclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINRemoteImageTask+Subclassing.h"; path = "Source/Classes/Categories/PINRemoteImageTask+Subclassing.h"; sourceTree = "<group>"; };
 		FDA5D3E889A1D2C9FF01777D47D6B195 /* PINImage+WebP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+WebP.m"; path = "Source/Classes/Categories/PINImage+WebP.m"; sourceTree = "<group>"; };
+		FE301AF6ACE08CD26DD9AC20A901A003 /* Pods_MyGifs_MyGifsMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyGifs_MyGifsMessages.framework; path = "Pods-MyGifs-MyGifsMessages.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACE07AF2FB5094DCE41C276E051C79 /* ASDisplayNode+Convenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+Convenience.h"; path = "Source/ASDisplayNode+Convenience.h"; sourceTree = "<group>"; };
 		FF02991C727F0DE691A933F95977C8FC /* NSAttributedString+ASText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+ASText.h"; path = "Source/Private/TextExperiment/Utility/NSAttributedString+ASText.h"; sourceTree = "<group>"; };
 		FF34CCE1EE13C7F78F34771CA9C6BC72 /* ASCollectionLayoutState.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASCollectionLayoutState.mm; path = Source/Details/ASCollectionLayoutState.mm; sourceTree = "<group>"; };
@@ -1090,6 +1201,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3012A1CAC408F64419BB26C25CDE0C67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				976ACDF3573D37301233EE8419CA3021 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30DD4CA4137D21457E01141DB5C07D39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1098,11 +1217,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BF314FB7A8F0E0E0BD7D1F3E8A1D138 /* Frameworks */ = {
+		4F996F73BCC1BFC4DA2068BF0C83B2DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CD07B1A1E4CD5F8E07FB253A5C659D /* Foundation.framework in Frameworks */,
+				C8C64B10C2893F7835AB295404ADDA6D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1255,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4DE0E171100CD8B7AA87973779D7F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D5E2BFDDACDB57AF945A66905D1BD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA7C6C14E0C7F87EF8B2678B05C79E7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1150,6 +1277,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02BBB9FBFFD2D93C8A52C8C33BF180B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66BB4948A0FD8A04F4F40B3027FAFABB /* AsyncDisplayKit.framework */,
+				1C10D6CB126109826993DEA8E0612490 /* PINCache.framework */,
+				367CFFC7887D897EFA05EB00A9F34F03 /* PINOperation.framework */,
+				2BCA9448635DD459CF9131FA3825826D /* PINRemoteImage.framework */,
+				049253E4DDE92DE7C9445DBC5F9B1028 /* Pods_MyGifs.framework */,
+				FE301AF6ACE08CD26DD9AC20A901A003 /* Pods_MyGifs_MyGifsMessages.framework */,
+				D89DD32C4A89DE225C90485E91534CC5 /* Pods_MyGifsKit.framework */,
+				0E71BA2535B3FFAC617BCD8F43C1877B /* Pods_MyGifsKit_MyGifsKitTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		03595B9109D8C51E3D956ED5685ADA09 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -1199,30 +1341,57 @@
 			path = "../Target Support Files/PINRemoteImage";
 			sourceTree = "<group>";
 		};
-		335C4377781793DBF35F2D509B52874D /* Pods-MyGifsKit */ = {
+		42E59EB87E0B5CA8FF83823587A1E96B /* Pods-MyGifs */ = {
 			isa = PBXGroup;
 			children = (
-				FC8D160B54AAA1590F0A5AA8BDADFB4D /* Info.plist */,
-				69A5CEC99D47C65D9034998007C50EFE /* Pods-MyGifsKit.modulemap */,
-				CD690B8170AA864862FE6FC6BC918209 /* Pods-MyGifsKit-acknowledgements.markdown */,
-				BC78C964CBA1424CEFA9F9294BBA614F /* Pods-MyGifsKit-acknowledgements.plist */,
-				CC6F196BDF585340AD15863AF59A7A92 /* Pods-MyGifsKit-dummy.m */,
-				8F5D2B24F7D5DDC668216B9BB90F43C3 /* Pods-MyGifsKit-resources.sh */,
-				B57D79A43AF8B5E35B833054F9DA05D3 /* Pods-MyGifsKit-umbrella.h */,
-				EA57139B0140848F051FD0492D6D736A /* Pods-MyGifsKit.debug.xcconfig */,
-				8D23B5D8162867894C048AE32E86F115 /* Pods-MyGifsKit.release.xcconfig */,
+				1534A9388D5BDFD6953CFFE6EADB1202 /* Info.plist */,
+				290632FA1DC976F36C500842C3D8ED29 /* Pods-MyGifs.modulemap */,
+				A17CDEA7780908D6C734D3CC7A32F9C8 /* Pods-MyGifs-acknowledgements.markdown */,
+				422836FB835B590D0CCE437DCA2197A5 /* Pods-MyGifs-acknowledgements.plist */,
+				CC3E8FE11C62E1392AD92D0A6005801B /* Pods-MyGifs-dummy.m */,
+				AD5947FD5322261815BC58846412D1D2 /* Pods-MyGifs-frameworks.sh */,
+				411AF02CC76B79A14994EB99C15FEE39 /* Pods-MyGifs-resources.sh */,
+				2E3DE4DDC3BC3A93A6EC31DA6D77E998 /* Pods-MyGifs-umbrella.h */,
+				5E5F1265EB831A8D4315869CA1A51F9B /* Pods-MyGifs.debug.xcconfig */,
+				1C570C5B57770485B3668C854D9D14AB /* Pods-MyGifs.release.xcconfig */,
 			);
-			name = "Pods-MyGifsKit";
-			path = "Target Support Files/Pods-MyGifsKit";
+			name = "Pods-MyGifs";
+			path = "Target Support Files/Pods-MyGifs";
 			sourceTree = "<group>";
 		};
-		56E1BB48D3F8D0DBB0474C66B7E36892 /* Targets Support Files */ = {
+		4637A01F1ECF4CBD0CFC967203CC6C93 /* Pods-MyGifs-MyGifsMessages */ = {
 			isa = PBXGroup;
 			children = (
-				DF75601742269DB9EDF0E7D9B03A181C /* Pods-MyGifs */,
-				335C4377781793DBF35F2D509B52874D /* Pods-MyGifsKit */,
+				57B89F2AAA36C9544B587D2254648D92 /* Info.plist */,
+				C9951500223C5B5635CE91066025263E /* Pods-MyGifs-MyGifsMessages.modulemap */,
+				534C40481090F4E0F7C2907827EEC083 /* Pods-MyGifs-MyGifsMessages-acknowledgements.markdown */,
+				F9834719E62BAE65FDA7052B114018FE /* Pods-MyGifs-MyGifsMessages-acknowledgements.plist */,
+				A56516562B15889327DE1B5773236205 /* Pods-MyGifs-MyGifsMessages-dummy.m */,
+				B0B71DAAA03B7A9E64928E72F6E85348 /* Pods-MyGifs-MyGifsMessages-resources.sh */,
+				2C2A9C769ACAE5F033076BDA2241C0E6 /* Pods-MyGifs-MyGifsMessages-umbrella.h */,
+				37769131EE45697BBAF029BD2755EB11 /* Pods-MyGifs-MyGifsMessages.debug.xcconfig */,
+				7C71850CB0EBF7C5A20793CC98A6FF62 /* Pods-MyGifs-MyGifsMessages.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-MyGifs-MyGifsMessages";
+			path = "Target Support Files/Pods-MyGifs-MyGifsMessages";
+			sourceTree = "<group>";
+		};
+		5D844295440F64CE2DAFB317ED28155E /* Pods-MyGifsKit-MyGifsKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				81CE706815876049C457B1C466E103DA /* Info.plist */,
+				E9EBADFEDCBC0A740AEFC3A118789FE0 /* Pods-MyGifsKit-MyGifsKitTests.modulemap */,
+				22A940394719A0786C9763BF4C9F58F8 /* Pods-MyGifsKit-MyGifsKitTests-acknowledgements.markdown */,
+				E60A5282A1EE612FEE29850AAFD9CEF0 /* Pods-MyGifsKit-MyGifsKitTests-acknowledgements.plist */,
+				6E9D0852C085FE440A506E8CFD792100 /* Pods-MyGifsKit-MyGifsKitTests-dummy.m */,
+				6F7A8D1CAB23CE3E755C6A1555178C97 /* Pods-MyGifsKit-MyGifsKitTests-frameworks.sh */,
+				93F4D605ADF1019659C8B7ABE904A32A /* Pods-MyGifsKit-MyGifsKitTests-resources.sh */,
+				5F7B11254E83AB501D017552BD299BD3 /* Pods-MyGifsKit-MyGifsKitTests-umbrella.h */,
+				776CB568C9A692F7C6332856AB3EC941 /* Pods-MyGifsKit-MyGifsKitTests.debug.xcconfig */,
+				3630C6B212BE14DFFD62805286D45195 /* Pods-MyGifsKit-MyGifsKitTests.release.xcconfig */,
+			);
+			name = "Pods-MyGifsKit-MyGifsKitTests";
+			path = "Target Support Files/Pods-MyGifsKit-MyGifsKitTests";
 			sourceTree = "<group>";
 		};
 		5F3105D9D3C557F715259965850C2847 /* Core */ = {
@@ -1642,8 +1811,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				D30590C469A50677F23B1C34A61ED73C /* Frameworks */,
 				A1D2D3A3774991A0B74ACC5389221BA4 /* Pods */,
-				87EA440ACE721EB700A2CD1430093FA7 /* Products */,
-				56E1BB48D3F8D0DBB0474C66B7E36892 /* Targets Support Files */,
+				02BBB9FBFFD2D93C8A52C8C33BF180B9 /* Products */,
+				9CEDE29534220954758E09277570A499 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1669,17 +1838,15 @@
 			name = "Arc-exception-safe";
 			sourceTree = "<group>";
 		};
-		87EA440ACE721EB700A2CD1430093FA7 /* Products */ = {
+		9CEDE29534220954758E09277570A499 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E5FA64BBC3B555A4C0695479350649F6 /* AsyncDisplayKit.framework */,
-				BD08FD43C2C50D4625622BA39052444A /* PINCache.framework */,
-				97DBAD33F0F78F7ABF3AA25FE0271C54 /* PINOperation.framework */,
-				08BD9CDCE546761FD8578504AAE8B811 /* PINRemoteImage.framework */,
-				0069416A04F550CDED8883395BDE5B7D /* Pods_MyGifs.framework */,
-				AFB77537404C309EB65FBC4B650B9DF6 /* Pods_MyGifsKit.framework */,
+				42E59EB87E0B5CA8FF83823587A1E96B /* Pods-MyGifs */,
+				4637A01F1ECF4CBD0CFC967203CC6C93 /* Pods-MyGifs-MyGifsMessages */,
+				CBB83804BF4BD6CEA06C1C313D18EEB4 /* Pods-MyGifsKit */,
+				5D844295440F64CE2DAFB317ED28155E /* Pods-MyGifsKit-MyGifsKitTests */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		A1D2D3A3774991A0B74ACC5389221BA4 /* Pods */ = {
@@ -1726,6 +1893,23 @@
 			);
 			name = PINCache;
 			path = PINCache;
+			sourceTree = "<group>";
+		};
+		CBB83804BF4BD6CEA06C1C313D18EEB4 /* Pods-MyGifsKit */ = {
+			isa = PBXGroup;
+			children = (
+				5CC35FFBFF3DE43AF6F6983DAB9DB779 /* Info.plist */,
+				C2EB373B2997F74DDA339D2D717975A7 /* Pods-MyGifsKit.modulemap */,
+				916F0A23ED4673E0EA073A09F359B0EF /* Pods-MyGifsKit-acknowledgements.markdown */,
+				045336591E8682A432323BB64E5A0951 /* Pods-MyGifsKit-acknowledgements.plist */,
+				3AA43B56327FD767A5BDCCB576717CB8 /* Pods-MyGifsKit-dummy.m */,
+				B4E6ABA68858365263833E60B019E9A4 /* Pods-MyGifsKit-resources.sh */,
+				B74F19D7E2D078028C4D116A29131322 /* Pods-MyGifsKit-umbrella.h */,
+				DB74E86EFD59701E1B46DCB3F7E199B2 /* Pods-MyGifsKit.debug.xcconfig */,
+				9DB55CB097110A180C88A28979D2EE71 /* Pods-MyGifsKit.release.xcconfig */,
+			);
+			name = "Pods-MyGifsKit";
+			path = "Target Support Files/Pods-MyGifsKit";
 			sourceTree = "<group>";
 		};
 		D30590C469A50677F23B1C34A61ED73C /* Frameworks */ = {
@@ -1807,24 +1991,6 @@
 				D847D887AAF7613ED5DDF082C6E91AF9 /* PINWebPAnimatedImage.m */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		DF75601742269DB9EDF0E7D9B03A181C /* Pods-MyGifs */ = {
-			isa = PBXGroup;
-			children = (
-				C585FBBA8815BB22074D100A328F8A79 /* Info.plist */,
-				7A5EBB6D31F288C138DCDDA7990AC50F /* Pods-MyGifs.modulemap */,
-				E2D8EECFC3141061AB76E1C940891D7D /* Pods-MyGifs-acknowledgements.markdown */,
-				7D2A67AB53F9C0FEFA6BF1CF0416E9E3 /* Pods-MyGifs-acknowledgements.plist */,
-				761DE08E8FD9B19F5551694549755F28 /* Pods-MyGifs-dummy.m */,
-				5C66504CF79983EC454D21EAE3111E59 /* Pods-MyGifs-frameworks.sh */,
-				62991FE7FC595B1AD2E397795FBBBC48 /* Pods-MyGifs-resources.sh */,
-				DCF0DB20E1A30D7070664F550501924B /* Pods-MyGifs-umbrella.h */,
-				813C2ECBA5CF3AD1853F454FE9BC517D /* Pods-MyGifs.debug.xcconfig */,
-				C355DC708014F16277E206EF5BD670F9 /* Pods-MyGifs.release.xcconfig */,
-			);
-			name = "Pods-MyGifs";
-			path = "Target Support Files/Pods-MyGifs";
 			sourceTree = "<group>";
 		};
 		F006B12B705BE294EF2D6E88337F4B9E /* PINOperation */ = {
@@ -2068,11 +2234,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		290487F0E9AE161966E13A6A95FE69C0 /* Headers */ = {
+		235C1E24E63BA4A7D829F4266E1F1B14 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD9BCFF39847D7F86D20533C82D541B7 /* Pods-MyGifsKit-umbrella.h in Headers */,
+				9520F359EA1F43E9A7A0440EDEC4206E /* Pods-MyGifsKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2094,6 +2260,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E013EBCAA282D1B21C48D80EE386B9 /* Pods-MyGifs-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96092D35605BD565097E628682F8AF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86B43C945A28FAFDF3072DCC3F43558 /* Pods-MyGifsKit-MyGifsKitTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2140,6 +2314,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8E5088E13324AA77925BDBDE86FC85F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB59F68E2FA5EB0504CBBEF5C41F3671 /* Pods-MyGifs-MyGifsMessages-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC6CDB35BFF4DAB7A6E6636338F93A93 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2175,24 +2357,28 @@
 			);
 			name = "Pods-MyGifs";
 			productName = "Pods-MyGifs";
-			productReference = 0069416A04F550CDED8883395BDE5B7D /* Pods_MyGifs.framework */;
+			productReference = 049253E4DDE92DE7C9445DBC5F9B1028 /* Pods_MyGifs.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		362B9124659D18900EE214328D4F332F /* Pods-MyGifsKit */ = {
+		49C0352DE33AB36E794F1298779708A4 /* Pods-MyGifs-MyGifsMessages */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AABBC12957CC63EF501B0EF044FFF522 /* Build configuration list for PBXNativeTarget "Pods-MyGifsKit" */;
+			buildConfigurationList = E3F4745E6DD155A2B2EF6A7B413237D7 /* Build configuration list for PBXNativeTarget "Pods-MyGifs-MyGifsMessages" */;
 			buildPhases = (
-				78FAB32B033A1F08AA6B163669F8292F /* Sources */,
-				9BF314FB7A8F0E0E0BD7D1F3E8A1D138 /* Frameworks */,
-				290487F0E9AE161966E13A6A95FE69C0 /* Headers */,
+				8001F91AABBECC17D1A84697E248BCBC /* Sources */,
+				3012A1CAC408F64419BB26C25CDE0C67 /* Frameworks */,
+				F8E5088E13324AA77925BDBDE86FC85F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9DE7DD6297D3235E012E581A38C1799 /* PBXTargetDependency */,
+				B5D2F2A5FDC23C4F86CB8D9C778E27E3 /* PBXTargetDependency */,
+				A6143BB544C65BACBF047B8E831D0A5D /* PBXTargetDependency */,
+				15C40FFFD8A428F7E4512B702CDCE01A /* PBXTargetDependency */,
 			);
-			name = "Pods-MyGifsKit";
-			productName = "Pods-MyGifsKit";
-			productReference = AFB77537404C309EB65FBC4B650B9DF6 /* Pods_MyGifsKit.framework */;
+			name = "Pods-MyGifs-MyGifsMessages";
+			productName = "Pods-MyGifs-MyGifsMessages";
+			productReference = FE301AF6ACE08CD26DD9AC20A901A003 /* Pods_MyGifs_MyGifsMessages.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		568185361EA6EEE89D2BC833905842FD /* PINCache */ = {
@@ -2210,7 +2396,7 @@
 			);
 			name = PINCache;
 			productName = PINCache;
-			productReference = BD08FD43C2C50D4625622BA39052444A /* PINCache.framework */;
+			productReference = 1C10D6CB126109826993DEA8E0612490 /* PINCache.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5C54A1E6C63EE30A5A98D49C537DF747 /* PINRemoteImage */ = {
@@ -2229,7 +2415,28 @@
 			);
 			name = PINRemoteImage;
 			productName = PINRemoteImage;
-			productReference = 08BD9CDCE546761FD8578504AAE8B811 /* PINRemoteImage.framework */;
+			productReference = 2BCA9448635DD459CF9131FA3825826D /* PINRemoteImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		672C1D6BF201DA19D154FD668C5EB4E5 /* Pods-MyGifsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC67F7B05EA9A4861A7B97312C648E33 /* Build configuration list for PBXNativeTarget "Pods-MyGifsKit" */;
+			buildPhases = (
+				2D06612668F27170E293B30EF3D13EDF /* Sources */,
+				4F996F73BCC1BFC4DA2068BF0C83B2DA /* Frameworks */,
+				235C1E24E63BA4A7D829F4266E1F1B14 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C0F89A5BFD73125196751B56A0443A /* PBXTargetDependency */,
+				BAB2C19380E496053E8879A4275FAAF0 /* PBXTargetDependency */,
+				ABD334DFC35387E9B1D92DE7E0D62AF3 /* PBXTargetDependency */,
+				FAD81DBBB911CEC53E18900658E9E4E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-MyGifsKit";
+			productName = "Pods-MyGifsKit";
+			productReference = D89DD32C4A89DE225C90485E91534CC5 /* Pods_MyGifsKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7C277C8A7D72555CB852615BA01019DA /* Texture */ = {
@@ -2249,7 +2456,7 @@
 			);
 			name = Texture;
 			productName = Texture;
-			productReference = E5FA64BBC3B555A4C0695479350649F6 /* AsyncDisplayKit.framework */;
+			productReference = 66BB4948A0FD8A04F4F40B3027FAFABB /* AsyncDisplayKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */ = {
@@ -2266,7 +2473,28 @@
 			);
 			name = PINOperation;
 			productName = PINOperation;
-			productReference = 97DBAD33F0F78F7ABF3AA25FE0271C54 /* PINOperation.framework */;
+			productReference = 367CFFC7887D897EFA05EB00A9F34F03 /* PINOperation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E397D95EAA0C07766E865307A0152B39 /* Pods-MyGifsKit-MyGifsKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C16A525EAEEB72B1F230E15A1033ED /* Build configuration list for PBXNativeTarget "Pods-MyGifsKit-MyGifsKitTests" */;
+			buildPhases = (
+				0538B10314A3DDF728029E7AF4E8A720 /* Sources */,
+				F4DE0E171100CD8B7AA87973779D7F5F /* Frameworks */,
+				B96092D35605BD565097E628682F8AF8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D1FB426B4A9BA543B1515DDDC4DB3E0 /* PBXTargetDependency */,
+				DCD40CB59D70F08DCDB23D6EAC076FF1 /* PBXTargetDependency */,
+				EDE1878B8FF17C68B694A619818EB370 /* PBXTargetDependency */,
+				E9D20D9A5D9260323DE43E093030A3EF /* PBXTargetDependency */,
+			);
+			name = "Pods-MyGifsKit-MyGifsKitTests";
+			productName = "Pods-MyGifsKit-MyGifsKitTests";
+			productReference = 0E71BA2535B3FFAC617BCD8F43C1877B /* Pods_MyGifsKit_MyGifsKitTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2286,7 +2514,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 87EA440ACE721EB700A2CD1430093FA7 /* Products */;
+			productRefGroup = 02BBB9FBFFD2D93C8A52C8C33BF180B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2294,13 +2522,31 @@
 				7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */,
 				5C54A1E6C63EE30A5A98D49C537DF747 /* PINRemoteImage */,
 				29B63D9BCAF495EC8241E591FE96A9AD /* Pods-MyGifs */,
-				362B9124659D18900EE214328D4F332F /* Pods-MyGifsKit */,
+				49C0352DE33AB36E794F1298779708A4 /* Pods-MyGifs-MyGifsMessages */,
+				672C1D6BF201DA19D154FD668C5EB4E5 /* Pods-MyGifsKit */,
+				E397D95EAA0C07766E865307A0152B39 /* Pods-MyGifsKit-MyGifsKitTests */,
 				7C277C8A7D72555CB852615BA01019DA /* Texture */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0538B10314A3DDF728029E7AF4E8A720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7C2C2C314C3D8EEF041520E5077AF0 /* Pods-MyGifsKit-MyGifsKitTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D06612668F27170E293B30EF3D13EDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251D3C1E17DA968C56E5481CD1B9EADA /* Pods-MyGifsKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54AE4DE23A9FADCFF3893CCAB6A05553 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2312,11 +2558,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78FAB32B033A1F08AA6B163669F8292F /* Sources */ = {
+		8001F91AABBECC17D1A84697E248BCBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5EF46500727E48BDC5D801D60C7CBA /* Pods-MyGifsKit-dummy.m in Sources */,
+				8AD6EA75EDC94471DA1C6B0C329E7D85 /* Pods-MyGifs-MyGifsMessages-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2558,6 +2804,12 @@
 			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
 			targetProxy = F641BEA8F348DFD8D4DE37ACE72E272A /* PBXContainerItemProxy */;
 		};
+		15C40FFFD8A428F7E4512B702CDCE01A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Texture;
+			target = 7C277C8A7D72555CB852615BA01019DA /* Texture */;
+			targetProxy = 251656469FB828D81A75157C551C9EFA /* PBXContainerItemProxy */;
+		};
 		27713EF57FB697496270A1844C5A8156 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PINOperation;
@@ -2600,11 +2852,41 @@
 			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
 			targetProxy = A46582E7402B5B60FC179519D162CE5B /* PBXContainerItemProxy */;
 		};
+		8D1FB426B4A9BA543B1515DDDC4DB3E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
+			targetProxy = 360533F6E65F4F3DCE8E0B0DCCA0B097 /* PBXContainerItemProxy */;
+		};
 		8F18413D796926ABB386CB5E8A7B1599 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Texture;
 			target = 7C277C8A7D72555CB852615BA01019DA /* Texture */;
 			targetProxy = DF45DB03475897BB8E0823F59997DC6B /* PBXContainerItemProxy */;
+		};
+		A0C0F89A5BFD73125196751B56A0443A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
+			targetProxy = E391659D9B8C8254FB8218F8973355B0 /* PBXContainerItemProxy */;
+		};
+		A6143BB544C65BACBF047B8E831D0A5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = 5C54A1E6C63EE30A5A98D49C537DF747 /* PINRemoteImage */;
+			targetProxy = 0DF5E251DB0767DA9CFEBC9CE1CA307B /* PBXContainerItemProxy */;
+		};
+		A9DE7DD6297D3235E012E581A38C1799 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
+			targetProxy = EB35FC12ECB9599C083192343CA7D797 /* PBXContainerItemProxy */;
+		};
+		ABD334DFC35387E9B1D92DE7E0D62AF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = 5C54A1E6C63EE30A5A98D49C537DF747 /* PINRemoteImage */;
+			targetProxy = F13FB7BC58830F8C41D8A9D739ED8E29 /* PBXContainerItemProxy */;
 		};
 		AFF9C7564A4DEC480021BD870664AB01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2612,12 +2894,48 @@
 			target = 5C54A1E6C63EE30A5A98D49C537DF747 /* PINRemoteImage */;
 			targetProxy = 50E9AC79F4FA4FBC68D72B61AFD9E01C /* PBXContainerItemProxy */;
 		};
+		B5D2F2A5FDC23C4F86CB8D9C778E27E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */;
+			targetProxy = EADA712F9F05F74DEF2DEB2544BDE76B /* PBXContainerItemProxy */;
+		};
+		BAB2C19380E496053E8879A4275FAAF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */;
+			targetProxy = E66C6235312752BE095E040977025B55 /* PBXContainerItemProxy */;
+		};
+		DCD40CB59D70F08DCDB23D6EAC076FF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */;
+			targetProxy = CF039B096EC5382E0D24ED28C9E101A3 /* PBXContainerItemProxy */;
+		};
+		E9D20D9A5D9260323DE43E093030A3EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Texture;
+			target = 7C277C8A7D72555CB852615BA01019DA /* Texture */;
+			targetProxy = 7004A8A7B45991D51C77CF4B50B3E5D2 /* PBXContainerItemProxy */;
+		};
+		EDE1878B8FF17C68B694A619818EB370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = 5C54A1E6C63EE30A5A98D49C537DF747 /* PINRemoteImage */;
+			targetProxy = 3B75C299E83ED86B3D9E79115F0331CC /* PBXContainerItemProxy */;
+		};
+		FAD81DBBB911CEC53E18900658E9E4E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Texture;
+			target = 7C277C8A7D72555CB852615BA01019DA /* Texture */;
+			targetProxy = B4BD24610A0AC3F166D1E6C156149B85 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		268F22EE4666453E788AA217E9E9A0F3 /* Release */ = {
+		0A4CE0EC7662CFCEC98881E3E27342E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA8DDD52DADDFB53F1875EC634BB370F /* PINOperation.xcconfig */;
+			baseConfigurationReference = 776CB568C9A692F7C6332856AB3EC941 /* Pods-MyGifsKit-MyGifsKitTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2628,13 +2946,79 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PINOperation/PINOperation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PINOperation/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyGifsKit-MyGifsKitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyGifsKit-MyGifsKitTests/Pods-MyGifsKit-MyGifsKitTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MyGifsKit_MyGifsKitTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		18619A4DD00688D9944376C08E8A92D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DB55CB097110A180C88A28979D2EE71 /* Pods-MyGifsKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyGifsKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyGifsKit/Pods-MyGifsKit.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MyGifsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		199A3738AF1D120147C1B527C554BF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5821473143C768338C9E961790BD061 /* Texture.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Texture/Texture-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Texture/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
-				PRODUCT_NAME = PINOperation;
+				MODULEMAP_FILE = "Target Support Files/Texture/Texture.modulemap";
+				PRODUCT_NAME = AsyncDisplayKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2706,9 +3090,74 @@
 			};
 			name = Debug;
 		};
+		4880A664BCD7290CA55558C7849133FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3630C6B212BE14DFFD62805286D45195 /* Pods-MyGifsKit-MyGifsKitTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyGifsKit-MyGifsKitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyGifsKit-MyGifsKitTests/Pods-MyGifsKit-MyGifsKitTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MyGifsKit_MyGifsKitTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6184226643C711B3D62643DCC6531E77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E36C13409D198A6AA28003F6DB3C87 /* PINCache.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6FA801D87D28E3371D1F05A182F91B3B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C355DC708014F16277E206EF5BD670F9 /* Pods-MyGifs.release.xcconfig */;
+			baseConfigurationReference = 1C570C5B57770485B3668C854D9D14AB /* Pods-MyGifs.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2739,9 +3188,41 @@
 			};
 			name = Release;
 		};
+		741C8C0F6F91786D61CBBB1EBC22945C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8DDD52DADDFB53F1875EC634BB370F /* PINOperation.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINOperation/PINOperation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINOperation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
+				PRODUCT_NAME = PINOperation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		77347B4CAEBDE50E6D20A25CE7E9D183 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 813C2ECBA5CF3AD1853F454FE9BC517D /* Pods-MyGifs.debug.xcconfig */;
+			baseConfigurationReference = 5E5F1265EB831A8D4315869CA1A51F9B /* Pods-MyGifs.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2771,10 +3252,11 @@
 			};
 			name = Debug;
 		};
-		798E66B139186F4D4F1CEFB487240DBB /* Debug */ = {
+		78050921B0B457D87859979CD8374F9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5821473143C768338C9E961790BD061 /* Texture.xcconfig */;
+			baseConfigurationReference = E3E36C13409D198A6AA28003F6DB3C87 /* PINCache.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2784,13 +3266,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Texture/Texture-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Texture/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Texture/Texture.modulemap";
-				PRODUCT_NAME = AsyncDisplayKit;
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_NAME = PINCache;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2800,6 +3282,72 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		884675D996C8308D13F305F528321E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD78E640D817220EE7896C940A9500A8 /* PINRemoteImage.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINRemoteImage/PINRemoteImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89568B8E1F425E7F0B45ED6D50F345CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C71850CB0EBF7C5A20793CC98A6FF62 /* Pods-MyGifs-MyGifsMessages.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyGifs-MyGifsMessages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyGifs-MyGifsMessages/Pods-MyGifs-MyGifsMessages.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MyGifs_MyGifsMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2856,9 +3404,42 @@
 			};
 			name = Release;
 		};
-		8F965C818E6C073C4F6CA519E66A20F3 /* Debug */ = {
+		903FC3C5AB714EC2F9A3AAFA33EA323F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA57139B0140848F051FD0492D6D736A /* Pods-MyGifsKit.debug.xcconfig */;
+			baseConfigurationReference = 37769131EE45697BBAF029BD2755EB11 /* Pods-MyGifs-MyGifsMessages.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyGifs-MyGifsMessages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyGifs-MyGifsMessages/Pods-MyGifs-MyGifsMessages.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MyGifs_MyGifsMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9DF1DD34C8537153F82A40EF8E724FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB74E86EFD59701E1B46DCB3F7E199B2 /* Pods-MyGifsKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2888,134 +3469,11 @@
 			};
 			name = Debug;
 		};
-		91A8082C118300362A4D96A78844C4AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD78E640D817220EE7896C940A9500A8 /* PINRemoteImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PINRemoteImage/PINRemoteImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
-				PRODUCT_NAME = PINRemoteImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9205E66C003F30423436FA8124AEC05A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3E36C13409D198A6AA28003F6DB3C87 /* PINCache.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
-				PRODUCT_NAME = PINCache;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9CA3A598BE63DD9E089B6E576B633483 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D23B5D8162867894C048AE32E86F115 /* Pods-MyGifsKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MyGifsKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MyGifsKit/Pods-MyGifsKit.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MyGifsKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ABA10F2E3CAB61F51EE9ED2243C54F39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD78E640D817220EE7896C940A9500A8 /* PINRemoteImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PINRemoteImage/PINRemoteImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
-				PRODUCT_NAME = PINRemoteImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DB2356271BB3D5279E39BEC56A98314D /* Release */ = {
+		B8ED8D6195067ABDB125D9B5BEE955E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5821473143C768338C9E961790BD061 /* Texture.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3037,16 +3495,16 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		ED921C87B57525B1A293A1C68143C7F1 /* Debug */ = {
+		CC7FD2CED0D5169C241E57E93AC6DF7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA8DDD52DADDFB53F1875EC634BB370F /* PINOperation.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3073,10 +3531,11 @@
 			};
 			name = Debug;
 		};
-		FDEF204DF7880D451F3EDA67B6A3B548 /* Release */ = {
+		F27D9100C7336A8250B771A45D98729D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3E36C13409D198A6AA28003F6DB3C87 /* PINCache.xcconfig */;
+			baseConfigurationReference = AD78E640D817220EE7896C940A9500A8 /* PINRemoteImage.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3086,23 +3545,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PINRemoteImage/PINRemoteImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
-				PRODUCT_NAME = PINCache;
+				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
+				PRODUCT_NAME = PINRemoteImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -3110,8 +3568,8 @@
 		004D58C58DE65EAD8ADDA0C5E76231EC /* Build configuration list for PBXNativeTarget "PINRemoteImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABA10F2E3CAB61F51EE9ED2243C54F39 /* Debug */,
-				91A8082C118300362A4D96A78844C4AD /* Release */,
+				F27D9100C7336A8250B771A45D98729D /* Debug */,
+				884675D996C8308D13F305F528321E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3119,8 +3577,17 @@
 		00A8E2145F58A678FD4DD2A6C9D45347 /* Build configuration list for PBXNativeTarget "PINCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9205E66C003F30423436FA8124AEC05A /* Debug */,
-				FDEF204DF7880D451F3EDA67B6A3B548 /* Release */,
+				78050921B0B457D87859979CD8374F9F /* Debug */,
+				6184226643C711B3D62643DCC6531E77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C16A525EAEEB72B1F230E15A1033ED /* Build configuration list for PBXNativeTarget "Pods-MyGifsKit-MyGifsKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A4CE0EC7662CFCEC98881E3E27342E1 /* Debug */,
+				4880A664BCD7290CA55558C7849133FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3146,8 +3613,8 @@
 		4F470BF8A4414D3D42F442F09B8F5D1A /* Build configuration list for PBXNativeTarget "PINOperation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED921C87B57525B1A293A1C68143C7F1 /* Debug */,
-				268F22EE4666453E788AA217E9E9A0F3 /* Release */,
+				CC7FD2CED0D5169C241E57E93AC6DF7F /* Debug */,
+				741C8C0F6F91786D61CBBB1EBC22945C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3155,17 +3622,26 @@
 		623B2BE00C53A2804E79451F0DBFB221 /* Build configuration list for PBXNativeTarget "Texture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				798E66B139186F4D4F1CEFB487240DBB /* Debug */,
-				DB2356271BB3D5279E39BEC56A98314D /* Release */,
+				B8ED8D6195067ABDB125D9B5BEE955E2 /* Debug */,
+				199A3738AF1D120147C1B527C554BF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AABBC12957CC63EF501B0EF044FFF522 /* Build configuration list for PBXNativeTarget "Pods-MyGifsKit" */ = {
+		E3F4745E6DD155A2B2EF6A7B413237D7 /* Build configuration list for PBXNativeTarget "Pods-MyGifs-MyGifsMessages" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F965C818E6C073C4F6CA519E66A20F3 /* Debug */,
-				9CA3A598BE63DD9E089B6E576B633483 /* Release */,
+				903FC3C5AB714EC2F9A3AAFA33EA323F /* Debug */,
+				89568B8E1F425E7F0B45ED6D50F345CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC67F7B05EA9A4861A7B97312C648E33 /* Build configuration list for PBXNativeTarget "Pods-MyGifsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF1DD34C8537153F82A40EF8E724FB3 /* Debug */,
+				18619A4DD00688D9944376C08E8A92D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
