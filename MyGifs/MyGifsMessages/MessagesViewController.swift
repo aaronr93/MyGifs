@@ -13,6 +13,7 @@ import Messages
 class MessagesViewController: MSMessagesAppViewController {
     
     var MyGifsNavController: UINavigationController?
+    var activeMenuItem: MenuItem?
     
     // MARK: - Conversation Handling
     
@@ -24,7 +25,7 @@ class MessagesViewController: MSMessagesAppViewController {
         super.willBecomeActive(with: conversation)
         
         // Present the view controller appropriate for the conversation and presentation style.
-        presentViewController(for: conversation, with: presentationStyle)
+        presentViewController(with: presentationStyle)
     }
     
     override func didResignActive(with conversation: MSConversation) {
@@ -39,37 +40,62 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         super.willTransition(to: presentationStyle)
-        
-    }
-    
-    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-        super.didTransition(to: presentationStyle)
-        
+        presentViewController(with: presentationStyle)
     }
     
     // MARK: Child view controller presentation
     
-    private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
+    private func presentViewController(with presentationStyle: MSMessagesAppPresentationStyle) {
         // Remove any child view controllers that have been presented.
         removeAllChildViewControllers()
         
-        //if presentationStyle == .compact {
+        if presentationStyle == .compact {
             // Compact view
-            
-        //} else {
+            presentMenu()
+        } else {
             // Full-page view
-            let mainFeedController = GfyCollectionNodeController()
-            mainFeedController.delegate = self
-            addChildViewController(mainFeedController)
-            mainFeedController.view.frame = view.bounds
-            mainFeedController.view.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(mainFeedController.view)
-            mainFeedController.didMove(toParentViewController: self)
-        //}
+            presentExpandedView()
+        }
         
     }
     
     // MARK: Convenience
+    
+    private func presentMenu() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
+        let compactMenu = CompactMenuCollectionViewController(collectionViewLayout: layout)
+        compactMenu.delegate = self
+        addChildViewController(compactMenu)
+        compactMenu.view.bounds = view.bounds
+        compactMenu.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(compactMenu.view)
+        compactMenu.didMove(toParentViewController: self)
+    }
+    
+    private func presentExpandedView() {
+        guard let menuItem = activeMenuItem else { return }
+        var expandedViewController: UIViewController?
+        switch (menuItem) {
+        case .Gfycat:
+            expandedViewController = GfyCollectionNodeController()
+            if let expandedVC = expandedViewController as? GfyCollectionNodeController {
+                expandedVC.delegate = self
+            }
+            break
+        case .Imgur:
+            break
+        case .Settings:
+            break
+        }
+        if let expandedViewController = expandedViewController {
+            addChildViewController(expandedViewController)
+            expandedViewController.view.frame = view.bounds
+            expandedViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(expandedViewController.view)
+            expandedViewController.didMove(toParentViewController: self)
+        }
+    }
     
     private func removeAllChildViewControllers() {
         for child in childViewControllers {
@@ -91,19 +117,8 @@ extension MessagesViewController: GfyCollectionDelegate {
 
 extension MessagesViewController: CompactMenuDelegate {
     func didTap(_ menuItem: MenuItem) {
-        switch (menuItem) {
-        case .Gfycat:
-            
-            break
-        case .Imgur:
-            
-            break
-        case .Settings:
-            
-            break
-        default:
-            break
-        }
+        activeMenuItem = menuItem
+        requestPresentationStyle(.expanded)
     }
 }
 

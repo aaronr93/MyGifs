@@ -18,7 +18,7 @@ enum MenuItem: String {
     case Settings = "Settings"
 }
 
-class CompactMenuCollectionViewController: UICollectionViewController {
+class CompactMenuCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var items: [MenuItem] = []
     weak var delegate: CompactMenuDelegate?
@@ -27,7 +27,9 @@ class CompactMenuCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         // Register cell classes
         self.collectionView!.register(CompactMenuItemCollectionViewCell.self, forCellWithReuseIdentifier: CompactMenuItemCollectionViewCell.reuseIdentifier)
-
+        
+        self.collectionView?.backgroundColor = UIColor.red
+        
         // Do any additional setup after loading the view.
         items.append(.Gfycat)
         items.append(.Imgur)
@@ -40,26 +42,26 @@ class CompactMenuCollectionViewController: UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return items.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CompactMenuItemCollectionViewCell.reuseIdentifier, for: indexPath) as? CompactMenuItemCollectionViewCell else { return UICollectionViewCell() }
         let index = indexPath.row
         
-        if let parentFrame = self.collectionView?.frame {
-            let numItems = self.collectionView?.numberOfItems(inSection: 0) ?? 2
-            let width = Int(parentFrame.width) / numItems
-            cell.frame = CGRect(x: index * width, y: 0, width: width, height: Int(parentFrame.height))
-        }
-        
         // Configure the cell
+        cell.backgroundColor = UIColor.white
         cell.menuItem = items[index]
-        cell.label = UILabel()
-        cell.label.attributedText = NSAttributedString(string: items[index].rawValue)
-        cell.label.adjustsFontSizeToFitWidth = true
+        cell.label = UILabel(frame: cell.frame)
+        cell.label.text = items[index].rawValue
+        cell.label?.attributedText = NSAttributedString(string: items[index].rawValue)
+        cell.label?.adjustsFontSizeToFitWidth = true
     
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width / 3 - 20, height: view.frame.height / 2)
     }
 
     // MARK: UICollectionViewDelegate

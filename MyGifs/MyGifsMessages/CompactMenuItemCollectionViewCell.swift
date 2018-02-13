@@ -10,6 +10,8 @@ import UIKit
 
 class CompactMenuItemCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "Cell"
+    
     var menuItem: MenuItem!
-    weak var label: UILabel!
+    
+    var label: UILabel!
 }
