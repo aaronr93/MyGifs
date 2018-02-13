@@ -128,6 +128,7 @@ extension GfyCollectionNodeController: ASVideoNodeDelegate {
     public func didTap(_ videoNode: ASVideoNode) {
         guard let gifNode = videoNode as? ASGifNode else { return }
         guard let gifUrlString = gifNode.gifUrlString else { return }
+        // TODO: Get the `Gif` object (performantly) from the URL so the Messages Extension can use the Gif Title
         delegate?.didTap(gifUrlString)
     }
 }

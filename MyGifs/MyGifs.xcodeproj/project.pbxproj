@@ -19,6 +19,8 @@
 		9326FE032018417400A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE022018417400A87134 /* MyGifsKit.framework */; };
 		9326FE042018417400A87134 /* MyGifsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE022018417400A87134 /* MyGifsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9326FE092018424E00A87134 /* MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326FE0A2018424E00A87134 /* MyGifsKit.framework */; };
+		93DB7C9120314D0700E7C303 /* CompactMenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C9020314D0700E7C303 /* CompactMenuCollectionViewController.swift */; };
+		93DB7C9320314E0B00E7C303 /* CompactMenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C9220314E0B00E7C303 /* CompactMenuItemCollectionViewCell.swift */; };
 		D0764BE532CD2B5EA54797A0 /* Pods_MyGifs_MyGifsMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF467A648A78C81A91F0C37 /* Pods_MyGifs_MyGifsMessages.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		9326FDCA2018405D00A87134 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9326FE022018417400A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9326FE0A2018424E00A87134 /* MyGifsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyGifsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93DB7C9020314D0700E7C303 /* CompactMenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactMenuCollectionViewController.swift; sourceTree = "<group>"; };
+		93DB7C9220314E0B00E7C303 /* CompactMenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactMenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9D3E4CCF7C6B9A8E2C50AC1 /* Pods_MyGifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB4163ACF04B32968A9C7FC /* Pods-MyGifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGifs.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyGifs/Pods-MyGifs.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				9326FDB820183FFD00A87134 /* MessagesViewController.swift */,
+				93DB7C9020314D0700E7C303 /* CompactMenuCollectionViewController.swift */,
+				93DB7C9220314E0B00E7C303 /* CompactMenuItemCollectionViewCell.swift */,
 				9326FDBA20183FFD00A87134 /* MainInterface.storyboard */,
 				9326FDBD20183FFD00A87134 /* Assets.xcassets */,
 				9326FDBF20183FFD00A87134 /* Info.plist */,
@@ -380,6 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9326FDB920183FFD00A87134 /* MessagesViewController.swift in Sources */,
+				93DB7C9320314E0B00E7C303 /* CompactMenuItemCollectionViewCell.swift in Sources */,
+				93DB7C9120314D0700E7C303 /* CompactMenuCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
