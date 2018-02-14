@@ -1,7 +1,7 @@
 # MyGifs
 
 Tired of scrolling through crappy gifs for TV shows and movies you don't care about?
-Wish you could scroll through only gifs from, say, The Office?
+Wish you could only look at gifs from The Office?
 Do you make your own gifs and want an easier way of keeping track of them all?
 Now you can!
 
