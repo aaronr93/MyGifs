@@ -17,10 +17,10 @@ Curate your own gif sources. Download for MyGifs coming soon.
 
 This feature list is roughly sorted in order of imminent implementation.
 
+* View a user's public albums of gifs on Imgur
 * Implement Settings for realtime debugging purposes
 * Show share menu on tap (configure action on tapping a gif in settings)
 * Browse by Tags and Searches in Gfycat
-* View a user's public albums of gifs on Imgur
 * Save a Gfycat User Feed to a list of feeds
 * Save a Gfycat Tag or Search feed to a list of feeds
 * Save gifs from Gfycat or Imgur to a MyGifs feed
