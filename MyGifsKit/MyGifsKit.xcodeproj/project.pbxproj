@@ -21,6 +21,7 @@
 		93DB7C86202744B100E7C303 /* GfyCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C83202744B000E7C303 /* GfyCollectionNodeController.swift */; };
 		93DB7C87202744B100E7C303 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C84202744B100E7C303 /* GifCollectionNode.swift */; };
 		93DB7C88202744B100E7C303 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */; };
+		93DB7C952033BA2300E7C303 /* API_Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93DB7C942033BA2300E7C303 /* API_Info.plist */; };
 		A1D5B3884859F0F7DA49B92E /* Pods_MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B810F64097D525C0E274028 /* Pods_MyGifsKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		93DB7C83202744B000E7C303 /* GfyCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfyCollectionNodeController.swift; sourceTree = "<group>"; };
 		93DB7C84202744B100E7C303 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
 		93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
+		93DB7C942033BA2300E7C303 /* API_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API_Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		93DB7C7A2025E95800E7C303 /* Project Items */ = {
 			isa = PBXGroup;
 			children = (
+				93DB7C942033BA2300E7C303 /* API_Info.plist */,
 				9326FDDD2018408D00A87134 /* MyGifsKit.h */,
 				9326FDDE2018408D00A87134 /* Info.plist */,
 			);
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DB7C952033BA2300E7C303 /* API_Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
