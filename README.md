@@ -1,9 +1,9 @@
 # MyGifs
 
 Tired of scrolling through crappy gifs for TV shows and movies you don't care about?
-Wish you could choose which shows and films are available for animated reactions?
+Wish you could scroll through only gifs from, say, The Office?
 Do you make your own gifs and want an easier way of keeping track of them all?
-Now you can.
+Now you can!
 
 Curate your own gif sources. Download for MyGifs coming soon.
 
