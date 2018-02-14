@@ -1,8 +1,8 @@
 # MyGifs
 
 Tired of scrolling through crappy gifs for TV shows and movies you don't care about?
-Wish you could only look at gifs from The Office?
 Do you make your own gifs and want an easier way of keeping track of them all?
+Wish you could only look at gifs from The Office?
 Now you can!
 
 Curate your own gif sources. Download for MyGifs coming soon.
