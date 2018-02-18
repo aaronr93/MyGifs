@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainFeedController = GfyCollectionNodeController()
+        let mainFeedController = CollectionNodeController()
         mainFeedController.delegate = self
         MyGifsNavController = UINavigationController(rootViewController: mainFeedController)
         
@@ -66,9 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: GfyCollectionDelegate {
-    func didTap(_ gifUrlString: String) {
-        sendTextMsg(gifUrlString)
+extension AppDelegate: GifCollectionDelegate {
+    func didTap(_ item: SendableItem) {
+        sendTextMsg(item.viewableUrl.absoluteString)
     }
 }
 

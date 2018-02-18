@@ -78,8 +78,8 @@ class MessagesViewController: MSMessagesAppViewController {
         var expandedViewController: UIViewController?
         switch (menuItem) {
         case .Gfycat:
-            expandedViewController = GfyCollectionNodeController()
-            if let expandedVC = expandedViewController as? GfyCollectionNodeController {
+            expandedViewController = CollectionNodeController()
+            if let expandedVC = expandedViewController as? CollectionNodeController {
                 expandedVC.delegate = self
             }
             break
@@ -107,10 +107,10 @@ class MessagesViewController: MSMessagesAppViewController {
 
 }
 
-extension MessagesViewController: GfyCollectionDelegate {
-    func didTap(_ gifUrlString: String) {
+extension MessagesViewController: GifCollectionDelegate {
+    func didTap(_ item: SendableItem) {
         guard let conversation = activeConversation else { fatalError("Expected a conversation") }
-        conversation.insertText(gifUrlString, completionHandler: nil)
+        conversation.insertText(item.viewableUrl.absoluteString, completionHandler: nil)
         dismiss()
     }
 }

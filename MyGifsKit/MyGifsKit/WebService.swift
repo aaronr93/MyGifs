@@ -19,22 +19,31 @@
 
 import Foundation
 
-final public class WebService {
-    func load<A>(resource: Resource<A>, completion: @escaping (Result<A>) -> ()) {
+final internal class WebService {
+    func getModel<A: Decodable>(withURL: URL) -> Resource<A> {
+        let parse = Resource<A>(url: withURL, parseJSON: { data in
+            guard let model = try? JSONDecoder().decode(A.self, from: data) else {
+                return .failure(.errorParsingJSON)
+            }
+            return .success(model)
+        })
+        return parse
+    }
+    
+    func load<A: Decodable>(resource: Resource<A>, completion: @escaping (Result<A>) -> ()) {
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: OperationQueue.main)
         session.dataTask(with: resource.url) { data, response, error in
             // Check for errors in responses.
             let result = self.checkForNetworkErrors(data, response, error)
-            
-                switch result {
-                case .success(let data):
-                    completion(resource.parse(data))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            
+            switch result {
+            case .success(let data):
+                completion(resource.parse(data))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }.resume()
     }
+    
 }
 
 extension WebService {
@@ -76,6 +85,12 @@ enum Result<T> {
     case failure(NetworkingErrors)
 }
 
+enum InternetStatus {
+    case connected
+    case noConnection
+    case unnecessary
+}
+
 enum NetworkingErrors: Error {
     case errorParsingJSON
     case noInternetConnection
@@ -83,4 +98,73 @@ enum NetworkingErrors: Error {
     case returnedError(Error)
     case invalidStatusCode(String)
     case customError(String)
+}
+
+enum HTTPStatusCode: Int, Decodable {
+    // 100 Informational
+    case Continue = 100
+    case SwitchingProtocols
+    case Processing
+    // 200 Success
+    case OK = 200
+    case Created
+    case Accepted
+    case NonAuthoritativeInformation
+    case NoContent
+    case ResetContent
+    case PartialContent
+    case MultiStatus
+    case AlreadyReported
+    case IMUsed = 226
+    // 300 Redirection
+    case MultipleChoices = 300
+    case MovedPermanently
+    case Found
+    case SeeOther
+    case NotModified
+    case UseProxy
+    case SwitchProxy
+    case TemporaryRedirect
+    case PermanentRedirect
+    // 400 Client Error
+    case BadRequest = 400
+    case Unauthorized
+    case PaymentRequired
+    case Forbidden
+    case NotFound
+    case MethodNotAllowed
+    case NotAcceptable
+    case ProxyAuthenticationRequired
+    case RequestTimeout
+    case Conflict
+    case Gone
+    case LengthRequired
+    case PreconditionFailed
+    case PayloadTooLarge
+    case URITooLong
+    case UnsupportedMediaType
+    case RangeNotSatisfiable
+    case ExpectationFailed
+    case ImATeapot
+    case MisdirectedRequest = 421
+    case UnprocessableEntity
+    case Locked
+    case FailedDependency
+    case UpgradeRequired = 426
+    case PreconditionRequired = 428
+    case TooManyRequests
+    case RequestHeaderFieldsTooLarge = 431
+    case UnavailableForLegalReasons = 451
+    // 500 Server Error
+    case InternalServerError = 500
+    case NotImplemented
+    case BadGateway
+    case ServiceUnavailable
+    case GatewayTimeout
+    case HTTPVersionNotSupported
+    case VariantAlsoNegotiates
+    case InsufficientStorage
+    case LoopDetected
+    case NotExtended = 510
+    case NetworkAuthenticationRequired
 }

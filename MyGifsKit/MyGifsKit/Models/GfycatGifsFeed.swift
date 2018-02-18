@@ -8,30 +8,24 @@
 
 import Foundation
 
-final public class GfyUserFeed: GfyFeed {
-    public var gfys: [Gif] = []
+final class GfyFeed: GifFeed {
+    var gifs: [Gif] = []
+    var url: URL?
     private var cursor: String?
-    private var url: URL?
     private var totalPagesSoFar: Int = 0
     private var fetchPageInProgress: Bool = false
     
-    public init(username: String) {
-        url = URL.URLForUser(username: username)
+    init(username: String) {
+        url = URL.ForGfycatUser(username: username)
     }
     
-    public var numberOfItemsInFeed: Int { return gfys.count }
-    
-    func parseGfyUserFeed(withURL: URL) -> Resource<GfyUserFeedModel> {
-        let parse = Resource<GfyUserFeedModel>(url: withURL, parseJSON: { data in
-            guard let model = try? JSONDecoder().decode(GfyUserFeedModel.self, from: data) else {
-                return .failure(.errorParsingJSON)
-            }
-            return .success(model)
-        })
-        return parse
+    func getGif(forURL url: URL) -> Gif? {
+        return gifs.first(where: { $0.viewableUrl == url })
     }
+    
+    var numberOfItemsInFeed: Int { return gifs.count }
 
-    public func updateNewBatch(additionsAndConnectionStatusCompletion: @escaping (Int, InternetStatus) -> ()) {
+    func updateNewBatch(additionsAndConnectionStatusCompletion: @escaping (Int, InternetStatus) -> ()) {
         guard !fetchPageInProgress else { return }
         
         fetchPageInProgress = true
@@ -42,7 +36,8 @@ final public class GfyUserFeed: GfyFeed {
                 switch error {
                 case .noInternetConnection:
                     additionsAndConnectionStatusCompletion(0, .noConnection)
-                default: additionsAndConnectionStatusCompletion(0, .connected)
+                default:
+                    additionsAndConnectionStatusCompletion(0, .connected)
                 }
             } else {
                 additionsAndConnectionStatusCompletion(additions, .connected)
@@ -64,23 +59,25 @@ final public class GfyUserFeed: GfyFeed {
             urlWithCursor = self.url!.addQueryParams([URLQueryItem.init(name: Const.Gfy.cursorKey, value: cursorValue)])
         }
         
-        WebService().load(resource: parseGfyUserFeed(withURL: urlWithCursor)) { [unowned self] result in
+        let webService = WebService()
+        let model: Resource<GfyUserFeedModel> = webService.getModel(withURL: urlWithCursor)
+        webService.load(resource: model) { [unowned self] result in
             DispatchQueue.global().async {
                 switch result {
                 case .success(let userFeed):
                     self.totalPagesSoFar += 1
                     self.cursor = userFeed.cursor
                     
-                    var gfys: [Gif] = []
+                    var gifs: [Gif] = []
                     for gfyModel in userFeed.gfycats {
-                        gfys.append(Gfy(model: gfyModel))
+                        gifs.append(Gfy(model: gfyModel))
                     }
                     
                     DispatchQueue.main.async {
                         if replaceData {
-                            self.gfys = gfys
+                            self.gifs = gifs
                         } else {
-                            self.gfys += gfys
+                            self.gifs += gifs
                         }
                         
                         numberOfAdditionsCompletion(userFeed.gfycats.count, nil)
@@ -101,8 +98,11 @@ struct GfyUserFeedModel: Decodable {
     var cursor: String?
 }
 
-public enum InternetStatus {
-    case connected
-    case noConnection
+struct GfyTagFeedModel: Decodable {
+    var tag: String
+    var gfycats: [GfyModel]
+    var cursor: String?
+    var digest: String?
+    var tagText: String?
 }
 

@@ -8,24 +8,41 @@
 
 import Foundation
 
-public extension URL {
-    
-    static func URLForUser(username: String) -> URL? {
+extension URL {
+    static func ForGfycatUser(username: String) -> URL? {
         guard !username.isEmpty else { return nil }
         let urlString = Const.Gfy.baseApiUrlString + Const.Gfy.userFeed + "/" + username + Const.Gfy.gfycatsFeed
         return URL(string: urlString)
     }
     
-    static func URLForTag(tagname: String) -> URL? {
+    static func ForGfycatTag(tagname: String) -> URL? {
         guard !tagname.isEmpty else { return nil }
         let tagsFeedBaseUrl = URL(string: Const.Gfy.baseApiUrlString + Const.Gfy.tagsFeed)
         return tagsFeedBaseUrl?.addQueryParams([Const.Gfy.Param.tagName:tagname])
     }
     
-    static func URLForSearch(searchStr: String) -> URL? {
+    static func ForGfycatSearch(searchStr: String) -> URL? {
         guard !searchStr.isEmpty else { return nil }
         let tagsFeedBaseUrl = URL(string: Const.Gfy.baseApiUrlString + Const.Gfy.gfycatsFeed + Const.Gfy.searchFeed)
         return tagsFeedBaseUrl?.addQueryParams([Const.Gfy.Param.searchText:searchStr])
+    }
+    
+    static func ForImgurAccountAlbums(username: String) -> URL? {
+        guard !username.isEmpty else { return nil }
+        let urlString = Const.Imgur.BaseApiUrlString + Const.Imgur.Endpoint.Account + username + Const.Imgur.Endpoint.Albums
+        return URL(string: urlString)
+    }
+    
+    static func ForImgurAlbumImages(albumId: String) -> URL? {
+        guard !albumId.isEmpty else { return nil }
+        let urlString = Const.Imgur.BaseApiUrlString + Const.Imgur.Endpoint.Album + albumId + Const.Imgur.Endpoint.Images
+        return URL(string: urlString)
+    }
+    
+    static func ForImgurImage(imageHash: String) -> URL? {
+        guard !imageHash.isEmpty else { return nil }
+        let urlString = Const.Imgur.BaseApiUrlString + Const.Imgur.Endpoint.Image + imageHash
+        return URL(string: urlString)
     }
     
     func addQueryParams(_ params: Dictionary<String, String>) -> URL {
@@ -48,5 +65,4 @@ public extension URL {
             return self
         }
     }
-    
 }

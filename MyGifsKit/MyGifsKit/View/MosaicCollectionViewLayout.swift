@@ -30,10 +30,10 @@ protocol MosaicCollectionViewLayoutDelegate: ASCollectionDelegate {
 
 class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
     var numberOfColumns: Int
-    var columnSpacing: CGFloat
-    var interItemSpacing: UIEdgeInsets
-    var columnHeights: [CGFloat] = []
-    var allAttributes = [UICollectionViewLayoutAttributes]()
+    private var columnSpacing: CGFloat
+    private var interItemSpacing: UIEdgeInsets
+    private var columnHeights: [CGFloat] = []
+    private var allAttributes = [UICollectionViewLayoutAttributes]()
     
     required override init() {
         self.numberOfColumns = 2
@@ -47,7 +47,7 @@ class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public var delegate: MosaicCollectionViewLayoutDelegate?
+    var delegate: MosaicCollectionViewLayoutDelegate?
     
     override func prepare() {
         super.prepare()

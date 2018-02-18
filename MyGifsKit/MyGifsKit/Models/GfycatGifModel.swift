@@ -8,13 +8,14 @@
 
 import Foundation
 
-final public class Gfy: Gif {
-    public var smallUrl: URL
-    public var fullResUrl: URL
-    public var thumbnailImageUrl: URL?
-    public var title: String?
-    public var width: Int
-    public var height: Int
+final class Gfy: Gif {
+    var viewableUrl: URL
+    var smallUrl: URL
+    var fullResUrl: URL
+    var thumbnailImageUrl: URL?
+    var title: String?
+    var width: Int
+    var height: Int
     
     init(model: GfyModel) {
         if let miniUrl = model.miniUrl {
@@ -24,22 +25,23 @@ final public class Gfy: Gif {
         } else {
             self.smallUrl = model.mp4Url
         }
+        self.viewableUrl = URL(string: Const.Gfy.baseUrlString + model.gfyId)!
         self.thumbnailImageUrl = model.miniPosterUrl
-        self.fullResUrl = URL(string: Const.Gfy.baseUrlString + model.gfyId)!
+        self.fullResUrl = model.mp4Url
         self.title = model.title
         self.width = model.width
         self.height = model.height
     }
     
-    public func size() -> CGSize {
+    func size() -> CGSize {
         return CGSize(width: width, height: height)
     }
 }
 extension Gfy: Hashable {
-    public var hashValue: Int {
+    var hashValue: Int {
         return fullResUrl.hashValue
     }
-    public static func ==(lhs: Gfy, rhs: Gfy) -> Bool {
+    static func ==(lhs: Gfy, rhs: Gfy) -> Bool {
         if (lhs.fullResUrl == rhs.fullResUrl) {
             return true
         } else {

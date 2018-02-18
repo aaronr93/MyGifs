@@ -25,7 +25,7 @@ class GifCollectionNode: ASCellNode {
             self.gifNode.asset = AVAsset(url: gif.smallUrl)
         }
         self.gifNode.url = gif.thumbnailImageUrl
-        self.gifNode.gifUrlString = gif.fullResUrl.absoluteString
+        self.gifNode.viewableUrl = gif.viewableUrl
         self.automaticallyManagesSubnodes = true
     }
     
@@ -36,5 +36,5 @@ class GifCollectionNode: ASCellNode {
 }
 
 class ASGifNode: ASVideoNode {
-    public var gifUrlString: String?
+    var viewableUrl: URL?
 }

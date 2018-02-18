@@ -34,5 +34,23 @@ struct Const {
             static let count = "count"
         }
     }
+    struct Imgur {
+        static let BaseApiUrlString = "https://api.imgur.com/3"
+        struct Endpoint {
+            static let Account = "/account/"
+            static let Album = "/album/"
+            static let Albums = "/albums/"
+            static let Image = "/image/"
+            static let Images = "/images/"
+        }
+        struct Thumbnail {
+            static let SmallSquare = "s"    // 90x90
+            static let BigSquare = "b"      // 160x160
+            static let Small = "t"          // 160x160
+            static let Medium = "m"         // 320x320
+            static let Large = "l"          // 640x640
+            static let Huge = "h"           // 1024x1024
+        }
+    }
 }
 
