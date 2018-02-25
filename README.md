@@ -9,7 +9,8 @@ Curate your own gif sources. Download for MyGifs coming soon.
 
 ## Features
 
-- View a Gfycat User Feed
+- View a collection of Gfycat gifs
+- View a collection of Imgur albums
 - Tap a gif to share to Messages
 - Browse and send gifs in iMessage with the iMessages Extension
 
@@ -17,8 +18,8 @@ Curate your own gif sources. Download for MyGifs coming soon.
 
 This feature list is roughly sorted in order of imminent implementation.
 
-* View a user's public albums of gifs on Imgur
 * Implement Settings for realtime debugging purposes
+* Filter Imgur albums; e.g. whether or not they're in the Gallery
 * Show share menu on tap (configure action on tapping a gif in settings)
 * Browse by Tags and Searches in Gfycat
 * Save a Gfycat User Feed to a list of feeds
