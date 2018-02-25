@@ -41,8 +41,8 @@ extension AlbumCollectionNodeDataSource: ASCollectionDelegate {
         }
     }
     
-    func shouldBatchFetchForCollectionNode(collectionNode: ASCollectionNode) -> Bool {
-        return true
+    func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
+        return feed.shouldBatchFetch()
     }
 }
 

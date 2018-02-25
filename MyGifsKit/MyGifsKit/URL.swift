@@ -45,6 +45,12 @@ extension URL {
         return URL(string: urlString)
     }
     
+    static func ForImgurAlbumCover(imageHash: String) -> URL? {
+        guard !imageHash.isEmpty else { return nil }
+        let urlString = Const.Imgur.BaseImageUrlString + imageHash + Const.Imgur.Extension.Image
+        return URL(string: urlString)
+    }
+    
     func addQueryParams(_ params: Dictionary<String, String>) -> URL {
         guard !params.isEmpty else { return self }
         let queryItems: [URLQueryItem] = params.map { return URLQueryItem(name: $0.key, value: $0.value) }

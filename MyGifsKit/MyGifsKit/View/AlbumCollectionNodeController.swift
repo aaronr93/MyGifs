@@ -14,8 +14,8 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
         didSet { node.leadingScreensForBatching = loadingScreensForBatching }
     }
     
-    private var feed: AlbumsFeed
     private let layout: UICollectionViewLayout
+    private var feed: AlbumsFeed
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
     private var albumDataSource: AlbumCollectionNodeDataSource

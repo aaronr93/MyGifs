@@ -13,18 +13,25 @@ class AlbumCollectionNode: ASCellNode {
     let albumTitleNode = ASTextNode()
     let albumNode: ASNetworkImageNode = {
         let imageNode = ASNetworkImageNode()
-        imageNode.contentMode = .scaleAspectFill
+        imageNode.contentMode = .scaleAspectFit
         return imageNode
     }()
     
     init(album: Album) {
         super.init()
-        albumNode.url = album.viewableUrl
+        albumNode.url = album.coverUrl
+        if let title = album.title {
+            albumTitleNode.attributedText = NSAttributedString(string: title)
+        }
         self.automaticallyManagesSubnodes = true
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        return ASRatioLayoutSpec(ratio: 1, child: albumNode)
+        let stack = ASStackLayoutSpec.vertical()
+        let thumbnailStack = ASRatioLayoutSpec(ratio: 1, child: albumNode)
+        let titleStack = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), child: albumTitleNode)
+        stack.children = [thumbnailStack, titleStack]
+        return stack
     }
     
 }

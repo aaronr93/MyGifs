@@ -8,11 +8,22 @@
 
 final class ImgurAlbum: Album {
     var gifs: [Gif] = []
+    var coverUrl: URL?
+    var coverWidth: Int?
+    var coverHeight: Int?
     var viewableUrl: URL
+    var id: String
     var title: String?
     
     init(model: ImgurAlbumModel) {
-        viewableUrl = URL.ForImgurAlbum(albumId: model.id)!
+        id = model.id
+        if let coverId = model.cover {
+            let thumbnailHash = coverId + Const.Imgur.Thumbnail.BigSquare
+            coverUrl = URL.ForImgurAlbumCover(imageHash: thumbnailHash)!
+        }
+        coverWidth = model.cover_width
+        coverHeight = model.cover_height
+        viewableUrl = URL(string: Const.Imgur.BaseAlbumUrlString + model.id)!
         title = model.title
         if let images = model.images {
             gifs = images.map({ (gifModel: ImgurGifModel) -> Gif in

@@ -45,6 +45,22 @@ protocol GifFeed: Feed {
 
 protocol Album: SendableItem {
     var gifs: [Gif] { get }
+    var coverUrl: URL? { get }
+    var coverWidth: Int? { get }
+    var coverHeight: Int? { get }
+}
+extension Album {
+    func coverSize() -> CGSize? {
+        guard coverUrl != nil, (coverWidth != nil && coverHeight != nil) else { return nil }
+        if let width = coverWidth, let height = coverHeight {
+            return CGSize(width: width, height: height)
+        } else if let width = coverWidth {
+            return CGSize(width: width, height: width)
+        } else if let height = coverHeight {
+            return CGSize(width: height, height: height)
+        }
+        return nil
+    }
 }
 
 protocol AlbumsFeed: Feed {

@@ -36,6 +36,8 @@ struct Const {
     }
     struct Imgur {
         static let BaseApiUrlString = "https://api.imgur.com/3"
+        static let BaseImageUrlString = "https://i.imgur.com/"
+        static let BaseAlbumUrlString = "https://imgur.com/a/"
         static let MaxResponseCount = 50
         struct Endpoint {
             static let Account = "/account/"
@@ -43,6 +45,10 @@ struct Const {
             static let Albums = "/albums/"
             static let Image = "/image/"
             static let Images = "/images/"
+        }
+        struct Extension {
+            static let Image = ".jpg"
+            static let Gif = ".gifv"
         }
         struct Thumbnail {
             static let SmallSquare = "s"    // 90x90
