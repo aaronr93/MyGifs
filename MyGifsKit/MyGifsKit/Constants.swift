@@ -36,6 +36,7 @@ struct Const {
     }
     struct Imgur {
         static let BaseApiUrlString = "https://api.imgur.com/3"
+        static let MaxResponseCount = 50
         struct Endpoint {
             static let Account = "/account/"
             static let Album = "/album/"

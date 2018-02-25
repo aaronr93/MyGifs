@@ -7,10 +7,18 @@
 //
 
 final class ImgurAlbum: Album {
-    var url: URL?
+    var gifs: [Gif] = []
+    var viewableUrl: URL
+    var title: String?
     
     init(model: ImgurAlbumModel) {
-        url = URL.ForImgurAlbumImages(albumId: model.id)
+        viewableUrl = URL.ForImgurAlbum(albumId: model.id)!
+        title = model.title
+        if let images = model.images {
+            gifs = images.map({ (gifModel: ImgurGifModel) -> Gif in
+                return ImgurGif(model: gifModel)
+            })
+        }
     }
 }
 
@@ -21,14 +29,14 @@ struct ImgurAlbumModel: Decodable {
     var datetime: Date
     
     var cover: String?
-    var cover_width: Int
-    var cover_height: Int
+    var cover_width: Int?
+    var cover_height: Int?
     
     var account_url: String?
     var account_id: Int?
     
-    var privacy: ImgurAlbumPrivacy
-    var layout: ImgurFeedLayout
+    var privacy: ImgurAlbumPrivacy?
+    var layout: ImgurFeedLayout?
     var views: Int
     var link: URL
     var favorite: Bool

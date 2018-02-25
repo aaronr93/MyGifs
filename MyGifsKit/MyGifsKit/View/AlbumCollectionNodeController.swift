@@ -1,56 +1,41 @@
 //
-//  GifCollectionNodeController.swift
-//  My Gifs
+//  AlbumCollectionNodeController.swift
+//  MyAlbumsKit
 //
-//  Created by Aaron Rosenberger on 11/5/17.
-//  Copyright © 2017 Aaron Rosenberger. All rights reserved.
+//  Created by Aaron Rosenberger on 2/24/18.
+//  Copyright © 2018 Aaron Rosenberger. All rights reserved.
 //
 
 import AsyncDisplayKit
 
-enum FeedModelType {
-    case feedModelTypeGfyUser
-    case feedModelTypeGfyTag
-}
-
-public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
-    
-    var numberOfColumns: Int {
-        didSet { layout.numberOfColumns = numberOfColumns }
-    }
+public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
     
     var loadingScreensForBatching: CGFloat {
         didSet { node.leadingScreensForBatching = loadingScreensForBatching }
     }
     
-    private var feed: GifFeed
-    
-    private let layout: MosaicCollectionViewLayout
-    private let layoutInspector: MosaicCollectionViewLayoutInspector
+    private var feed: AlbumsFeed
+    private let layout: UICollectionViewLayout
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
-    private var gifDataSource: GifCollectionNodeDataSource!
+    private var albumDataSource: AlbumCollectionNodeDataSource
     
     weak public var delegate: CollectionDelegate?
     
     public init() {
-        layout = MosaicCollectionViewLayout()
-        layoutInspector = MosaicCollectionViewLayoutInspector()
+        layout = UICollectionViewFlowLayout()
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
-        numberOfColumns = 1
         loadingScreensForBatching = 2.5
         
-        feed = GfyFeed(username: "aaronr93")
-        gifDataSource = GifCollectionNodeDataSource(newFeed: feed)
+        feed = ImgurAccountAlbums(username: "aaronr93")
+        albumDataSource = AlbumCollectionNodeDataSource(newFeed: feed)
         
         super.init(node: collectionNode)
-        layout.delegate = self
-        node.layoutInspector = layoutInspector
-        node.allowsSelection = false
         
-        node.dataSource = gifDataSource
-        node.delegate = gifDataSource
-        gifDataSource.delegate = self
+        node.allowsSelection = false
+        node.dataSource = albumDataSource
+        node.delegate = albumDataSource
+        albumDataSource.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -73,7 +58,7 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
     }
 }
 
-extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
+extension AlbumCollectionNodeController: CollectionNodeDataSourceDelegate {
     func didTap(_ item: SendableItem) {
         delegate?.didTap(item)
     }
@@ -95,16 +80,9 @@ extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
         }
     }
     
-    func addRowsIntoTableNode(newCount newGfys: Int) {
-        let indexRange = (feed.numberOfItemsInFeed - newGfys..<feed.numberOfItemsInFeed)
+    func addRowsIntoTableNode(newCount newItems: Int) {
+        let indexRange = (feed.numberOfItemsInFeed - newItems..<feed.numberOfItemsInFeed)
         let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
         node.insertItems(at: indexPaths)
     }
 }
-
-extension GifCollectionNodeController: MosaicCollectionViewLayoutDelegate {
-    internal func collectionView(_ collectionView: UICollectionView, layout: MosaicCollectionViewLayout, originalItemSizeAt indexPath: IndexPath) -> CGSize {
-        return gifDataSource.feed.gifs[indexPath.row].size()
-    }
-}
-

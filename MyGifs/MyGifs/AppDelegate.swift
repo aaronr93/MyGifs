@@ -20,17 +20,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return window
     }()
     
-    var MyGifsNavController: UINavigationController?
+    lazy var GfycatController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: GifCollectionNodeController())
+        if let gfycatController = controller.childViewControllers.first as? GifCollectionNodeController {
+            gfycatController.tabBarItem = UITabBarItem(title: "Gifs", image: nil, tag: 0)
+            gfycatController.delegate = self
+        }
+        return controller
+    }()
+    
+    lazy var ImgurController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: AlbumCollectionNodeController())
+        if let imgurController = controller.childViewControllers.first as? AlbumCollectionNodeController {
+            imgurController.tabBarItem = UITabBarItem(title: "Albums", image: nil, tag: 0)
+            imgurController.delegate = self
+        }
+        return controller
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainFeedController = CollectionNodeController()
-        mainFeedController.delegate = self
-        MyGifsNavController = UINavigationController(rootViewController: mainFeedController)
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers([GfycatController, ImgurController], animated: true)
+        tabBarController.selectedIndex = 1
         
         // UIWindow
-        window?.rootViewController = MyGifsNavController
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
         do {
@@ -66,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: GifCollectionDelegate {
+extension AppDelegate: CollectionDelegate {
     func didTap(_ item: SendableItem) {
         sendTextMsg(item.viewableUrl.absoluteString)
     }
@@ -83,7 +99,7 @@ extension AppDelegate: MFMessageComposeViewControllerDelegate {
             let composeVC = MFMessageComposeViewController()
             composeVC.messageComposeDelegate = self
             composeVC.body = message
-            self.MyGifsNavController?.present(composeVC, animated: true, completion: nil)
+            self.GfycatController.present(composeVC, animated: true, completion: nil)
         }
     }
 }

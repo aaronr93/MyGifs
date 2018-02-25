@@ -1,6 +1,6 @@
 //
 //  ImgurAccountAlbumsModel.swift
-//  MyGifsKit
+//  MyalbumsKit
 //
 //  Created by Aaron Rosenberger on 2/14/18.
 //  Copyright © 2018 Aaron Rosenberger. All rights reserved.
@@ -8,23 +8,25 @@
 
 final class ImgurAccountAlbums: AlbumsFeed {
     var albums: [Album] = []
-    var numberOfItemsInFeed: Int = 0
-    var fetchPageInProgress = false
     var url: URL?
+    var map: [ArraySlice<Album>] = []
+    
+    private var lastFetchCount = 0
+    private var eTag = ""
+    private var fetchPageInProgress = false
+    private let webService: WebService
+    
+    var numberOfItemsInFeed: Int { return albums.count }
+    private var totalPages: Int { return map.endIndex }
     
     init(username: String) {
+        webService = WebService()
         guard !username.isEmpty else { return }
         url = URL.ForImgurAccountAlbums(username: username)
     }
     
-    func getModel(withURL: URL) -> Resource<ImgurAccountAlbumsFeedModel> {
-        let parse = Resource<ImgurAccountAlbumsFeedModel>(url: withURL, parseJSON: { data in
-            guard let model = try? JSONDecoder().decode(ImgurAccountAlbumsFeedModel.self, from: data) else {
-                return .failure(.errorParsingJSON)
-            }
-            return .success(model)
-        })
-        return parse
+    func shouldBatchFetch() -> Bool {
+        return !(totalPages > 0 && lastFetchCount < Const.Imgur.MaxResponseCount)
     }
     
     func updateNewBatch(additionsAndConnectionStatusCompletion: @escaping (Int, InternetStatus) -> ()) {
@@ -46,29 +48,37 @@ final class ImgurAccountAlbums: AlbumsFeed {
     }
     
     private func fetchNextPage(replaceData: Bool, numberOfAdditionsCompletion: @escaping (Int, NetworkingErrors?) -> ()) {
-        guard let url = self.url else { return }
+        guard var url = self.url else { return }
+        url.appendPathComponent("\(totalPages)", isDirectory: false)
         
-        let webService = WebService()
         let model: Resource<ImgurAccountAlbumsFeedModel> = webService.getModel(withURL: url)
         webService.load(resource: model) { [unowned self] result in
             DispatchQueue.global().async {
                 switch result {
-                case .success(let albumsFeed):
+                case .success(let response):
+                    let albumsFeed = response.feed
+                    self.eTag = response.eTag ?? ""
+                    
                     guard albumsFeed.success else {
-                        numberOfAdditionsCompletion(albumsFeed.data.count, nil)
+                        numberOfAdditionsCompletion(0, nil)
                         return
                     }
                     
-                    var albums: [Album] = []
-                    for albumModel in albumsFeed.data {
-                        albums.append(ImgurAlbum(model: albumModel))
-                    }
+                    var albumsToAdd: [Album] = []
+                    albumsToAdd = albumsFeed.data.map({ (albumModel: ImgurAlbumModel) -> ImgurAlbum in
+                        return ImgurAlbum(model: albumModel)
+                    })
+                    self.lastFetchCount = albumsToAdd.count
+                    
+                    let indexOfLastElement = max(self.albums.endIndex-1, 0)
                     DispatchQueue.main.async {
                         if replaceData {
-                            self.albums = albums
+                            self.albums = albumsToAdd
                         } else {
-                            self.albums += albums
+                            self.albums += albumsToAdd
                         }
+                        let page = self.albums.suffix(from: indexOfLastElement)
+                        self.map.append(page)
                         numberOfAdditionsCompletion(albumsFeed.data.count, nil)
                     }
                 case .failure(let fail):

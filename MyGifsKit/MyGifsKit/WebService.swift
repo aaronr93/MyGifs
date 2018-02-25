@@ -20,24 +20,31 @@
 import Foundation
 
 final internal class WebService {
+    let session: URLSession
+    
+    init() {
+        session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
+    }
+    
     func getModel<A: Decodable>(withURL: URL) -> Resource<A> {
-        let parse = Resource<A>(url: withURL, parseJSON: { data in
-            guard let model = try? JSONDecoder().decode(A.self, from: data) else {
+        let parse = Resource<A>(url: withURL, parseJSON: { (data: Data, eTag: String?) in
+            guard let feed = try? JSONDecoder().decode(A.self, from: data) else {
                 return .failure(.errorParsingJSON)
             }
-            return .success(model)
+            return .success(feed: feed, eTag: eTag)
         })
         return parse
     }
     
     func load<A: Decodable>(resource: Resource<A>, completion: @escaping (Result<A>) -> ()) {
-        let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: OperationQueue.main)
-        session.dataTask(with: resource.url) { data, response, error in
+        var request = URLRequest(url: resource.url)
+        request.addValue("Client-ID 0cf6d3195975a95", forHTTPHeaderField: "Authorization")
+        session.dataTask(with: request) { data, response, error in
             // Check for errors in responses.
             let result = self.checkForNetworkErrors(data, response, error)
             switch result {
-            case .success(let data):
-                completion(resource.parse(data))
+            case .success(let response):
+                completion(resource.parse(response.feed, response.eTag))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -58,30 +65,129 @@ extension WebService {
             }
         }
         
-        if let response = response as? HTTPURLResponse, response.statusCode <= 200 && response.statusCode >= 299 {
-            return .failure((.invalidStatusCode("Request returned status code other than 2xx \(response)")))
+        var eTag = ""
+        if let response = response as? HTTPURLResponse {
+            if let headersData = try? JSONSerialization.data(withJSONObject: response.allHeaderFields) {
+                if let headers = try? JSONDecoder().decode(ImgurResponseHeaders.self, from: headersData) {
+                    eTag = headers.Etag ?? ""
+                }
+            }
+            
+            if (response.statusCode <= 200 && response.statusCode >= 299) {
+                return .failure((.invalidStatusCode(response.statusCode)))
+            }
         }
         
         guard let data = data else { return .failure(.dataReturnedNil) }
         
-        return .success(data)
+        return .success(feed: data, eTag: eTag)
+    }
+}
+
+protocol ImgurHeaders {
+    var Etag: String? { get set }
+}
+
+struct ImgurRequestHeaders: ImgurHeaders, Encodable {
+    var Etag: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case Etag = "If-None-Match"
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var values = encoder.container(keyedBy: CodingKeys.self)
+        try? values.encode(Etag, forKey: .Etag)
+    }
+}
+
+struct ImgurResponseHeaders: ImgurHeaders {
+    var Etag: String?
+    var XCache: eXCacheResult?
+    var XCacheHits: Int?
+    var CacheControl: String?
+    var XRateLimitClientRemaining: Int?
+    var XRateLimitClientLimit: Int?
+    var XRateLimitUserRemaining: Int?
+    var XRateLimitUserLimit: Int?
+    var XRateLimitUserReset: Int?
+    var ContentType: eResponseContentType?
+    var ContentEncoding: eResponseContentEncoding?
+    var ContentLength: Int?
+    var ResponseAge: Int?
+    var ResponseDate: Date?
+}
+extension ImgurResponseHeaders: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case Etag
+        case XCache = "x-cache"
+        case XCacheHits = "x-cache-hits"
+        case CacheControl = "Cache-Control"
+        case XRateLimitClientRemaining = "x-ratelimit-clientremaining"
+        case XRateLimitClientLimit = "x-ratelimit-clientlimit"
+        case XRateLimitUserRemaining = "x-ratelimit-userremaining"
+        case XRateLimitUserLimit = "x-ratelimit-userlimit"
+        case XRateLimitUserReset = "x-ratelimit-userreset"
+        case ContentType = "Content-Type"
+        case ContentEncoding = "Content-Encoding"
+        case ContentLength = "Content-Length"
+        case ResponseAge = "Age"
+        case ResponseDate = "Date"
+    }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        Etag = try? values.decode(String.self, forKey: .Etag).dropFirst(3).dropLast(1).lowercased()
+        XCache = try? values.decode(eXCacheResult.self, forKey: .XCache)
+        if let xCacheHits = try? values.decode(String.self, forKey: .XCacheHits) { XCacheHits = Int(xCacheHits) }
+        CacheControl = try? values.decode(String.self, forKey: .CacheControl)
+        if let xRateLimitClientRemaining = try? values.decode(String.self, forKey: .XRateLimitClientRemaining) { XRateLimitClientRemaining = Int(xRateLimitClientRemaining) }
+        if let xRateLimitClientLimit = try? values.decode(String.self, forKey: .XRateLimitClientLimit) { XRateLimitClientLimit = Int(xRateLimitClientLimit) }
+        if let xRateLimitUserRemaining = try? values.decode(String.self, forKey: .XRateLimitUserRemaining) { XRateLimitUserRemaining = Int(xRateLimitUserRemaining) }
+        if let xRateLimitUserLimit = try? values.decode(String.self, forKey: .XRateLimitUserLimit) { XRateLimitUserLimit = Int(xRateLimitUserLimit) }
+        if let xRateLimitUserReset = try? values.decode(String.self, forKey: .XRateLimitUserReset) { XRateLimitUserReset = Int(xRateLimitUserReset) }
+        ContentType = try? values.decode(eResponseContentType.self, forKey: .ContentType)
+        ContentEncoding = try? values.decode(eResponseContentEncoding.self, forKey: .ContentEncoding)
+        if let contentLength = try? values.decode(String.self, forKey: .ContentLength) { ContentLength = Int(contentLength) }
+        if let responseAge = try? values.decode(String.self, forKey: .ResponseAge) { ResponseAge = Int(responseAge) }
+        if let responseDate = try? values.decode(String.self, forKey: .ResponseDate) { ResponseDate = responseDate.toDate(dateFormat: "E, d MMM yyyy HH:mm:ss zzz") }
+    }
+    enum eXCacheResult: String, Decodable {
+        case Hit = "HIT"
+        case Miss = "MISS"
+    }
+    enum eResponseContentType: String, Decodable {
+        case JSON = "application/json"
+        case XML = "application/xml"
+    }
+    enum eResponseContentEncoding: String, Decodable {
+        case gzip = "gzip"
+    }
+}
+
+extension String {
+    func toDate(dateFormat format: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        return dateFormatter.date(from: self)!
     }
 }
 
 struct Resource<A> {
     let url: URL
-    let parse: (Data) -> Result<A>
+    let parse: (Data, String?) -> Result<A>
 }
 
 extension Resource {
-    init(url: URL, parseJSON: @escaping (Data) -> Result<A>) {
+    init(url: URL, parseJSON: @escaping (Data, String?) -> Result<A>) {
         self.url = url
-        self.parse = { data in return parseJSON(data) }
+        self.parse = { (data, eTag) in return parseJSON(data, eTag) }
     }
 }
 
 enum Result<T> {
-    case success(T)
+    case success(feed: T, eTag: String?)
     case failure(NetworkingErrors)
 }
 
@@ -96,7 +202,7 @@ enum NetworkingErrors: Error {
     case noInternetConnection
     case dataReturnedNil
     case returnedError(Error)
-    case invalidStatusCode(String)
+    case invalidStatusCode(Int)
     case customError(String)
 }
 

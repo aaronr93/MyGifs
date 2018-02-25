@@ -17,6 +17,7 @@
 		9326FDFE201840B100A87134 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF7201840B000A87134 /* Protocols.swift */; };
 		9326FE00201840B100A87134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF9201840B000A87134 /* Constants.swift */; };
 		9326FE01201840B100A87134 /* GfycatGifsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDFA201840B000A87134 /* GfycatGifsFeed.swift */; };
+		9327D81D204193250031ABB8 /* AlbumCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327D81C204193250031ABB8 /* AlbumCollectionNodeController.swift */; };
 		93DB7C86202744B100E7C303 /* GifCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C83202744B000E7C303 /* GifCollectionNodeController.swift */; };
 		93DB7C87202744B100E7C303 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C84202744B100E7C303 /* GifCollectionNode.swift */; };
 		93DB7C88202744B100E7C303 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */; };
@@ -24,8 +25,8 @@
 		93DB7C992035310A00E7C303 /* ImgurAlbumsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C982035310A00E7C303 /* ImgurAlbumsFeed.swift */; };
 		93DB7C9B2035314200E7C303 /* ImgurGifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C9A2035314200E7C303 /* ImgurGifModel.swift */; };
 		93DB7C9D20377E9800E7C303 /* ImgurAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C9C20377E9800E7C303 /* ImgurAlbumModel.swift */; };
-		93DB7C9F203866F000E7C303 /* CollectionNodeGifDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C9E203866F000E7C303 /* CollectionNodeGifDataSource.swift */; };
-		93DB7CA1203866FF00E7C303 /* CollectionNodeAlbumDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7CA0203866FF00E7C303 /* CollectionNodeAlbumDataSource.swift */; };
+		93DB7C9F203866F000E7C303 /* GifCollectionNodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C9E203866F000E7C303 /* GifCollectionNodeDataSource.swift */; };
+		93DB7CA1203866FF00E7C303 /* AlbumCollectionNodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7CA0203866FF00E7C303 /* AlbumCollectionNodeDataSource.swift */; };
 		93DB7CA32039FC0300E7C303 /* AlbumCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7CA22039FC0300E7C303 /* AlbumCollectionNode.swift */; };
 		93DB7CA5203A1E3000E7C303 /* ImgurGifsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7CA4203A1E3000E7C303 /* ImgurGifsFeed.swift */; };
 		A1D5B3884859F0F7DA49B92E /* Pods_MyGifsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B810F64097D525C0E274028 /* Pods_MyGifsKit.framework */; };
@@ -60,6 +61,7 @@
 		9326FDF7201840B000A87134 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9326FDF9201840B000A87134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9326FDFA201840B000A87134 /* GfycatGifsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfycatGifsFeed.swift; sourceTree = "<group>"; };
+		9327D81C204193250031ABB8 /* AlbumCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionNodeController.swift; sourceTree = "<group>"; };
 		93DB7C83202744B000E7C303 /* GifCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNodeController.swift; sourceTree = "<group>"; };
 		93DB7C84202744B100E7C303 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
 		93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -67,8 +69,8 @@
 		93DB7C982035310A00E7C303 /* ImgurAlbumsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAlbumsFeed.swift; sourceTree = "<group>"; };
 		93DB7C9A2035314200E7C303 /* ImgurGifModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGifModel.swift; sourceTree = "<group>"; };
 		93DB7C9C20377E9800E7C303 /* ImgurAlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAlbumModel.swift; sourceTree = "<group>"; };
-		93DB7C9E203866F000E7C303 /* CollectionNodeGifDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNodeGifDataSource.swift; sourceTree = "<group>"; };
-		93DB7CA0203866FF00E7C303 /* CollectionNodeAlbumDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNodeAlbumDataSource.swift; sourceTree = "<group>"; };
+		93DB7C9E203866F000E7C303 /* GifCollectionNodeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionNodeDataSource.swift; sourceTree = "<group>"; };
+		93DB7CA0203866FF00E7C303 /* AlbumCollectionNodeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionNodeDataSource.swift; sourceTree = "<group>"; };
 		93DB7CA22039FC0300E7C303 /* AlbumCollectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionNode.swift; sourceTree = "<group>"; };
 		93DB7CA4203A1E3000E7C303 /* ImgurGifsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGifsFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,11 +186,12 @@
 			isa = PBXGroup;
 			children = (
 				93DB7C83202744B000E7C303 /* GifCollectionNodeController.swift */,
+				93DB7C9E203866F000E7C303 /* GifCollectionNodeDataSource.swift */,
 				93DB7C84202744B100E7C303 /* GifCollectionNode.swift */,
+				9327D81C204193250031ABB8 /* AlbumCollectionNodeController.swift */,
+				93DB7CA0203866FF00E7C303 /* AlbumCollectionNodeDataSource.swift */,
 				93DB7CA22039FC0300E7C303 /* AlbumCollectionNode.swift */,
 				93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */,
-				93DB7C9E203866F000E7C303 /* CollectionNodeGifDataSource.swift */,
-				93DB7CA0203866FF00E7C303 /* CollectionNodeAlbumDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9327D81D204193250031ABB8 /* AlbumCollectionNodeController.swift in Sources */,
 				93DB7C9B2035314200E7C303 /* ImgurGifModel.swift in Sources */,
 				93DB7C88202744B100E7C303 /* MosaicCollectionViewLayout.swift in Sources */,
 				93DB7C9D20377E9800E7C303 /* ImgurAlbumModel.swift in Sources */,
@@ -410,14 +414,14 @@
 				9326FE01201840B100A87134 /* GfycatGifsFeed.swift in Sources */,
 				93DB7C87202744B100E7C303 /* GifCollectionNode.swift in Sources */,
 				9326FDFD201840B100A87134 /* WebService.swift in Sources */,
-				93DB7C9F203866F000E7C303 /* CollectionNodeGifDataSource.swift in Sources */,
+				93DB7C9F203866F000E7C303 /* GifCollectionNodeDataSource.swift in Sources */,
 				93DB7C992035310A00E7C303 /* ImgurAlbumsFeed.swift in Sources */,
 				9326FDFE201840B100A87134 /* Protocols.swift in Sources */,
 				93DB7CA32039FC0300E7C303 /* AlbumCollectionNode.swift in Sources */,
 				93DB7CA5203A1E3000E7C303 /* ImgurGifsFeed.swift in Sources */,
 				9326FDFB201840B100A87134 /* GfycatGifModel.swift in Sources */,
 				9326FDFC201840B100A87134 /* URL.swift in Sources */,
-				93DB7CA1203866FF00E7C303 /* CollectionNodeAlbumDataSource.swift in Sources */,
+				93DB7CA1203866FF00E7C303 /* AlbumCollectionNodeDataSource.swift in Sources */,
 				9326FE00201840B100A87134 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

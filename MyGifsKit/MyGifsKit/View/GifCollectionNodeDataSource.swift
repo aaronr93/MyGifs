@@ -1,5 +1,5 @@
 //
-//  CollectionNodeAlbumDataSource.swift
+//  GifCollectionNodeDataSource.swift
 //  MyGifsKit
 //
 //  Created by Aaron Rosenberger on 2/17/18.
@@ -8,48 +8,50 @@
 
 import AsyncDisplayKit
 
-protocol CollectionNodeAlbumDataSourceDelegate: class {
-    func didTap(_ album: Album)
-    func didBeginUpdate(_ context: ASBatchContext?)
-    func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus)
-}
-
-class CollectionNodeAlbumDataSource: NSObject {
-    var feed: AlbumsFeed
-    weak var delegate: CollectionNodeAlbumDataSourceDelegate!
-    init(newFeed: AlbumsFeed) {
+class GifCollectionNodeDataSource: NSObject {
+    var feed: GifFeed
+    weak var delegate: CollectionNodeDataSourceDelegate!
+    init(newFeed: GifFeed) {
         feed = newFeed
     }
 }
 
-extension CollectionNodeAlbumDataSource: ASCollectionDataSource {
+extension GifCollectionNodeDataSource: ASCollectionDataSource {
     func numberOfSections(in collectionNode: ASCollectionNode) -> Int { return 1 }
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
         return feed.numberOfItemsInFeed
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
-        let album = feed.albums[indexPath.row]
+        let gif = feed.gifs[indexPath.row]
         let nodeBlock: ASCellNodeBlock = {
-            let node = AlbumCollectionNode(album: album)
-            node.albumNode.delegate = self
+            let node = GifCollectionNode(gif: gif)
+            node.gifNode.delegate = self
             return node
         }
         return nodeBlock
     }
 }
 
-extension CollectionNodeAlbumDataSource: ASCollectionDelegate {
+extension GifCollectionNodeDataSource: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
         delegate.didBeginUpdate(context)
         feed.updateNewBatch { additions, connectionStatus in
             self.delegate.didEndUpdate(context, with: additions, connectionStatus)
         }
     }
-}
-
-extension CollectionNodeAlbumDataSource: ASNetworkImageNodeDelegate {
     
+    func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
+        return feed.shouldBatchFetch()
+    }
 }
 
+extension GifCollectionNodeDataSource: ASVideoNodeDelegate {
+    func didTap(_ videoNode: ASVideoNode) {
+        guard let gifNode = videoNode as? ASGifNode else { return }
+        guard let viewableUrl = gifNode.viewableUrl else { return }
+        guard let gif = feed.getGif(forURL: viewableUrl) else { return }
+        delegate.didTap(gif)
+    }
+}
 

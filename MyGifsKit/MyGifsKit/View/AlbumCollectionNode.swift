@@ -19,7 +19,7 @@ class AlbumCollectionNode: ASCellNode {
     
     init(album: Album) {
         super.init()
-        albumNode.url = album.url
+        albumNode.url = album.viewableUrl
         self.automaticallyManagesSubnodes = true
     }
     

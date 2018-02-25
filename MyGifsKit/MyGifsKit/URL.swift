@@ -33,9 +33,9 @@ extension URL {
         return URL(string: urlString)
     }
     
-    static func ForImgurAlbumImages(albumId: String) -> URL? {
+    static func ForImgurAlbum(albumId: String) -> URL? {
         guard !albumId.isEmpty else { return nil }
-        let urlString = Const.Imgur.BaseApiUrlString + Const.Imgur.Endpoint.Album + albumId + Const.Imgur.Endpoint.Images
+        let urlString = Const.Imgur.BaseApiUrlString + Const.Imgur.Endpoint.Album + albumId
         return URL(string: urlString)
     }
     
