@@ -7,18 +7,18 @@
 //
 
 final class ImgurAlbum: Album {
+    var id: String
     var gifs: [Gif] = []
     var coverUrl: URL?
     var coverWidth: Int?
     var coverHeight: Int?
     var viewableUrl: URL
-    var id: String
     var title: String?
     
     init(model: ImgurAlbumModel) {
         id = model.id
         if let coverId = model.cover {
-            let thumbnailHash = coverId + Const.Imgur.Thumbnail.BigSquare
+            let thumbnailHash = coverId + String(Thumbnail.BigSquare.rawValue)
             coverUrl = URL.ForImgurAlbumCover(imageHash: thumbnailHash)!
         }
         coverWidth = model.cover_width
@@ -70,6 +70,5 @@ enum ImgurAlbumPrivacy: String, Decodable {
 
 enum ImgurFeedLayout: String, Decodable {
     case Blog = "blog"
-    
 }
 

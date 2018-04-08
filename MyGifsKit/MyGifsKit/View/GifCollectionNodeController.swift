@@ -8,9 +8,13 @@
 
 import AsyncDisplayKit
 
-enum FeedModelType {
-    case feedModelTypeGfyUser
-    case feedModelTypeGfyTag
+public enum FeedModelType {
+    case GfycatUserGifs
+    case GfycatAlbumGifs
+    case GfycatUserAlbums
+    case ImgurUserGifs
+    case ImgurAlbumGifs
+    case ImgurUserAlbums
 }
 
 public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
@@ -23,31 +27,48 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
         didSet { node.leadingScreensForBatching = loadingScreensForBatching }
     }
     
-    private var feed: GifFeed
+    private var feed: GifFeed?
     
     private let layout: MosaicCollectionViewLayout
     private let layoutInspector: MosaicCollectionViewLayoutInspector
+    
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
     private var gifDataSource: GifCollectionNodeDataSource!
     
     weak public var delegate: CollectionDelegate?
     
-    public init() {
+    init() {
+        ASDisableLogging()
+        
         layout = MosaicCollectionViewLayout()
         layoutInspector = MosaicCollectionViewLayoutInspector()
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
         numberOfColumns = 1
-        loadingScreensForBatching = 2.5
-        
-        feed = GfyFeed(username: "aaronr93")
-        gifDataSource = GifCollectionNodeDataSource(newFeed: feed)
+        loadingScreensForBatching = 2
         
         super.init(node: collectionNode)
         layout.delegate = self
         node.layoutInspector = layoutInspector
         node.allowsSelection = false
-        
+    }
+    
+    public convenience init(identifier: String, sourceType: FeedModelType) {
+        self.init()
+        switch sourceType {
+        case .GfycatUserGifs:
+            feed = GfyFeed(username: identifier)
+        case .GfycatAlbumGifs:
+            break
+        case .ImgurUserGifs:
+            
+            break
+        case .ImgurAlbumGifs:
+            feed = ImgurGifsFeed(albumId: identifier)
+        default:
+            return
+        }
+        gifDataSource = GifCollectionNodeDataSource(newFeed: feed!)
         node.dataSource = gifDataSource
         node.delegate = gifDataSource
         gifDataSource.delegate = self
@@ -74,8 +95,8 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
 }
 
 extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
-    func didTap(_ item: SendableItem) {
-        delegate?.didTap(item)
+    func didTap(_ item: SendableItem, _ action: TapAction) {
+        delegate?.didTap(item, action)
     }
     
     func didBeginUpdate(_ context: ASBatchContext?) {
@@ -83,20 +104,22 @@ extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
     }
     
     func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus) {
-        switch connectionStatus {
-        case .noConnection:
-            self.activityIndicator.stopAnimating()
-            context?.completeBatchFetching(true)
-            break
-        default:
-            self.activityIndicator.stopAnimating()
-            self.addRowsIntoTableNode(newCount: additions)
-            context?.completeBatchFetching(true)
+        DispatchQueue.main.async {
+            switch connectionStatus {
+            case .noConnection:
+                self.activityIndicator.stopAnimating()
+                context?.completeBatchFetching(true)
+                break
+            default:
+                self.activityIndicator.stopAnimating()
+                self.addRowsIntoTableNode(newCount: additions)
+                context?.completeBatchFetching(true)
+            }
         }
     }
     
     func addRowsIntoTableNode(newCount newGfys: Int) {
-        let indexRange = (feed.numberOfItemsInFeed - newGfys..<feed.numberOfItemsInFeed)
+        let indexRange = (feed!.numberOfItemsInFeed - newGfys..<feed!.numberOfItemsInFeed)
         let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
         node.insertItems(at: indexPaths)
     }

@@ -18,6 +18,8 @@
 		9326FE00201840B100A87134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDF9201840B000A87134 /* Constants.swift */; };
 		9326FE01201840B100A87134 /* GfycatGifsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326FDFA201840B000A87134 /* GfycatGifsFeed.swift */; };
 		9327D81D204193250031ABB8 /* AlbumCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327D81C204193250031ABB8 /* AlbumCollectionNodeController.swift */; };
+		9327D8202045871F0031ABB8 /* ImgurWebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327D81F2045871F0031ABB8 /* ImgurWebHelper.swift */; };
+		9327D822204587290031ABB8 /* GfycatWebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327D821204587290031ABB8 /* GfycatWebHelper.swift */; };
 		93DB7C86202744B100E7C303 /* GifCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C83202744B000E7C303 /* GifCollectionNodeController.swift */; };
 		93DB7C87202744B100E7C303 /* GifCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C84202744B100E7C303 /* GifCollectionNode.swift */; };
 		93DB7C88202744B100E7C303 /* MosaicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */; };
@@ -62,6 +64,8 @@
 		9326FDF9201840B000A87134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9326FDFA201840B000A87134 /* GfycatGifsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfycatGifsFeed.swift; sourceTree = "<group>"; };
 		9327D81C204193250031ABB8 /* AlbumCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionNodeController.swift; sourceTree = "<group>"; };
+		9327D81F2045871F0031ABB8 /* ImgurWebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurWebHelper.swift; sourceTree = "<group>"; };
+		9327D821204587290031ABB8 /* GfycatWebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfycatWebHelper.swift; sourceTree = "<group>"; };
 		93DB7C83202744B000E7C303 /* GifCollectionNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNodeController.swift; sourceTree = "<group>"; };
 		93DB7C84202744B100E7C303 /* GifCollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionNode.swift; sourceTree = "<group>"; };
 		93DB7C85202744B100E7C303 /* MosaicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -143,7 +147,7 @@
 				9326FDF9201840B000A87134 /* Constants.swift */,
 				9326FDF7201840B000A87134 /* Protocols.swift */,
 				9326FDF5201840B000A87134 /* URL.swift */,
-				9326FDF6201840B000A87134 /* WebService.swift */,
+				9327D81E204587020031ABB8 /* WebService */,
 				93DB7C89202744B700E7C303 /* View */,
 				93DB7C792025E89700E7C303 /* Models */,
 			);
@@ -157,6 +161,16 @@
 				9326FDEA2018408D00A87134 /* Info.plist */,
 			);
 			path = MyGifsKitTests;
+			sourceTree = "<group>";
+		};
+		9327D81E204587020031ABB8 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				9326FDF6201840B000A87134 /* WebService.swift */,
+				9327D81F2045871F0031ABB8 /* ImgurWebHelper.swift */,
+				9327D821204587290031ABB8 /* GfycatWebHelper.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 		93DB7C792025E89700E7C303 /* Models */ = {
@@ -258,7 +272,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Aaron Rosenberger";
 				TargetAttributes = {
 					9326FDD92018408D00A87134 = {
@@ -421,8 +435,10 @@
 				93DB7CA5203A1E3000E7C303 /* ImgurGifsFeed.swift in Sources */,
 				9326FDFB201840B100A87134 /* GfycatGifModel.swift in Sources */,
 				9326FDFC201840B100A87134 /* URL.swift in Sources */,
+				9327D822204587290031ABB8 /* GfycatWebHelper.swift in Sources */,
 				93DB7CA1203866FF00E7C303 /* AlbumCollectionNodeDataSource.swift in Sources */,
 				9326FE00201840B100A87134 /* Constants.swift in Sources */,
+				9327D8202045871F0031ABB8 /* ImgurWebHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +475,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -466,6 +483,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -519,6 +537,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -526,6 +545,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

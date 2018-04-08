@@ -18,23 +18,27 @@ final class GfyFeed: GifFeed {
     private var totalPagesSoFar: Int = 0
     private var fetchPageInProgress: Bool = false
     private let webService: WebService
+    var numberOfItemsInFeed: Int { return gifs.count }
     
-    init(username: String) {
+    init() {
         webService = WebService()
+    }
+    
+    /**
+     Models a request and response object for retrieving gfys belonging to the specified user.
+     - Parameters:
+       - username: A Gfycat-registered username whose gifs are fetched
+     */
+    convenience init(username: String) {
+        self.init()
         url = URL.ForGfycatUser(username: username)
     }
-    
-    func getGif(forURL url: URL) -> Gif? {
-        return gifs.first(where: { $0.viewableUrl == url })
-    }
-    
-    var numberOfItemsInFeed: Int { return gifs.count }
 
     func updateNewBatch(additionsAndConnectionStatusCompletion: @escaping (Int, InternetStatus) -> ()) {
         guard !fetchPageInProgress else { return }
         
         fetchPageInProgress = true
-        fetchNextPage(replaceData: false) { [unowned self] additions, errors in
+        fetchNextPage() { [unowned self] additions, errors in
             self.fetchPageInProgress = false
             if let error = errors {
                 switch error {
@@ -53,15 +57,17 @@ final class GfyFeed: GifFeed {
         return !(totalPagesSoFar > 0 && cursor.isEmpty)
     }
     
-    private func fetchNextPage(replaceData: Bool, numberOfAdditionsCompletion: @escaping (Int, NetworkingErrors?) -> ()) {
+    private func fetchNextPage(numberOfAdditionsCompletion: @escaping (Int, NetworkingErrors?) -> ()) {
         guard var batchUrl = self.url, shouldBatchFetch() else {
             numberOfAdditionsCompletion(0, .dataReturnedNil)
             return
         }
-        batchUrl = batchUrl.addQueryParams([URLQueryItem.init(name: Const.Gfy.cursorKey, value: cursor)])
+        if !cursor.isEmpty {
+            batchUrl = batchUrl.addQueryParams([URLQueryItem.init(name: Const.Gfy.cursorKey, value: cursor)])
+        }
         
         let model: Resource<GfyUserFeedModel> = webService.getModel(withURL: batchUrl)
-        webService.load(resource: model) { [unowned self] result in
+        webService.load(resource: model, withHeaders: nil) { [unowned self] result in
             DispatchQueue.global().async {
                 switch result {
                 case .success(let response):
@@ -76,21 +82,13 @@ final class GfyFeed: GifFeed {
                     
                     let indexOfLastElement = max(self.gifs.endIndex-1, 0)
                     DispatchQueue.main.async {
-                        if replaceData {
-                            self.gifs = gifsToAdd
-                        } else {
-                            self.gifs += gifsToAdd
-                        }
+                        self.gifs += gifsToAdd
                         let page = (self.cursor, gifs: self.gifs.suffix(from: indexOfLastElement))
                         self.map.append(page)
-                        numberOfAdditionsCompletion(feed.gfycats.count, nil)
                     }
-                    
+                    numberOfAdditionsCompletion(feed.gfycats.count, nil)
                 case .failure(let fail):
-                    print(fail)
-                    DispatchQueue.main.async {
-                        numberOfAdditionsCompletion(0, fail)
-                    }
+                    numberOfAdditionsCompletion(0, fail)
                 }
             }
         }

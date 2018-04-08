@@ -8,6 +8,12 @@
 
 import AsyncDisplayKit
 
+protocol CollectionNodeDataSourceDelegate: class {
+    func didTap(_ item: SendableItem, _ action: TapAction)
+    func didBeginUpdate(_ context: ASBatchContext?)
+    func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus)
+}
+
 class AlbumCollectionNodeDataSource: NSObject {
     var feed: AlbumsFeed
     weak var delegate: CollectionNodeDataSourceDelegate!
@@ -26,7 +32,7 @@ extension AlbumCollectionNodeDataSource: ASCollectionDataSource {
         let album = feed.albums[indexPath.row]
         let nodeBlock: ASCellNodeBlock = {
             let node = AlbumCollectionNode(album: album)
-            node.albumNode.delegate = self
+            node.delegate = self
             return node
         }
         return nodeBlock
@@ -46,8 +52,10 @@ extension AlbumCollectionNodeDataSource: ASCollectionDelegate {
     }
 }
 
-extension AlbumCollectionNodeDataSource: ASNetworkImageNodeDelegate {
-    
+extension AlbumCollectionNodeDataSource: CollectionNodeTapDelegate {
+    func didTap(_ item: SendableItem, _ action: TapAction) {
+        delegate.didTap(item, action)
+    }
 }
 
 

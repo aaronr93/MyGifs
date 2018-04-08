@@ -8,6 +8,10 @@
 
 import AsyncDisplayKit
 
+protocol CollectionNodeTapDelegate: class {
+    func didTap(_ item: SendableItem, _ action: TapAction)
+}
+
 class AlbumCollectionNode: ASCellNode {
     
     let albumTitleNode = ASTextNode()
@@ -17,13 +21,25 @@ class AlbumCollectionNode: ASCellNode {
         return imageNode
     }()
     
+    weak var delegate: CollectionNodeTapDelegate?
+    var album: Album!
+    
     init(album: Album) {
         super.init()
+        self.album = album
         albumNode.url = album.coverUrl
         if let title = album.title {
             albumTitleNode.attributedText = NSAttributedString(string: title)
         }
         self.automaticallyManagesSubnodes = true
+    }
+    
+    override func didLoad() {
+        albumNode.addTarget(self, action: #selector(didTapNode(_:)), forControlEvents: .touchUpInside)
+    }
+    
+    @objc func didTapNode(_ sender: UITapGestureRecognizer? = nil) {
+        delegate?.didTap(album, .ExpandChildren)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

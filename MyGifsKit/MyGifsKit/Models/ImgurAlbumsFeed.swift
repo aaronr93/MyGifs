@@ -19,8 +19,17 @@ final class ImgurAccountAlbums: AlbumsFeed {
     var numberOfItemsInFeed: Int { return albums.count }
     private var totalPages: Int { return map.endIndex }
     
-    init(username: String) {
+    init() {
         webService = WebService()
+    }
+    
+    /**
+     Models a request and response object for retrieving albums belonging to the specified user.
+     - Parameters:
+       - username: An Imgur-registered username whose albums are fetched
+     */
+    convenience init(username: String) {
+        self.init()
         guard !username.isEmpty else { return }
         url = URL.ForImgurAccountAlbums(username: username)
     }
@@ -32,7 +41,7 @@ final class ImgurAccountAlbums: AlbumsFeed {
     func updateNewBatch(additionsAndConnectionStatusCompletion: @escaping (Int, InternetStatus) -> ()) {
         guard !fetchPageInProgress else { return }
         fetchPageInProgress = true
-        fetchNextPage(replaceData: false) { [unowned self] additions, errors in
+        fetchNextPage() { [unowned self] additions, errors in
             self.fetchPageInProgress = false
             if let error = errors {
                 switch error {
@@ -47,12 +56,18 @@ final class ImgurAccountAlbums: AlbumsFeed {
         }
     }
     
-    private func fetchNextPage(replaceData: Bool, numberOfAdditionsCompletion: @escaping (Int, NetworkingErrors?) -> ()) {
+    private func addHeaders(toRequestWith url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.addValue("Client-ID 0cf6d3195975a95", forHTTPHeaderField: "Authorization")
+        return request
+    }
+    
+    private func fetchNextPage(numberOfAdditionsCompletion: @escaping (Int, NetworkingErrors?) -> ()) {
         guard var url = self.url else { return }
         url.appendPathComponent("\(totalPages)", isDirectory: false)
         
         let model: Resource<ImgurAccountAlbumsFeedModel> = webService.getModel(withURL: url)
-        webService.load(resource: model) { [unowned self] result in
+        webService.load(resource: model, withHeaders: addHeaders) { [unowned self] result in
             DispatchQueue.global().async {
                 switch result {
                 case .success(let response):
@@ -72,20 +87,13 @@ final class ImgurAccountAlbums: AlbumsFeed {
                     
                     let indexOfLastElement = max(self.albums.endIndex-1, 0)
                     DispatchQueue.main.async {
-                        if replaceData {
-                            self.albums = albumsToAdd
-                        } else {
-                            self.albums += albumsToAdd
-                        }
+                        self.albums += albumsToAdd
                         let page = self.albums.suffix(from: indexOfLastElement)
                         self.map.append(page)
-                        numberOfAdditionsCompletion(albumsFeed.data.count, nil)
                     }
+                    numberOfAdditionsCompletion(albumsFeed.data.count, nil)
                 case .failure(let fail):
-                    print(fail)
-                    DispatchQueue.main.async {
-                        numberOfAdditionsCompletion(0, fail)
-                    }
+                    numberOfAdditionsCompletion(0, fail)
                 }
             }
         }

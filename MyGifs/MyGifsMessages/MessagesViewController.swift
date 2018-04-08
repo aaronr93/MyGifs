@@ -78,7 +78,7 @@ class MessagesViewController: MSMessagesAppViewController {
         var expandedViewController: UIViewController?
         switch (menuItem) {
         case .Gfycat:
-            expandedViewController = GifCollectionNodeController()
+            expandedViewController = GifCollectionNodeController(identifier: "aaronr93", sourceType: .GfycatUserGifs)
             if let expandedVC = expandedViewController as? GifCollectionNodeController {
                 expandedVC.delegate = self
             }
@@ -108,7 +108,7 @@ class MessagesViewController: MSMessagesAppViewController {
 }
 
 extension MessagesViewController: CollectionDelegate {
-    func didTap(_ item: SendableItem) {
+    func didTap(_ item: SendableItem, _ action: TapAction) {
         guard let conversation = activeConversation else { fatalError("Expected a conversation") }
         conversation.insertText(item.viewableUrl.absoluteString, completionHandler: nil)
         dismiss()

@@ -8,6 +8,10 @@
 
 import AsyncDisplayKit
 
+public protocol CollectionDelegate: class {
+    func didTap(_ item: SendableItem, _ action: TapAction)
+}
+
 public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
     
     var loadingScreensForBatching: CGFloat {
@@ -15,24 +19,35 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
     }
     
     private let layout: UICollectionViewLayout
-    private var feed: AlbumsFeed
+    private var feed: AlbumsFeed?
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
-    private var albumDataSource: AlbumCollectionNodeDataSource
+    private var albumDataSource: AlbumCollectionNodeDataSource!
     
     weak public var delegate: CollectionDelegate?
     
-    public init() {
+    init() {
         layout = UICollectionViewFlowLayout()
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
         loadingScreensForBatching = 2.5
         
-        feed = ImgurAccountAlbums(username: "aaronr93")
-        albumDataSource = AlbumCollectionNodeDataSource(newFeed: feed)
-        
         super.init(node: collectionNode)
-        
         node.allowsSelection = false
+    }
+    
+    public convenience init(identifier: String, sourceType: FeedModelType) {
+        self.init()
+        switch sourceType {
+        case .GfycatUserAlbums:
+            break
+        case .ImgurUserAlbums:
+            feed = ImgurAccountAlbums(username: identifier)
+            break
+        default:
+            return
+        }
+        guard let feed = feed else { return }
+        albumDataSource = AlbumCollectionNodeDataSource(newFeed: feed)
         node.dataSource = albumDataSource
         node.delegate = albumDataSource
         albumDataSource.delegate = self
@@ -59,8 +74,8 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
 }
 
 extension AlbumCollectionNodeController: CollectionNodeDataSourceDelegate {
-    func didTap(_ item: SendableItem) {
-        delegate?.didTap(item)
+    func didTap(_ item: SendableItem, _ action: TapAction) {
+        delegate?.didTap(item, action)
     }
     
     func didBeginUpdate(_ context: ASBatchContext?) {
@@ -68,19 +83,22 @@ extension AlbumCollectionNodeController: CollectionNodeDataSourceDelegate {
     }
     
     func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus) {
-        switch connectionStatus {
-        case .noConnection:
-            self.activityIndicator.stopAnimating()
-            context?.completeBatchFetching(true)
-            break
-        default:
-            self.activityIndicator.stopAnimating()
-            self.addRowsIntoTableNode(newCount: additions)
-            context?.completeBatchFetching(true)
+        DispatchQueue.main.async {
+            switch connectionStatus {
+            case .noConnection:
+                self.activityIndicator.stopAnimating()
+                context?.completeBatchFetching(true)
+                break
+            default:
+                self.activityIndicator.stopAnimating()
+                self.addRowsIntoTableNode(newCount: additions)
+                context?.completeBatchFetching(true)
+            }
         }
     }
     
     func addRowsIntoTableNode(newCount newItems: Int) {
+        guard let feed = feed else { return }
         let indexRange = (feed.numberOfItemsInFeed - newItems..<feed.numberOfItemsInFeed)
         let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
         node.insertItems(at: indexPaths)

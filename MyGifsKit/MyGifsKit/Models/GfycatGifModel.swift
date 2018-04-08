@@ -9,6 +9,7 @@
 import Foundation
 
 final class Gfy: Gif {
+    var id: String
     var viewableUrl: URL
     var smallUrl: URL
     var fullResUrl: URL
@@ -18,6 +19,7 @@ final class Gfy: Gif {
     var height: Int
     
     init(model: GfyModel) {
+        id = model.gfyId
         if let miniUrl = model.miniUrl {
             self.smallUrl = miniUrl
         } else if let mobileUrl = model.mobileUrl {

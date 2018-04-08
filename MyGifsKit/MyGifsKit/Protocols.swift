@@ -9,19 +9,28 @@
 import Foundation
 import AsyncDisplayKit
 
-public protocol CollectionDelegate: class {
-    func didTap(_ item: SendableItem)
+public enum TapAction {
+    case SendTextMessage
+    case ShareMenu
+    case ExpandChildren
 }
 
-protocol CollectionNodeDataSourceDelegate: class {
-    func didTap(_ item: SendableItem)
-    func didBeginUpdate(_ context: ASBatchContext?)
-    func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus)
+protocol RequestHeaders: Encodable {
+    var Authorization: String? { get }
+}
+
+protocol ResponseHeaders: Decodable {
+    var ContentType: eResponseContentType? { get }
+}
+enum eResponseContentType: String, Decodable {
+    case JSON = "application/json"
+    case XML = "application/xml"
 }
 
 public protocol SendableItem {
     var viewableUrl: URL { get }
     var title: String? { get }
+    var id: String { get }
 }
 
 protocol Gif: SendableItem {
@@ -40,10 +49,15 @@ protocol Feed {
 
 protocol GifFeed: Feed {
     var gifs: [Gif] { get }
-    func getGif(forURL url: URL) -> Gif?
+}
+extension GifFeed {
+    func getGif(forURL url: URL) -> Gif? {
+        return gifs.first(where: { $0.viewableUrl == url })
+    }
 }
 
 protocol Album: SendableItem {
+    var id: String { get }
     var gifs: [Gif] { get }
     var coverUrl: URL? { get }
     var coverWidth: Int? { get }

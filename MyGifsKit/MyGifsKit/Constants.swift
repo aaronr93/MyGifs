@@ -50,14 +50,27 @@ struct Const {
             static let Image = ".jpg"
             static let Gif = ".gifv"
         }
-        struct Thumbnail {
-            static let SmallSquare = "s"    // 90x90
-            static let BigSquare = "b"      // 160x160
-            static let Small = "t"          // 160x160
-            static let Medium = "m"         // 320x320
-            static let Large = "l"          // 640x640
-            static let Huge = "h"           // 1024x1024
-        }
     }
+    static let assetKeys = [
+        "playable",
+        "readable",
+        "creationDate",
+        "tracks",
+        "metadata",
+        "commonMetadata",
+        "lyrics",
+        "compatibleWithAirPlayVideo",
+        "compatibleWithSavedPhotosAlbum",
+        "preferredMediaSelection"
+    ]
+}
+
+enum Thumbnail: Character {
+    case SmallSquare = "s"    // 90x90
+    case BigSquare = "b"      // 160x160
+    case Small = "t"          // 160x160
+    case Medium = "m"         // 320x320
+    case Large = "l"          // 640x640
+    case Huge = "h"           // 1024x1024
 }
 

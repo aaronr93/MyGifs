@@ -51,7 +51,7 @@ extension GifCollectionNodeDataSource: ASVideoNodeDelegate {
         guard let gifNode = videoNode as? ASGifNode else { return }
         guard let viewableUrl = gifNode.viewableUrl else { return }
         guard let gif = feed.getGif(forURL: viewableUrl) else { return }
-        delegate.didTap(gif)
+        delegate.didTap(gif, .SendTextMessage)
     }
 }
 

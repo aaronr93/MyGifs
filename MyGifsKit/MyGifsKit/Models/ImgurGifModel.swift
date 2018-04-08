@@ -9,6 +9,7 @@
 import Foundation
 
 final class ImgurGif: Gif {
+    var id: String
     var viewableUrl: URL
     var smallUrl: URL
     var fullResUrl: URL
@@ -18,20 +19,13 @@ final class ImgurGif: Gif {
     var height: Int
     
     init(model: ImgurGifModel) {
-        if let gifv = model.gifv {
-            smallUrl = gifv
-            fullResUrl = gifv
-        } else if let mp4 = model.mp4 {
-            smallUrl = mp4
-            fullResUrl = mp4
-        } else {
-            smallUrl = model.link
-            fullResUrl = model.link
-        }
-        self.viewableUrl = URL.ForImgurImage(imageHash: model.id)!
-        self.title = model.title
-        self.width = model.width
-        self.height = model.height
+        id = model.id
+        smallUrl = model.mp4?.addingImgurThumbnailTag(tag: .Small) ?? model.link.addingImgurThumbnailTag(tag: .Small)
+        fullResUrl = model.mp4 ?? model.link
+        viewableUrl = model.gifv ?? URL.ForImgurImage(imageHash: model.id)!
+        title = model.title
+        width = model.width
+        height = model.height
     }
     
     func size() -> CGSize {
