@@ -31,10 +31,14 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
     
     private let layout: MosaicCollectionViewLayout
     private let layoutInspector: MosaicCollectionViewLayoutInspector
-    
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
     private var gifDataSource: GifCollectionNodeDataSource!
+    
+    public var viewTitle: String? {
+        get { return navigationItem.title }
+        set { navigationItem.title = newValue }
+    }
     
     weak public var delegate: CollectionDelegate?
     
@@ -61,7 +65,6 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
         case .GfycatAlbumGifs:
             break
         case .ImgurUserGifs:
-            
             break
         case .ImgurAlbumGifs:
             feed = ImgurGifsFeed(albumId: identifier)
@@ -126,8 +129,14 @@ extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
 }
 
 extension GifCollectionNodeController: MosaicCollectionViewLayoutDelegate {
-    internal func collectionView(_ collectionView: UICollectionView, layout: MosaicCollectionViewLayout, originalItemSizeAt indexPath: IndexPath) -> CGSize {
+    internal func collectionView(_ collectionView: UICollectionView, originalItemSizeAt indexPath: IndexPath) -> CGSize {
         return gifDataSource.feed.gifs[indexPath.row].size()
+    }
+}
+
+extension GifCollectionNodeController: CollectionNodeLayoutDelegate {
+    internal func collectionView(_ collectionView: UICollectionView, heightForNodeAtIndexPath indexPath: IndexPath) -> CGFloat {
+        return gifDataSource.feed.gifs[indexPath.row].size().height
     }
 }
 

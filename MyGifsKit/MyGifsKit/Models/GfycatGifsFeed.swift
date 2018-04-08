@@ -76,14 +76,12 @@ final class GfyFeed: GifFeed {
                     self.cursor = feed.cursor ?? ""
                     
                     var gifsToAdd: [Gif] = []
-                    gifsToAdd = feed.gfycats.map({ (gifModel: GfyModel) -> Gif in
-                        return Gfy(model: gifModel)
-                    })
+                    gifsToAdd = feed.gfycats.map { Gfy(model: $0) }
                     
                     let indexOfLastElement = max(self.gifs.endIndex-1, 0)
                     DispatchQueue.main.async {
                         self.gifs += gifsToAdd
-                        let page = (self.cursor, gifs: self.gifs.suffix(from: indexOfLastElement))
+                        let page = (self.cursor, self.gifs.suffix(from: indexOfLastElement))
                         self.map.append(page)
                     }
                     numberOfAdditionsCompletion(feed.gfycats.count, nil)

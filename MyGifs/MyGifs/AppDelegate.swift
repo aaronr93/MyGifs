@@ -37,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var GfycatGifsController: GifCollectionNodeController = {
         let gfycatGifsController = GifCollectionNodeController(identifier: "aaronr93", sourceType: .GfycatUserGifs)
-        gfycatGifsController.tabBarItem = UITabBarItem(title: "Gfycat Gifs", image: nil, tag: 0)
         gfycatGifsController.delegate = self
         return gfycatGifsController
     }()
@@ -50,14 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func GetImgurAlbumsController(username: String) -> AlbumCollectionNodeController {
         let imgurAlbumsController = AlbumCollectionNodeController(identifier: username, sourceType: .ImgurUserAlbums)
-        imgurAlbumsController.tabBarItem.title = "\(username)'s Albums"
+        imgurAlbumsController.viewTitle = "Imgur Albums"
         imgurAlbumsController.delegate = self
         return imgurAlbumsController
     }
     
-    func GetImgurGifsController(albumId: String, title: String?) -> GifCollectionNodeController {
+    func GetImgurGifsController(albumId: String) -> GifCollectionNodeController {
         let imgurGifsController = GifCollectionNodeController(identifier: albumId, sourceType: .ImgurAlbumGifs)
-        imgurGifsController.tabBarItem.title = title
         imgurGifsController.delegate = self
         return imgurGifsController
     }
@@ -67,6 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         TabBarController.setViewControllers([GfycatNavController, ImgurNavController], animated: true)
         TabBarController.selectedIndex = Tabs.Imgur.rawValue
+        TabBarController.tabBar.items![0].title = "Gfycat Gifs"
+        TabBarController.tabBar.items![1].title = "Imgur Albums"
         
         // UIWindow
         window?.rootViewController = TabBarController
@@ -107,7 +107,7 @@ extension AppDelegate: CollectionDelegate {
         switch action {
         case .ExpandChildren:
             if TabBarController.selectedIndex == 1, ImgurNavController.visibleViewController is AlbumCollectionNodeController {
-                ImgurNavController.pushViewController(GetImgurGifsController(albumId: item.id, title: item.title ?? "Imgur Gifs"), animated: true)
+                ImgurNavController.pushViewController(GetImgurGifsController(albumId: item.id), animated: true)
             }
             break
         case .SendTextMessage:

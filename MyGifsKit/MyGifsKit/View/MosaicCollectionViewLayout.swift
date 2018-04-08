@@ -21,11 +21,10 @@
 //
 
 import Foundation
-import UIKit
 import AsyncDisplayKit
 
 protocol MosaicCollectionViewLayoutDelegate: ASCollectionDelegate {
-    func collectionView(_ collectionView: UICollectionView, layout: MosaicCollectionViewLayout, originalItemSizeAt indexPath: IndexPath) -> CGSize
+    func collectionView(_ collectionView: UICollectionView, originalItemSizeAt indexPath: IndexPath) -> CGSize
 }
 
 class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
@@ -114,7 +113,7 @@ class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
     
     func itemSizeAtIndexPath(indexPath: IndexPath) -> CGSize {
         var size = CGSize(width: self.columnWidth(), height: 0)
-        let originalSize = self.delegate!.collectionView(self.collectionView!, layout: self, originalItemSizeAt: indexPath)
+        let originalSize = self.delegate!.collectionView(self.collectionView!, originalItemSizeAt: indexPath)
         if originalSize.height > 0 && originalSize.width > 0 {
             size.height = originalSize.height / originalSize.width * size.width
         }

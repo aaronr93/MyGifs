@@ -24,6 +24,11 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
     private let collectionNode: ASCollectionNode
     private var albumDataSource: AlbumCollectionNodeDataSource!
     
+    public var viewTitle: String? {
+        get { return navigationItem.title }
+        set { navigationItem.title = newValue }
+    }
+    
     weak public var delegate: CollectionDelegate?
     
     init() {
@@ -42,7 +47,6 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
             break
         case .ImgurUserAlbums:
             feed = ImgurAccountAlbums(username: identifier)
-            break
         default:
             return
         }
