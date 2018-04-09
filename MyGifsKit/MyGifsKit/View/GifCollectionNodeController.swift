@@ -18,41 +18,25 @@ public enum FeedModelType {
 }
 
 public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
-    
-    var numberOfColumns: Int {
-        didSet { layout.numberOfColumns = numberOfColumns }
-    }
-    
-    var loadingScreensForBatching: CGFloat {
-        didSet { node.leadingScreensForBatching = loadingScreensForBatching }
-    }
-    
-    private var feed: GifFeed?
-    
-    private let layout: MosaicCollectionViewLayout
-    private let layoutInspector: MosaicCollectionViewLayoutInspector
+    weak public var delegate: CollectionDelegate?
+    private var feed: GifFeed!
+    private let layout = MosaicCollectionViewLayout()
+    private let layoutInspector = MosaicCollectionViewLayoutInspector()
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
-    private var gifDataSource: GifCollectionNodeDataSource!
     
     public var viewTitle: String? {
         get { return navigationItem.title }
         set { navigationItem.title = newValue }
     }
     
-    weak public var delegate: CollectionDelegate?
-    
     init() {
         ASDisableLogging()
-        
-        layout = MosaicCollectionViewLayout()
-        layoutInspector = MosaicCollectionViewLayoutInspector()
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
-        numberOfColumns = 1
-        loadingScreensForBatching = 2
-        
         super.init(node: collectionNode)
+        layout.numberOfColumns = 2
         layout.delegate = self
+        node.leadingScreensForBatching = 2
         node.layoutInspector = layoutInspector
         node.allowsSelection = false
     }
@@ -69,12 +53,10 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
         case .ImgurAlbumGifs:
             feed = ImgurGifsFeed(albumId: identifier)
         default:
-            return
+            fatalError("This feed case has not been implemented: \(sourceType)")
         }
-        gifDataSource = GifCollectionNodeDataSource(newFeed: feed!)
-        node.dataSource = gifDataSource
-        node.delegate = gifDataSource
-        gifDataSource.delegate = self
+        node.dataSource = self
+        node.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -97,13 +79,33 @@ public class GifCollectionNodeController: ASViewController<ASCollectionNode> {
     }
 }
 
-extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
-    func didTap(_ item: SendableItem, _ action: TapAction) {
-        delegate?.didTap(item, action)
+extension GifCollectionNodeController: ASCollectionDataSource {
+    public func numberOfSections(in collectionNode: ASCollectionNode) -> Int { return 1 }
+    public func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
+        return feed.numberOfItemsInFeed
     }
     
-    func didBeginUpdate(_ context: ASBatchContext?) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let gif = feed.gifs[indexPath.row]
+        let nodeBlock: ASCellNodeBlock = {
+            let node = GifCollectionNode(gif: gif)
+            node.gifNode.delegate = self
+            return node
+        }
+        return nodeBlock
+    }
+}
+
+extension GifCollectionNodeController: ASCollectionDelegate {
+    public func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
         DispatchQueue.main.async { self.activityIndicator.startAnimating() }
+        feed.updateNewBatch { additions, connectionStatus in
+            self.didEndUpdate(context, with: additions, connectionStatus)
+        }
+    }
+    
+    public func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
+        return feed.shouldBatchFetch()
     }
     
     func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus) {
@@ -122,21 +124,24 @@ extension GifCollectionNodeController: CollectionNodeDataSourceDelegate {
     }
     
     func addRowsIntoTableNode(newCount newGfys: Int) {
-        let indexRange = (feed!.numberOfItemsInFeed - newGfys..<feed!.numberOfItemsInFeed)
+        let indexRange = (feed.numberOfItemsInFeed - newGfys..<feed.numberOfItemsInFeed)
         let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
         node.insertItems(at: indexPaths)
     }
 }
 
-extension GifCollectionNodeController: MosaicCollectionViewLayoutDelegate {
-    internal func collectionView(_ collectionView: UICollectionView, originalItemSizeAt indexPath: IndexPath) -> CGSize {
-        return gifDataSource.feed.gifs[indexPath.row].size()
+extension GifCollectionNodeController: ASVideoNodeDelegate {
+    public func didTap(_ videoNode: ASVideoNode) {
+        guard let gifNode = videoNode as? ASGifNode else { return }
+        guard let viewableUrl = gifNode.viewableUrl else { return }
+        guard let gif = feed.getGif(forURL: viewableUrl) else { return }
+        delegate?.didTap(gif, .SendTextMessage)
     }
 }
 
-extension GifCollectionNodeController: CollectionNodeLayoutDelegate {
-    internal func collectionView(_ collectionView: UICollectionView, heightForNodeAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return gifDataSource.feed.gifs[indexPath.row].size().height
+extension GifCollectionNodeController: MosaicCollectionViewLayoutDelegate {
+    internal func collectionView(_ collectionView: UICollectionView, originalItemSizeAt indexPath: IndexPath) -> CGSize {
+        return feed.gifs[indexPath.row].size()
     }
 }
 

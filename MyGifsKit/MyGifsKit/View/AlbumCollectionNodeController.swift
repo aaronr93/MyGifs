@@ -13,16 +13,11 @@ public protocol CollectionDelegate: class {
 }
 
 public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
-    
-    var loadingScreensForBatching: CGFloat {
-        didSet { node.leadingScreensForBatching = loadingScreensForBatching }
-    }
-    
-    private let layout: UICollectionViewLayout
-    private var feed: AlbumsFeed?
+    private let layout = MosaicCollectionViewLayout()
+    private let layoutInspector = MosaicCollectionViewLayoutInspector()
+    private var feed: AlbumsFeed!
     private var activityIndicator: UIActivityIndicatorView!
     private let collectionNode: ASCollectionNode
-    private var albumDataSource: AlbumCollectionNodeDataSource!
     
     public var viewTitle: String? {
         get { return navigationItem.title }
@@ -32,12 +27,12 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
     weak public var delegate: CollectionDelegate?
     
     init() {
-        layout = UICollectionViewFlowLayout()
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
-        loadingScreensForBatching = 2.5
-        
         super.init(node: collectionNode)
+        node.leadingScreensForBatching = 2.5
         node.allowsSelection = false
+        layout.delegate = self
+        node.layoutInspector = layoutInspector
     }
     
     public convenience init(identifier: String, sourceType: FeedModelType) {
@@ -48,13 +43,10 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
         case .ImgurUserAlbums:
             feed = ImgurAccountAlbums(username: identifier)
         default:
-            return
+            fatalError("This feed case has not been implemented: \(sourceType)")
         }
-        guard let feed = feed else { return }
-        albumDataSource = AlbumCollectionNodeDataSource(newFeed: feed)
-        node.dataSource = albumDataSource
-        node.delegate = albumDataSource
-        albumDataSource.delegate = self
+        node.dataSource = self
+        node.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -77,13 +69,33 @@ public class AlbumCollectionNodeController: ASViewController<ASCollectionNode> {
     }
 }
 
-extension AlbumCollectionNodeController: CollectionNodeDataSourceDelegate {
-    func didTap(_ item: SendableItem, _ action: TapAction) {
-        delegate?.didTap(item, action)
+extension AlbumCollectionNodeController: ASCollectionDataSource {
+    public func numberOfSections(in collectionNode: ASCollectionNode) -> Int { return 1 }
+    public func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
+        return feed!.numberOfItemsInFeed
     }
     
-    func didBeginUpdate(_ context: ASBatchContext?) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let album = feed.albums[indexPath.row]
+        let nodeBlock: ASCellNodeBlock = {
+            let node = AlbumCollectionNode(album: album)
+            node.delegate = self
+            return node
+        }
+        return nodeBlock
+    }
+}
+
+extension AlbumCollectionNodeController: ASCollectionDelegate {
+    public func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
         DispatchQueue.main.async { self.activityIndicator.startAnimating() }
+        feed.updateNewBatch { additions, connectionStatus in
+            self.didEndUpdate(context, with: additions, connectionStatus)
+        }
+    }
+    
+    public func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
+        return feed.shouldBatchFetch()
     }
     
     func didEndUpdate(_ context: ASBatchContext?, with additions: Int, _ connectionStatus: InternetStatus) {
@@ -106,5 +118,20 @@ extension AlbumCollectionNodeController: CollectionNodeDataSourceDelegate {
         let indexRange = (feed.numberOfItemsInFeed - newItems..<feed.numberOfItemsInFeed)
         let indexPaths = indexRange.map { IndexPath(row: $0, section: 0) }
         node.insertItems(at: indexPaths)
+    }
+}
+
+extension AlbumCollectionNodeController: CollectionNodeTapDelegate {
+    func didTap(_ item: SendableItem, _ action: TapAction) {
+        delegate?.didTap(item, action)
+    }
+}
+
+extension AlbumCollectionNodeController: MosaicCollectionViewLayoutDelegate {
+    internal func collectionView(_ collectionView: UICollectionView, originalItemSizeAt indexPath: IndexPath) -> CGSize {
+        guard let albumNode = node.nodeForItem(at: indexPath) as? AlbumCollectionNode else {
+            return feed.albums[indexPath.row].coverSize() ?? CGSize(width: 100, height: 100)
+        }
+        return albumNode.size()
     }
 }

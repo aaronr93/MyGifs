@@ -43,16 +43,12 @@ class GifCollectionNode: ASCellNode, ASVideoNodeDelegate {
             switch status {
             case .loaded?:
                 break
-            // Sucessfully loaded. Continue processing.
             case .failed?:
                 break
-            // Handle error
             case .cancelled?:
                 break
-            // Terminate processing
             default:
                 break
-                // Handle all other cases
             }
         })
     }
@@ -60,7 +56,6 @@ class GifCollectionNode: ASCellNode, ASVideoNodeDelegate {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         return ASRatioLayoutSpec(ratio: 9/16, child: gifNode)
     }
-    
 }
 
 class ASGifNode: ASVideoNode {

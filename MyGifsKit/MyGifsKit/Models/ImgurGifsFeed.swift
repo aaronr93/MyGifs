@@ -98,8 +98,7 @@ final class ImgurGifsFeed: GifFeed {
         guard gifsFeed.success else { return 0 }
         self.lastFetchCount = gifsFeed.data.count
         
-        var gifsToAdd: [Gif] = []
-        gifsToAdd = gifsFeed.data.map { ImgurGif(model: $0) }
+        let gifsToAdd: [Gif] = gifsFeed.data.map { ImgurGif(model: $0) }
         
         let indexOfLastElement = max(self.gifs.endIndex-1, 0)
         

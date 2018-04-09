@@ -14,6 +14,12 @@ protocol CollectionNodeTapDelegate: class {
 
 class AlbumCollectionNode: ASCellNode {
     
+    func size() -> CGSize {
+        let albumSize = self.albumNode.calculatedSize
+        let titleHeight = self.albumTitleNode.calculatedSize.height
+        return CGSize(width: 100, height: 100 + titleHeight)
+    }
+    
     let albumTitleNode = ASTextNode()
     let albumNode: ASNetworkImageNode = {
         let imageNode = ASNetworkImageNode()
@@ -21,7 +27,7 @@ class AlbumCollectionNode: ASCellNode {
         return imageNode
     }()
     
-    weak var delegate: CollectionNodeTapDelegate?
+    weak var delegate: CollectionNodeTapDelegate!
     var album: Album!
     
     init(album: Album) {
@@ -39,7 +45,7 @@ class AlbumCollectionNode: ASCellNode {
     }
     
     @objc func didTapNode(_ sender: UITapGestureRecognizer? = nil) {
-        delegate?.didTap(album, .ExpandChildren)
+        delegate.didTap(album, .ExpandChildren)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

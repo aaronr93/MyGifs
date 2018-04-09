@@ -75,8 +75,7 @@ final class GfyFeed: GifFeed {
                     self.totalPagesSoFar += 1
                     self.cursor = feed.cursor ?? ""
                     
-                    var gifsToAdd: [Gif] = []
-                    gifsToAdd = feed.gfycats.map { Gfy(model: $0) }
+                    let gifsToAdd: [Gif] = feed.gfycats.map { Gfy(model: $0) }
                     
                     let indexOfLastElement = max(self.gifs.endIndex-1, 0)
                     DispatchQueue.main.async {

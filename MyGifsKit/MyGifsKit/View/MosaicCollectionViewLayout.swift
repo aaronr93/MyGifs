@@ -35,7 +35,7 @@ class MosaicCollectionViewLayout: UICollectionViewFlowLayout {
     private var allAttributes = [UICollectionViewLayoutAttributes]()
     
     required override init() {
-        self.numberOfColumns = 2
+        numberOfColumns = 2
         self.columnSpacing = 10.0
         self.interItemSpacing = UIEdgeInsetsMake(10.0, 0, 10.0, 0)
         super.init()
